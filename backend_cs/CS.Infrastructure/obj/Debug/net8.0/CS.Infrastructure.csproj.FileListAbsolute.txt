@@ -1,0 +1,34 @@
+C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Infrastructure\bin\Debug\net8.0\CS.Infrastructure.deps.json
+C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Infrastructure\bin\Debug\net8.0\CS.Infrastructure.dll
+C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Infrastructure\bin\Debug\net8.0\CS.Infrastructure.pdb
+C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Infrastructure\bin\Debug\net8.0\CS.Application.dll
+C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Infrastructure\bin\Debug\net8.0\CS.Domain.dll
+C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Infrastructure\bin\Debug\net8.0\CS.Application.pdb
+C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Infrastructure\bin\Debug\net8.0\CS.Domain.pdb
+C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Infrastructure\obj\Debug\net8.0\CS.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Infrastructure\obj\Debug\net8.0\CS.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Infrastructure\obj\Debug\net8.0\CS.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Infrastructure\obj\Debug\net8.0\CS.Infrastructure.AssemblyInfo.cs
+C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Infrastructure\obj\Debug\net8.0\CS.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Infrastructure\obj\Debug\net8.0\CS.Infra.6C8BCFE7.Up2Date
+C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Infrastructure\obj\Debug\net8.0\CS.Infrastructure.dll
+C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Infrastructure\obj\Debug\net8.0\refint\CS.Infrastructure.dll
+C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Infrastructure\obj\Debug\net8.0\CS.Infrastructure.pdb
+C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Infrastructure\obj\Debug\net8.0\ref\CS.Infrastructure.dll
+C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Infrastructure\bin\Debug\net8.0\CS.Infrastructure.deps.json
+C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Infrastructure\bin\Debug\net8.0\CS.Infrastructure.dll
+C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Infrastructure\bin\Debug\net8.0\CS.Infrastructure.pdb
+C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Infrastructure\bin\Debug\net8.0\CS.Application.dll
+C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Infrastructure\bin\Debug\net8.0\CS.Domain.dll
+C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Infrastructure\bin\Debug\net8.0\CS.Application.pdb
+C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Infrastructure\bin\Debug\net8.0\CS.Domain.pdb
+C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Infrastructure\obj\Debug\net8.0\CS.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Infrastructure\obj\Debug\net8.0\CS.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Infrastructure\obj\Debug\net8.0\CS.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Infrastructure\obj\Debug\net8.0\CS.Infrastructure.AssemblyInfo.cs
+C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Infrastructure\obj\Debug\net8.0\CS.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Infrastructure\obj\Debug\net8.0\CS.Infra.6C8BCFE7.Up2Date
+C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Infrastructure\obj\Debug\net8.0\CS.Infrastructure.dll
+C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Infrastructure\obj\Debug\net8.0\refint\CS.Infrastructure.dll
+C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Infrastructure\obj\Debug\net8.0\CS.Infrastructure.pdb
+C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Infrastructure\obj\Debug\net8.0\ref\CS.Infrastructure.dll
