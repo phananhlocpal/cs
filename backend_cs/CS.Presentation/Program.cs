@@ -1,10 +1,13 @@
-using CS.Application.Services;
+using CS.Application;
+using CS.Application.Abstractions.Repositories;
+using CS.Application.Abstractions.Services;
+using CS.Application.Behaviors;
 using CS.Application.UseCases.CustomerUseCases;
 using CS.Domain.DBContext;
 using CS.Domain.Entities;
-using CS.Domain.Interfaces;
 using CS.Infrastructure.Repositories;
 using CS.Infrastructure.Services;
+using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
@@ -66,7 +69,18 @@ builder.Services.AddScoped<IUserRepo, UserRepo>();
 
 // Register password hasher
 builder.Services.AddScoped<IPasswordHasher<Customer>, PasswordHasher<Customer>>();
-builder.Services.AddScoped< IPasswordHasher<User>, PasswordHasher <User>>();
+builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
+
+// Register from application layer
+builder.Services.AddApplication();
+
+// Register authorization policies
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminPolicy", policy => policy.RequireRole("AdminPolicy"));
+    options.AddPolicy("UserPolicy", policy => policy.RequireRole("UserPolicy"));
+    options.AddPolicy("CustomerPolicy", policy => policy.RequireRole("Customer"));
+});
 
 var app = builder.Build();
 
@@ -82,6 +96,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

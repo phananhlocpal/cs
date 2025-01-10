@@ -28,3 +28,4 @@ C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Application\obj\Debug\net8.0\CS.A
 C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Application\obj\Debug\net8.0\refint\CS.Application.dll
 C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Application\obj\Debug\net8.0\CS.Application.pdb
 C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Application\obj\Debug\net8.0\ref\CS.Application.dll
+C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Application\obj\Debug\net8.0\CS.Application.sourcelink.json

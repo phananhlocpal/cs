@@ -1,4 +1,5 @@
-﻿using CS.Application.DTOs.UserDTO;
+﻿using CS.Application.Abstractions;
+using CS.Application.DTOs.UserDTO;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CS.Application.Queries.UserQueries
 {
-    public class GetAllUsersQuery : IRequest<IEnumerable<UserReadDTO>>
+    public class GetAllUsersQuery : IQuery<IEnumerable<UserReadDTO>>
     {
     }
 }

@@ -3,6 +3,7 @@ using CS.Application.AuthenDTO;
 using CS.Application.Commands.AuthenCommands;
 using CS.Application.Commands.CustomerCommands;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
@@ -21,6 +22,7 @@ namespace CS.Presentation.Controllers
             _mediator = mediator;
         }
 
+        [AllowAnonymous]
         [HttpPost("customer-login")]
         public async Task<CustomerLoginResponseViewModel> LoginCustomer(CustomerLoginCommand loginRequest)
         {
@@ -28,6 +30,7 @@ namespace CS.Presentation.Controllers
             return loginResponse;
         }
 
+        [AllowAnonymous]
         [HttpPost("user-login")]
         public async Task<UserLoginResponseViewModel> LoginUser(UserLoginCommand loginRequest)
         {
@@ -35,6 +38,7 @@ namespace CS.Presentation.Controllers
             return loginResponse;
         }
 
+        [AllowAnonymous]
         [HttpPost("customer-register")]
         public async Task<IActionResult> RegisterCustomer([FromBody] CreateCustomerCommand createCustomerCommand)
         {

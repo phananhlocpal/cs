@@ -1,7 +1,8 @@
 ﻿using AutoMapper;
+using CS.Application.Abstractions;
+using CS.Application.Abstractions.Repositories;
 using CS.Application.DTOs.UserDTO;
 using CS.Application.Queries.UserQueries;
-using CS.Domain.Interfaces;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace CS.Application.UseCases.UserUseCases
 {
-    public class GetAllUsersHandler : IRequestHandler<GetAllUsersQuery, IEnumerable<UserReadDTO>>
+    public class GetAllUsersHandler : IQueryHandler<GetAllUsersQuery, IEnumerable<UserReadDTO>>
     {
         private readonly IUserRepo _userRepo;
         private readonly IMapper _mapper;

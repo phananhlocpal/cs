@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using CS.Application.Abstractions;
+using CS.Application.Abstractions.Repositories;
 using CS.Application.DTOs.CustomerDTO;
 using CS.Application.Queries.CustomerQueries;
-using CS.Domain.Interfaces;
 using MediatR;
 
 namespace CS.Application.UseCases.CustomerUseCases
 {
-    public class GetCustomerByIdHandler : IRequestHandler<GetCustomerByIdQuery, CustomerReadDTO>
+    public class GetCustomerByIdHandler : IQueryHandler<GetCustomerByIdQuery, CustomerReadDTO>
     {
         private readonly ICustomerRepo _customerRepo;
         private readonly IMapper _mapper;

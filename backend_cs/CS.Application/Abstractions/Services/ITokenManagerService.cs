@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CS.Application.Services
+namespace CS.Application.Abstractions.Services
 {
     public interface ITokenManagerService
     {

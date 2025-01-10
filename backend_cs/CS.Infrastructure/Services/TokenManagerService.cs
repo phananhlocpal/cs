@@ -1,4 +1,4 @@
-﻿using CS.Application.Services;
+﻿using CS.Application.Abstractions.Services;
 using CS.Domain.Entities;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;

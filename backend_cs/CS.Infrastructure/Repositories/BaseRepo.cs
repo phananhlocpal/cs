@@ -6,8 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using CS.Domain.DBContext;
 using CS.Domain.Entities;
-using CS.Application.Interfaces;
 using Dapper;
+using CS.Application.Abstractions.Interfaces;
 
 namespace CS.Infrastructure.Repositories
 {
@@ -40,7 +40,7 @@ namespace CS.Infrastructure.Repositories
             return entity;
         }
 
-        public void Delete(T entity)
+        public async Task Delete(T entity)
         {
             using (var connection = _context.CreateConnection())
             {

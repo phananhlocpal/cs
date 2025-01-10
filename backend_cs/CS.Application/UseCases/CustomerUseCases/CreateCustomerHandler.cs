@@ -4,18 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using CS.Application.Abstractions;
+using CS.Application.Abstractions.Repositories;
+using CS.Application.Abstractions.Services;
 using CS.Application.Commands.CustomerCommands;
 using CS.Application.DTOs.CustomerDTO;
-using CS.Application.Services;
 using CS.Domain.Entities;
 using CS.Domain.Enumerations;
-using CS.Domain.Interfaces;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 
 namespace CS.Application.UseCases.CustomerUseCases
 {
-    public class CreateCustomerHandler : IRequestHandler<CreateCustomerCommand, CustomerReadDTO>
+    public class CreateCustomerHandler : ICommandHandler<CreateCustomerCommand, CustomerReadDTO>
     {
         private readonly ICustomerRepo _customerRepo;
         private readonly IMapper _mapper;

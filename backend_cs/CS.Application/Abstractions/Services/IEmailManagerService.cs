@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CS.Domain.Entities;
 
-namespace CS.Application.Services
+namespace CS.Application.Abstractions.Services
 {
     public interface IEmailManagerService
     {

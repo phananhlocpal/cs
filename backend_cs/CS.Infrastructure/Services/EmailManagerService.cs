@@ -5,10 +5,10 @@ using System.Net.Mail;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-using CS.Application.Services;
 using CS.Domain.Entities;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.WebUtilities;
+using CS.Application.Abstractions.Services;
 
 namespace CS.Infrastructure.Services
 {

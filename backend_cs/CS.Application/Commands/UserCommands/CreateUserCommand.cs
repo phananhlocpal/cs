@@ -1,4 +1,5 @@
-﻿using CS.Application.DTOs.UserDTO;
+﻿using CS.Application.Abstractions;
+using CS.Application.DTOs.UserDTO;
 using CS.Domain.Enumerations;
 using MediatR;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace CS.Application.Commands.UserCommands
 {
-    public class CreateUserCommand : IRequest<UserReadDTO>
+    public class CreateUserCommand : ICommand<UserReadDTO>
     {
         public string Name { get; set; }
         public string Email { get; set; }

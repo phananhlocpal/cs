@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "gCrmoE9LYLririkIcMnwOvKCPXaJ/W3myUIjDq5zX1s=",
+  "Hash": "1tuq62AyM1mkKtUpo3L1PT2M59GNB6I+t5tUaLlVXuQ=",
   "Source": "CS.Presentation",
   "BasePath": "_content/CS.Presentation",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

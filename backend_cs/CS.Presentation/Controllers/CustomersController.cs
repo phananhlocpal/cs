@@ -1,6 +1,8 @@
 ﻿using CS.Application.Commands.CustomerCommands;
 using CS.Application.Queries.CustomerQueries;
+using FluentValidation;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,12 +13,15 @@ namespace CS.Controllers
     public class CustomersController : ControllerBase
     {
         private readonly IMediator _mediator;
+        private readonly IValidator<CreateCustomerCommand> _validator;
 
         public CustomersController(IMediator mediator)
         {
             _mediator = mediator;
         }
 
+        [Authorize(Policy = "AdminPolicy")]
+        [Authorize(Policy = "UserPolicy")]
         [HttpGet]
         public async Task<IActionResult> GetCustomers()
         {
@@ -25,6 +30,9 @@ namespace CS.Controllers
             return Ok(result);
         }
 
+        [Authorize(Policy = "AdminPolicy")]
+        [Authorize(Policy = "UserPolicy")]
+        [Authorize(Policy = "CustomerPolicy")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetCustomerById(Guid id)
         {
@@ -36,13 +44,28 @@ namespace CS.Controllers
             return Ok(result);
         }
 
+        [Authorize(Policy = "AdminPolicy")]
+        [Authorize(Policy = "UserPolicy")]
         [HttpPost]
         public async Task<IActionResult> CreateCustomer([FromBody] CreateCustomerCommand command)
         {
-            var result = await _mediator.Send(command);
-            return Ok(result);
+            try
+            {
+                var result = await _mediator.Send(command);
+                return Ok(result);
+            }
+            catch (FluentValidation.ValidationException ex)
+            {
+                return BadRequest(new
+                {
+                    Errors = ex.Errors.Select(e => e.ErrorMessage)
+                });
+            }
+
         }
 
+        [Authorize(Policy = "AdminPolicy")]
+        [Authorize(Policy = "CustomerPolicy")]
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateCustomer(Guid id, [FromBody] UpdateCustomerCommand command)
         {

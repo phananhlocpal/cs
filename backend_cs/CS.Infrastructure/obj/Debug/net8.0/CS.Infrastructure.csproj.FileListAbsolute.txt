@@ -32,3 +32,4 @@ C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Infrastructure\obj\Debug\net8.0\C
 C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Infrastructure\obj\Debug\net8.0\refint\CS.Infrastructure.dll
 C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Infrastructure\obj\Debug\net8.0\CS.Infrastructure.pdb
 C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Infrastructure\obj\Debug\net8.0\ref\CS.Infrastructure.dll
+C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Infrastructure\obj\Debug\net8.0\CS.Infrastructure.sourcelink.json

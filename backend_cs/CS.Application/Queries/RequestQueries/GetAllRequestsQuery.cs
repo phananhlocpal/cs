@@ -1,4 +1,5 @@
-﻿using CS.Application.DTOs.RequestDTO;
+﻿using CS.Application.Abstractions;
+using CS.Application.DTOs.RequestDTO;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CS.Application.Queries.RequestQueries
 {
-    public class GetAllRequestsQuery : IRequest<IEnumerable<RequestReadDTO>>
+    public class GetAllRequestsQuery : IQuery<IEnumerable<RequestReadDTO>>
     {
     }
 }

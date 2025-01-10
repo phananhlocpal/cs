@@ -4,16 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using CS.Application.Abstractions;
+using CS.Application.Abstractions.Repositories;
 using CS.Application.Commands.CustomerCommands;
 using CS.Application.DTOs.CustomerDTO;
 using CS.Domain.Entities;
-using CS.Domain.Interfaces;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 
 namespace CS.Application.UseCases.CustomerUseCases
 {
-    public class UpdateCustomerHandler : IRequestHandler<UpdateCustomerCommand, CustomerReadDTO>
+    public class UpdateCustomerHandler : ICommandHandler<UpdateCustomerCommand, CustomerReadDTO>
     {
         private readonly ICustomerRepo _customerRepo;
         private readonly IMapper _mapper;

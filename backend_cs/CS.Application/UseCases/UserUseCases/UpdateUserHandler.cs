@@ -1,9 +1,10 @@
 ﻿using AutoMapper;
+using CS.Application.Abstractions;
+using CS.Application.Abstractions.Repositories;
 using CS.Application.Commands.UserCommands;
 using CS.Application.DTOs.CustomerDTO;
 using CS.Application.DTOs.UserDTO;
 using CS.Domain.Entities;
-using CS.Domain.Interfaces;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using System;
@@ -14,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace CS.Application.UseCases.UserUseCases
 {
-    public class UpdateUserHandler : IRequestHandler<UpdateUserCommand, UserReadDTO>
+    public class UpdateUserHandler : ICommandHandler<UpdateUserCommand, UserReadDTO>
     {
         private readonly IUserRepo _userRepo;
         private readonly IMapper _mapper;

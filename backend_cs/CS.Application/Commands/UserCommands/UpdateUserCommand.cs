@@ -1,4 +1,5 @@
-﻿using CS.Application.DTOs.UserDTO;
+﻿using CS.Application.Abstractions;
+using CS.Application.DTOs.UserDTO;
 using CS.Domain.Enumerations;
 using MediatR;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace CS.Application.Commands.UserCommands
 {
-    public class UpdateUserCommand : IRequest<UserReadDTO>
+    public class UpdateUserCommand : ICommand<UserReadDTO>
     {
         public Guid Id { get; set; }
         public string? Name { get; set; }

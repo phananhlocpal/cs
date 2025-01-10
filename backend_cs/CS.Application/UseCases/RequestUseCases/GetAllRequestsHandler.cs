@@ -1,7 +1,8 @@
 ﻿using AutoMapper;
+using CS.Application.Abstractions;
+using CS.Application.Abstractions.Repositories;
 using CS.Application.DTOs.RequestDTO;
 using CS.Application.Queries.RequestQueries;
-using CS.Domain.Interfaces;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace CS.Application.UseCases.RequestUseCases
 {
-    public class GetAllRequestsHandler : IRequestHandler<GetAllRequestsQuery, IEnumerable<RequestReadDTO>>
+    public class GetAllRequestsHandler : IQueryHandler<GetAllRequestsQuery, IEnumerable<RequestReadDTO>>
     {
         private readonly IRequestRepo _requestRepo;
         private readonly IMapper _mapper;

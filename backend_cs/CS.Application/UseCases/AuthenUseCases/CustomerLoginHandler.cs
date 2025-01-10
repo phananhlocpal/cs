@@ -1,10 +1,11 @@
 ﻿using AutoMapper;
+using CS.Application.Abstractions;
+using CS.Application.Abstractions.Repositories;
+using CS.Application.Abstractions.Services;
 using CS.Application.AuthenDTO;
 using CS.Application.Commands.AuthenCommands;
 using CS.Application.DTOs.CustomerDTO;
-using CS.Application.Services;
 using CS.Domain.Entities;
-using CS.Domain.Interfaces;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using System;
@@ -15,7 +16,7 @@ using System.Threading.Tasks;
 
 namespace CS.Application.UseCases.AuthenUseCases
 {
-    public class CustomerLoginHandler : IRequestHandler<CustomerLoginCommand, CustomerLoginResponseViewModel>
+    public class CustomerLoginHandler : ICommandHandler<CustomerLoginCommand, CustomerLoginResponseViewModel>
     {
         private readonly ICustomerRepo _customerRepo;
         private readonly IMapper _mapper;

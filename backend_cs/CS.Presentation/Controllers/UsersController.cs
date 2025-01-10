@@ -3,6 +3,7 @@ using CS.Application.Commands.UserCommands;
 using CS.Application.Queries.CustomerQueries;
 using CS.Application.Queries.UserQueries;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,6 +20,8 @@ namespace CS.Presentation.Controllers
             _mediator = mediator;
         }
 
+        [Authorize(Policy = "AdminPolicy")]
+        [Authorize(Policy = "UserPolicy")]
         [HttpGet]
         public async Task<IActionResult> GetUsers()
         {
@@ -27,6 +30,8 @@ namespace CS.Presentation.Controllers
             return Ok(result);
         }
 
+        [Authorize(Policy = "AdminPolicy")]
+        [Authorize(Policy = "UserPolicy")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetUserById(Guid id)
         {
@@ -38,6 +43,8 @@ namespace CS.Presentation.Controllers
             return Ok(result);
         }
 
+        [Authorize(Policy = "AdminPolicy")]
+        [Authorize(Policy = "UserPolicy")]
         [HttpPost]
         public async Task<IActionResult> CreateUser([FromBody] CreateUserCommand command)
         {
@@ -45,6 +52,8 @@ namespace CS.Presentation.Controllers
             return Ok(result);
         }
 
+        [Authorize(Policy = "AdminPolicy")]
+        [Authorize(Policy = "UserPolicy")]
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateUser(Guid id, [FromBody] UpdateUserCommand command)
         {
