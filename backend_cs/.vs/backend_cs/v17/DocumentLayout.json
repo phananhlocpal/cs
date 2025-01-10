@@ -339,21 +339,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UpdateUserCommandValidator.cs",
-              "DocumentMoniker": "C:\\Users\\lphan\\Documents\\Paul\u0027s Workspace\\My Project\\cs\\backend_cs\\CS.Application\\Validators\\UserCommandValidators\\UpdateUserCommandValidator.cs",
-              "RelativeDocumentMoniker": "CS.Application\\Validators\\UserCommandValidators\\UpdateUserCommandValidator.cs",
-              "ToolTip": "C:\\Users\\lphan\\Documents\\Paul\u0027s Workspace\\My Project\\cs\\backend_cs\\CS.Application\\Validators\\UserCommandValidators\\UpdateUserCommandValidator.cs",
-              "RelativeToolTip": "CS.Application\\Validators\\UserCommandValidators\\UpdateUserCommandValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:50:42.002Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 4,
@@ -364,8 +351,7 @@
               "RelativeToolTip": "CS.Presentation\\Program.cs",
               "ViewState": "AgIAADwAAAAAAAAAAAAAAFMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T08:30:35.254Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T08:30:35.254Z"
             },
             {
               "$type": "Document",
@@ -377,34 +363,7 @@
               "RelativeToolTip": "CS.Presentation\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T08:29:57.138Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CustomersController.cs",
-              "DocumentMoniker": "C:\\Users\\lphan\\Documents\\Paul\u0027s Workspace\\My Project\\cs\\backend_cs\\CS.Presentation\\Controllers\\CustomersController.cs",
-              "RelativeDocumentMoniker": "CS.Presentation\\Controllers\\CustomersController.cs",
-              "ToolTip": "C:\\Users\\lphan\\Documents\\Paul\u0027s Workspace\\My Project\\cs\\backend_cs\\CS.Presentation\\Controllers\\CustomersController.cs",
-              "RelativeToolTip": "CS.Presentation\\Controllers\\CustomersController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T08:46:20.588Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RequestsController.cs",
-              "DocumentMoniker": "C:\\Users\\lphan\\Documents\\Paul\u0027s Workspace\\My Project\\cs\\backend_cs\\CS.Presentation\\Controllers\\RequestsController.cs",
-              "RelativeDocumentMoniker": "CS.Presentation\\Controllers\\RequestsController.cs",
-              "ToolTip": "C:\\Users\\lphan\\Documents\\Paul\u0027s Workspace\\My Project\\cs\\backend_cs\\CS.Presentation\\Controllers\\RequestsController.cs",
-              "RelativeToolTip": "CS.Presentation\\Controllers\\RequestsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFEAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T08:45:20.1Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T08:29:57.138Z"
             },
             {
               "$type": "Document",
@@ -421,6 +380,42 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UpdateUserCommandValidator.cs",
+              "DocumentMoniker": "C:\\Users\\lphan\\Documents\\Paul\u0027s Workspace\\My Project\\cs\\backend_cs\\CS.Application\\Validators\\UserCommandValidators\\UpdateUserCommandValidator.cs",
+              "RelativeDocumentMoniker": "CS.Application\\Validators\\UserCommandValidators\\UpdateUserCommandValidator.cs",
+              "ToolTip": "C:\\Users\\lphan\\Documents\\Paul\u0027s Workspace\\My Project\\cs\\backend_cs\\CS.Application\\Validators\\UserCommandValidators\\UpdateUserCommandValidator.cs",
+              "RelativeToolTip": "CS.Application\\Validators\\UserCommandValidators\\UpdateUserCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T03:50:42.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CustomersController.cs",
+              "DocumentMoniker": "C:\\Users\\lphan\\Documents\\Paul\u0027s Workspace\\My Project\\cs\\backend_cs\\CS.Presentation\\Controllers\\CustomersController.cs",
+              "RelativeDocumentMoniker": "CS.Presentation\\Controllers\\CustomersController.cs",
+              "ToolTip": "C:\\Users\\lphan\\Documents\\Paul\u0027s Workspace\\My Project\\cs\\backend_cs\\CS.Presentation\\Controllers\\CustomersController.cs",
+              "RelativeToolTip": "CS.Presentation\\Controllers\\CustomersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T08:46:20.588Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RequestsController.cs",
+              "DocumentMoniker": "C:\\Users\\lphan\\Documents\\Paul\u0027s Workspace\\My Project\\cs\\backend_cs\\CS.Presentation\\Controllers\\RequestsController.cs",
+              "RelativeDocumentMoniker": "CS.Presentation\\Controllers\\RequestsController.cs",
+              "ToolTip": "C:\\Users\\lphan\\Documents\\Paul\u0027s Workspace\\My Project\\cs\\backend_cs\\CS.Presentation\\Controllers\\RequestsController.cs",
+              "RelativeToolTip": "CS.Presentation\\Controllers\\RequestsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFEAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T08:45:20.1Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
               "Title": "CreateUserCommandValidator.cs",
               "DocumentMoniker": "C:\\Users\\lphan\\Documents\\Paul\u0027s Workspace\\My Project\\cs\\backend_cs\\CS.Application\\Validators\\UserCommandValidators\\CreateUserCommandValidator.cs",
@@ -429,8 +424,7 @@
               "RelativeToolTip": "CS.Application\\Validators\\UserCommandValidators\\CreateUserCommandValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:50:26.799Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:50:26.799Z"
             },
             {
               "$type": "Document",
@@ -442,8 +436,7 @@
               "RelativeToolTip": "CS.Application\\Validators\\RequestCommandValidators\\UpdateRequestCommandValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:50:12.606Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:50:12.606Z"
             },
             {
               "$type": "Document",
@@ -455,8 +448,7 @@
               "RelativeToolTip": "CS.Application\\Validators\\RequestCommandValidators\\CreateRequestCommandValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:49:56.85Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:49:56.85Z"
             },
             {
               "$type": "Document",
@@ -468,8 +460,7 @@
               "RelativeToolTip": "CS.Application\\Validators\\AuthenCommandValidators\\UserLoginCommandValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:49:02.165Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:49:02.165Z"
             },
             {
               "$type": "Document",
@@ -481,8 +472,7 @@
               "RelativeToolTip": "CS.Application\\Validators\\AuthenCommandValidators\\CustomerLoginCommandValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:48:47.045Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:48:47.045Z"
             },
             {
               "$type": "Document",
@@ -494,8 +484,7 @@
               "RelativeToolTip": "CS.Application\\Validators\\CustomerCommandValidators\\CreateCustomerCommandValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:47:59.559Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:47:59.559Z"
             },
             {
               "$type": "Document",
@@ -507,8 +496,7 @@
               "RelativeToolTip": "CS.Application\\Validators\\CustomerCommandValidators\\UpdateCustomerCommandValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:40:15.276Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:40:15.276Z"
             },
             {
               "$type": "Document",
@@ -520,8 +508,7 @@
               "RelativeToolTip": "CS.Application\\DependencyInjection.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:35:30.004Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:35:30.004Z"
             },
             {
               "$type": "Document",
@@ -533,8 +520,7 @@
               "RelativeToolTip": "CS.Application\\Behaviors\\ValidationPipelineBahavior.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAAwCMAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T02:54:35.795Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T02:54:35.795Z"
             },
             {
               "$type": "Document",
@@ -546,8 +532,7 @@
               "RelativeToolTip": "CS.Presentation\\CS.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-01-09T06:40:37.299Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T06:40:37.299Z"
             },
             {
               "$type": "Document",
@@ -559,8 +544,7 @@
               "RelativeToolTip": "CS.Application\\Commands\\AuthenCommands\\CustomerLoginCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:12:19.84Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:12:19.84Z"
             },
             {
               "$type": "Document",
@@ -572,8 +556,7 @@
               "RelativeToolTip": "CS.Application\\UseCases\\AuthenUseCases\\UserLoginHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T08:16:26.137Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T08:16:26.137Z"
             },
             {
               "$type": "Document",
@@ -585,8 +568,7 @@
               "RelativeToolTip": "CS.Application\\UseCases\\AuthenUseCases\\CustomerLoginHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T08:38:11.782Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T08:38:11.782Z"
             },
             {
               "$type": "Document",
@@ -598,8 +580,7 @@
               "RelativeToolTip": "CS.Application\\UseCases\\CustomerUseCases\\UpdateCustomerHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T10:13:25.9Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T10:13:25.9Z"
             },
             {
               "$type": "Document",
@@ -611,8 +592,7 @@
               "RelativeToolTip": "CS.Application\\UseCases\\CustomerUseCases\\GetCustomerByIdHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T04:07:08.545Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T04:07:08.545Z"
             },
             {
               "$type": "Document",
@@ -624,8 +604,7 @@
               "RelativeToolTip": "CS.Application\\UseCases\\CustomerUseCases\\GetAllCustomerHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T04:03:07.531Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T04:03:07.531Z"
             },
             {
               "$type": "Document",
@@ -637,8 +616,7 @@
               "RelativeToolTip": "CS.Application\\UseCases\\CustomerUseCases\\CreateCustomerHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T09:14:57.262Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T09:14:57.262Z"
             },
             {
               "$type": "Document",
@@ -650,8 +628,7 @@
               "RelativeToolTip": "CS.Application\\UseCases\\UserUseCases\\UpdateUserHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T08:50:56.292Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T08:50:56.292Z"
             },
             {
               "$type": "Document",
@@ -663,8 +640,7 @@
               "RelativeToolTip": "CS.Application\\UseCases\\UserUseCases\\GetUserByIdHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T08:51:18.427Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T08:51:18.427Z"
             },
             {
               "$type": "Document",
@@ -676,8 +652,7 @@
               "RelativeToolTip": "CS.Application\\UseCases\\UserUseCases\\GetAllUsersHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T08:51:30.644Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T08:51:30.644Z"
             },
             {
               "$type": "Document",
@@ -689,8 +664,7 @@
               "RelativeToolTip": "CS.Application\\UseCases\\UserUseCases\\CreateUserHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T08:50:31.597Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T08:50:31.597Z"
             },
             {
               "$type": "Document",
@@ -702,8 +676,7 @@
               "RelativeToolTip": "CS.Application\\UseCases\\RequestUseCases\\UpdateRequestHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T09:17:30.444Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T09:17:30.444Z"
             },
             {
               "$type": "Document",
@@ -715,8 +688,7 @@
               "RelativeToolTip": "CS.Application\\UseCases\\RequestUseCases\\GetRequestsByUserIdHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T02:22:45.069Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T02:22:45.069Z"
             },
             {
               "$type": "Document",
@@ -728,8 +700,7 @@
               "RelativeToolTip": "CS.Application\\UseCases\\RequestUseCases\\GetRequestsByStatusHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T02:14:46.53Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T02:14:46.53Z"
             },
             {
               "$type": "Document",
@@ -741,8 +712,7 @@
               "RelativeToolTip": "CS.Application\\UseCases\\RequestUseCases\\GetRequestsByCustomerIdHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T02:18:13.257Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T02:18:13.257Z"
             },
             {
               "$type": "Document",
@@ -754,8 +724,7 @@
               "RelativeToolTip": "CS.Application\\UseCases\\RequestUseCases\\GetRequestByIdHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T09:18:05.131Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T09:18:05.131Z"
             },
             {
               "$type": "Document",
@@ -767,8 +736,7 @@
               "RelativeToolTip": "CS.Application\\UseCases\\RequestUseCases\\GetAllRequestsHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T09:17:50.008Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T09:17:50.008Z"
             },
             {
               "$type": "Document",
@@ -780,8 +748,7 @@
               "RelativeToolTip": "CS.Application\\UseCases\\RequestUseCases\\DeleteRequestHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T02:11:25.363Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T02:11:25.363Z"
             },
             {
               "$type": "Document",
@@ -793,8 +760,7 @@
               "RelativeToolTip": "CS.Application\\UseCases\\RequestUseCases\\CreateRequestHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T09:17:17.704Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T09:17:17.704Z"
             },
             {
               "$type": "Document",
@@ -806,8 +772,7 @@
               "RelativeToolTip": "CS.Application\\Queries\\UserQueries\\GetUserByIdQuery.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:27:35.831Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:27:35.831Z"
             },
             {
               "$type": "Document",
@@ -819,8 +784,7 @@
               "RelativeToolTip": "CS.Application\\Queries\\UserQueries\\GetAllUsersQuery.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:27:28.592Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:27:28.592Z"
             },
             {
               "$type": "Document",
@@ -832,8 +796,7 @@
               "RelativeToolTip": "CS.Application\\Queries\\RequestQueries\\GetRequestsByUserIdQuery.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:27:20.982Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:27:20.982Z"
             },
             {
               "$type": "Document",
@@ -845,8 +808,7 @@
               "RelativeToolTip": "CS.Application\\Queries\\RequestQueries\\GetRequestsByStatusQuery.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:27:14.538Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:27:14.538Z"
             },
             {
               "$type": "Document",
@@ -858,8 +820,7 @@
               "RelativeToolTip": "CS.Application\\Queries\\RequestQueries\\GetRequestsByCustomerIdQuery.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:27:02.918Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:27:02.918Z"
             },
             {
               "$type": "Document",
@@ -871,8 +832,7 @@
               "RelativeToolTip": "CS.Application\\Queries\\RequestQueries\\GetRequestByIdQuery.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:26:55.392Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:26:55.392Z"
             },
             {
               "$type": "Document",
@@ -884,8 +844,7 @@
               "RelativeToolTip": "CS.Application\\Queries\\RequestQueries\\GetAllRequestsQuery.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:26:46.938Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:26:46.938Z"
             },
             {
               "$type": "Document",
@@ -897,8 +856,7 @@
               "RelativeToolTip": "CS.Application\\Queries\\CustomerQueries\\GetCustomerByIdQuery.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:26:34.234Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:26:34.234Z"
             },
             {
               "$type": "Document",
@@ -910,8 +868,7 @@
               "RelativeToolTip": "CS.Application\\Queries\\CustomerQueries\\GetAllCustomersQuery.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:26:24.666Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:26:24.666Z"
             },
             {
               "$type": "Document",
@@ -923,8 +880,7 @@
               "RelativeToolTip": "CS.Application\\Commands\\UserCommands\\UpdateUserCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:26:11.14Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:26:11.14Z"
             },
             {
               "$type": "Document",
@@ -936,8 +892,7 @@
               "RelativeToolTip": "CS.Application\\Commands\\UserCommands\\CreateUserCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:26:03.162Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:26:03.162Z"
             },
             {
               "$type": "Document",
@@ -949,8 +904,7 @@
               "RelativeToolTip": "CS.Application\\Commands\\RequestCommands\\UpdateRequestCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:25:53.71Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:25:53.71Z"
             },
             {
               "$type": "Document",
@@ -962,8 +916,7 @@
               "RelativeToolTip": "CS.Application\\Commands\\RequestCommands\\DeleteRequestCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:25:44.687Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:25:44.687Z"
             },
             {
               "$type": "Document",
@@ -975,8 +928,7 @@
               "RelativeToolTip": "CS.Application\\Commands\\RequestCommands\\CreateRequestCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:25:37.372Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:25:37.372Z"
             },
             {
               "$type": "Document",
@@ -988,8 +940,7 @@
               "RelativeToolTip": "CS.Application\\Commands\\CustomerCommands\\CreateCustomerCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:25:05.366Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:25:05.366Z"
             },
             {
               "$type": "Document",
@@ -1001,8 +952,7 @@
               "RelativeToolTip": "CS.Application\\Commands\\AuthenCommands\\UserLoginCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:24:53.323Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:24:53.323Z"
             },
             {
               "$type": "Document",
@@ -1014,8 +964,7 @@
               "RelativeToolTip": "CS.Application\\Abstractions\\IQueryHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:13:27.772Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:13:27.772Z"
             },
             {
               "$type": "Document",
@@ -1027,8 +976,7 @@
               "RelativeToolTip": "CS.Application\\Abstractions\\ICommandHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T02:58:24.336Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T02:58:24.336Z"
             },
             {
               "$type": "Document",
@@ -1040,8 +988,7 @@
               "RelativeToolTip": "CS.Infrastructure\\Repositories\\UserRepo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:06:07.4Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:06:07.4Z"
             },
             {
               "$type": "Document",
@@ -1053,8 +1000,7 @@
               "RelativeToolTip": "CS.Application\\Abstractions\\ICommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T02:57:34.615Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T02:57:34.615Z"
             },
             {
               "$type": "Document",
@@ -1066,8 +1012,7 @@
               "RelativeToolTip": "CS.Application\\Abstractions\\Repositories\\IUserRepo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T02:56:50.187Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T02:56:50.187Z"
             },
             {
               "$type": "Document",
@@ -1079,8 +1024,7 @@
               "RelativeToolTip": "CS.Infrastructure\\Repositories\\CustomerRepo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T08:28:52.143Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T08:28:52.143Z"
             },
             {
               "$type": "Document",
@@ -1092,8 +1036,7 @@
               "RelativeToolTip": "CS.Infrastructure\\Repositories\\RequestRepo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T02:29:59.993Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T02:29:59.993Z"
             },
             {
               "$type": "Document",
@@ -1105,8 +1048,7 @@
               "RelativeToolTip": "CS.Application\\Abstractions\\IQuery.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T02:58:05.053Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T02:58:05.053Z"
             },
             {
               "$type": "Document",
@@ -1118,8 +1060,7 @@
               "RelativeToolTip": "CS.Application\\Abstractions\\Repositories\\IRequestRepo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T02:56:45.264Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T02:56:45.264Z"
             },
             {
               "$type": "Document",
@@ -1131,8 +1072,7 @@
               "RelativeToolTip": "CS.Application\\Abstractions\\Repositories\\ICustomerRepo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T02:56:40.745Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T02:56:40.745Z"
             },
             {
               "$type": "Document",
@@ -1144,8 +1084,7 @@
               "RelativeToolTip": "CS.Application\\Abstractions\\Repositories\\IBaseRepo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T02:55:58.333Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T02:55:58.333Z"
             },
             {
               "$type": "Document",
@@ -1157,8 +1096,7 @@
               "RelativeToolTip": "CS.Application\\Abstractions\\Services\\IEmailManagerService.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T09:32:49.454Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T09:32:49.454Z"
             },
             {
               "$type": "Document",
@@ -1170,8 +1108,7 @@
               "RelativeToolTip": "CS.Domain\\Entities\\BaseEntity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T09:37:22.595Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T09:37:22.595Z"
             },
             {
               "$type": "Document",
@@ -1183,8 +1120,7 @@
               "RelativeToolTip": "CS.Domain\\Enumerations\\RequestIssueTypeEnum.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T09:35:45.304Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T09:35:45.304Z"
             },
             {
               "$type": "Document",
@@ -1196,8 +1132,7 @@
               "RelativeToolTip": "CS.Infrastructure\\DBContext\\DapperContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T04:43:19.628Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T04:43:19.628Z"
             },
             {
               "$type": "Document",
@@ -1209,8 +1144,7 @@
               "RelativeToolTip": "CS.Domain\\Entities\\Customer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T09:37:24.66Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T09:37:24.66Z"
             },
             {
               "$type": "Document",
@@ -1222,8 +1156,7 @@
               "RelativeToolTip": "CS.Presentation\\Middlewares\\ExceptionHandlingMiddleware.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T09:44:45.506Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T09:44:45.506Z"
             },
             {
               "$type": "Document",
@@ -1235,8 +1168,7 @@
               "RelativeToolTip": "CS.Application\\Abstractions\\Services\\ITokenManagerService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T09:32:53.058Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T09:32:53.058Z"
             },
             {
               "$type": "Document",
@@ -1248,8 +1180,7 @@
               "RelativeToolTip": "CS.Application\\DTOs\\RequestDTO\\RequestReadDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T09:26:13.665Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T09:26:13.665Z"
             },
             {
               "$type": "Document",
@@ -1261,8 +1192,7 @@
               "RelativeToolTip": "CS.Application\\DTOs\\UserDTO\\UserReadDTO.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T08:48:40.373Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T08:48:40.373Z"
             },
             {
               "$type": "Document",
@@ -1274,8 +1204,7 @@
               "RelativeToolTip": "CS.Application\\DTOs\\UserDTO\\UserCreateDTO.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T08:48:37.201Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T08:48:37.201Z"
             },
             {
               "$type": "Document",
@@ -1287,8 +1216,7 @@
               "RelativeToolTip": "CS.Presentation\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-09T08:42:29.912Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T08:42:29.912Z"
             },
             {
               "$type": "Document",
@@ -1300,8 +1228,7 @@
               "RelativeToolTip": "CS.Infrastructure\\Services\\TokenManagerService.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAnwCcAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T08:39:26.408Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T08:39:26.408Z"
             },
             {
               "$type": "Document",
@@ -1313,8 +1240,7 @@
               "RelativeToolTip": "CS.Presentation\\Properties\\launchSettings.json",
               "ViewState": "AgIAABsAAAAAAAAAAIBJwBwAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-09T06:40:14.922Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T06:40:14.922Z"
             },
             {
               "$type": "Document",
@@ -1348,8 +1274,7 @@
               "RelativeToolTip": "CS.Application\\DTOs\\CustomerDTO\\CustomerCreateDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T03:29:28.358Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T03:29:28.358Z"
             },
             {
               "$type": "Document",
@@ -1361,8 +1286,7 @@
               "RelativeToolTip": "CS.Application\\Mappings\\RequestMapping.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T02:19:07.88Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T02:19:07.88Z"
             },
             {
               "$type": "Document",
@@ -1374,8 +1298,7 @@
               "RelativeToolTip": "CS.Application\\Mappings\\UserMapping.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T02:19:16.255Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T02:19:16.255Z"
             },
             {
               "$type": "Document",
