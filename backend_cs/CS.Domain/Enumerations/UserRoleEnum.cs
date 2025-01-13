@@ -9,7 +9,6 @@ namespace CS.Domain.Enumerations
     public enum UserRoleEnum
     {
         User,
-        Admin,
-        Customer
+        Admin
     }
 }

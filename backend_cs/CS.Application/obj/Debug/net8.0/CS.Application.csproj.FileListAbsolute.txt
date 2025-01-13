@@ -29,3 +29,19 @@ C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Application\obj\Debug\net8.0\refi
 C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Application\obj\Debug\net8.0\CS.Application.pdb
 C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Application\obj\Debug\net8.0\ref\CS.Application.dll
 C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Application\obj\Debug\net8.0\CS.Application.sourcelink.json
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Application\bin\Debug\net8.0\CS.Application.deps.json
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Application\bin\Debug\net8.0\CS.Application.dll
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Application\bin\Debug\net8.0\CS.Application.pdb
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Application\bin\Debug\net8.0\CS.Domain.dll
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Application\bin\Debug\net8.0\CS.Domain.pdb
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Application\obj\Debug\net8.0\CS.Application.csproj.AssemblyReference.cache
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Application\obj\Debug\net8.0\CS.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Application\obj\Debug\net8.0\CS.Application.AssemblyInfoInputs.cache
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Application\obj\Debug\net8.0\CS.Application.AssemblyInfo.cs
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Application\obj\Debug\net8.0\CS.Application.csproj.CoreCompileInputs.cache
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Application\obj\Debug\net8.0\CS.Application.sourcelink.json
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Application\obj\Debug\net8.0\CS.Appli.56701010.Up2Date
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Application\obj\Debug\net8.0\CS.Application.dll
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Application\obj\Debug\net8.0\refint\CS.Application.dll
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Application\obj\Debug\net8.0\CS.Application.pdb
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Application\obj\Debug\net8.0\ref\CS.Application.dll

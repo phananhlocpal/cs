@@ -23,3 +23,16 @@ C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Domain\obj\Debug\net8.0\refint\CS
 C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Domain\obj\Debug\net8.0\CS.Domain.pdb
 C:\Users\Surface\Downloads\cs\cs\backend_cs\CS.Domain\obj\Debug\net8.0\ref\CS.Domain.dll
 C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Domain\obj\Debug\net8.0\CS.Domain.sourcelink.json
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Domain\bin\Debug\net8.0\CS.Domain.deps.json
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Domain\bin\Debug\net8.0\CS.Domain.dll
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Domain\bin\Debug\net8.0\CS.Domain.pdb
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Domain\obj\Debug\net8.0\CS.Domain.csproj.AssemblyReference.cache
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Domain\obj\Debug\net8.0\CS.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Domain\obj\Debug\net8.0\CS.Domain.AssemblyInfoInputs.cache
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Domain\obj\Debug\net8.0\CS.Domain.AssemblyInfo.cs
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Domain\obj\Debug\net8.0\CS.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Domain\obj\Debug\net8.0\CS.Domain.sourcelink.json
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Domain\obj\Debug\net8.0\CS.Domain.dll
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Domain\obj\Debug\net8.0\refint\CS.Domain.dll
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Domain\obj\Debug\net8.0\CS.Domain.pdb
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Domain\obj\Debug\net8.0\ref\CS.Domain.dll

@@ -20,8 +20,7 @@ namespace CS.Presentation.Controllers
             _mediator = mediator;
         }
 
-        [Authorize(Policy = "AdminPolicy")]
-        [Authorize(Policy = "UserPolicy")]
+        [Authorize(Roles = "Admin, User")]
         [HttpGet]
         public async Task<IActionResult> GetUsers()
         {
@@ -30,8 +29,7 @@ namespace CS.Presentation.Controllers
             return Ok(result);
         }
 
-        [Authorize(Policy = "AdminPolicy")]
-        [Authorize(Policy = "UserPolicy")]
+        [Authorize(Roles = "Admin, User")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetUserById(Guid id)
         {
@@ -43,8 +41,7 @@ namespace CS.Presentation.Controllers
             return Ok(result);
         }
 
-        [Authorize(Policy = "AdminPolicy")]
-        [Authorize(Policy = "UserPolicy")]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> CreateUser([FromBody] CreateUserCommand command)
         {
@@ -52,8 +49,7 @@ namespace CS.Presentation.Controllers
             return Ok(result);
         }
 
-        [Authorize(Policy = "AdminPolicy")]
-        [Authorize(Policy = "UserPolicy")]
+        [Authorize(Roles = "Admin, User")]
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateUser(Guid id, [FromBody] UpdateUserCommand command)
         {

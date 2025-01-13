@@ -21,8 +21,7 @@ namespace CS.Presentation.Controllers
             _mediator = mediator;
         }
 
-        [Authorize(Policy = "AdminPolicy")]
-        [Authorize(Policy = "UserPolicy")]
+        [Authorize(Roles = "Admin, User")]
         [HttpGet]
         public async Task<IActionResult> GetRequests()
         {
@@ -30,9 +29,7 @@ namespace CS.Presentation.Controllers
             return Ok(result);
         }
 
-        [Authorize(Policy = "AdminPolicy")]
-        [Authorize(Policy = "UserPolicy")]
-        [Authorize(Policy = "CustomerPolicy")]
+        [Authorize(Roles = "Admin, User, Customer")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetRequestById(Guid id)
         {
@@ -40,9 +37,7 @@ namespace CS.Presentation.Controllers
             return Ok(result);
         }
 
-        [Authorize(Policy = "AdminPolicy")]
-        [Authorize(Policy = "UserPolicy")]
-        [Authorize(Policy = "CustomerPolicy")]
+        [Authorize(Roles = "Admin, User, Customer")]
         [HttpGet("customer/{customerId}")]
         public async Task<IActionResult> GetRequestsByCustomerId(Guid customerId)
         {
@@ -50,8 +45,7 @@ namespace CS.Presentation.Controllers
             return Ok(result);
         }
 
-        [Authorize(Policy = "AdminPolicy")]
-        [Authorize(Policy = "UserPolicy")]
+        [Authorize(Roles = "Admin, User")]
         [HttpGet("status/{status}")]
         public async Task<IActionResult> GetRequestsByStatus(RequestStatusEnum status)
         {
@@ -59,8 +53,7 @@ namespace CS.Presentation.Controllers
             return Ok(result);
         }
 
-        [Authorize(Policy = "AdminPolicy")]
-        [Authorize(Policy = "UserPolicy")]
+        [Authorize(Roles = "Admin, User")]
         [HttpGet("user/{userId}")]
         public async Task<IActionResult> GetRequestsByUserId(Guid userId)
         {
@@ -68,9 +61,7 @@ namespace CS.Presentation.Controllers
             return Ok(result);
         }
 
-        [Authorize(Policy = "AdminPolicy")]
-        [Authorize(Policy = "UserPolicy")]
-        [Authorize(Policy = "CustomerPolicy")]
+        [Authorize(Roles = "Admin, User, Customer")]
         [HttpPost]
         public async Task<IActionResult> CreateRequest([FromBody] CreateRequestCommand command)
         {
@@ -78,8 +69,7 @@ namespace CS.Presentation.Controllers
             return Ok(result);
         }
 
-        [Authorize(Policy = "AdminPolicy")]
-        [Authorize(Policy = "UserPolicy")]
+        [Authorize(Roles = "Admin, User")]
         [HttpPut]
         public async Task<IActionResult> UpdateRequest([FromBody] UpdateRequestCommand command)
         {
@@ -87,7 +77,7 @@ namespace CS.Presentation.Controllers
             return Ok(result);
         }
 
-        [Authorize(Policy = "AdminPolicy")]
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteRequest(Guid id)
         {

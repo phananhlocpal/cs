@@ -39,6 +39,7 @@ namespace CS.Application.UseCases.UserUseCases
             var userRequest = new User
             {
                 Id = Guid.NewGuid(),
+                Name = request.Name,
                 Email = request.Email,
                 PhoneNumber = request.PhoneNumber,
                 Password = request.Password,

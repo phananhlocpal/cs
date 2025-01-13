@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using CS.Domain.DBContext;
 using CS.Domain.Entities;
 using Dapper;
-using CS.Application.Abstractions.Interfaces;
+using CS.Application.Abstractions.Repositories;
 
 namespace CS.Infrastructure.Repositories
 {

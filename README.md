@@ -5,6 +5,7 @@
 - [x] Dapper
 - [x] Fluent Validation
 - [x] CQRS and mediator
+- [x] Attribute and RABC
 
 ## Features in my project
 - [x] CRUD Users

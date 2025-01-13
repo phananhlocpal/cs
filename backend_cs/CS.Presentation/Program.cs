@@ -1,10 +1,11 @@
-using CS.Application;
+﻿using CS.Application;
 using CS.Application.Abstractions.Repositories;
 using CS.Application.Abstractions.Services;
 using CS.Application.Behaviors;
 using CS.Application.UseCases.CustomerUseCases;
 using CS.Domain.DBContext;
 using CS.Domain.Entities;
+using CS.Domain.Enumerations;
 using CS.Infrastructure.Repositories;
 using CS.Infrastructure.Services;
 using MediatR;
@@ -74,12 +75,15 @@ builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 // Register from application layer
 builder.Services.AddApplication();
 
-// Register authorization policies
-builder.Services.AddAuthorization(options =>
+// Register CORS
+builder.Services.AddCors(setupAction =>
 {
-    options.AddPolicy("AdminPolicy", policy => policy.RequireRole("AdminPolicy"));
-    options.AddPolicy("UserPolicy", policy => policy.RequireRole("UserPolicy"));
-    options.AddPolicy("CustomerPolicy", policy => policy.RequireRole("Customer"));
+    setupAction.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
 });
 
 var app = builder.Build();
@@ -95,6 +99,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("AllowAll");
 
 app.UseAuthentication();
 app.UseAuthorization();

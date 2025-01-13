@@ -20,8 +20,7 @@ namespace CS.Controllers
             _mediator = mediator;
         }
 
-        [Authorize(Policy = "AdminPolicy")]
-        [Authorize(Policy = "UserPolicy")]
+        [Authorize(Roles = "Admin, User")]
         [HttpGet]
         public async Task<IActionResult> GetCustomers()
         {
@@ -30,9 +29,7 @@ namespace CS.Controllers
             return Ok(result);
         }
 
-        [Authorize(Policy = "AdminPolicy")]
-        [Authorize(Policy = "UserPolicy")]
-        [Authorize(Policy = "CustomerPolicy")]
+        [Authorize(Roles = "Admin, User, Customer")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetCustomerById(Guid id)
         {
@@ -44,8 +41,7 @@ namespace CS.Controllers
             return Ok(result);
         }
 
-        [Authorize(Policy = "AdminPolicy")]
-        [Authorize(Policy = "UserPolicy")]
+        [Authorize(Roles = "Admin, User")]
         [HttpPost]
         public async Task<IActionResult> CreateCustomer([FromBody] CreateCustomerCommand command)
         {
@@ -64,8 +60,7 @@ namespace CS.Controllers
 
         }
 
-        [Authorize(Policy = "AdminPolicy")]
-        [Authorize(Policy = "CustomerPolicy")]
+        [Authorize(Roles = "Admin, Customer")]
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateCustomer(Guid id, [FromBody] UpdateCustomerCommand command)
         {
