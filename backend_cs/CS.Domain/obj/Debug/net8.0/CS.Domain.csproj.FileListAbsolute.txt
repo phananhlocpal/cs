@@ -36,3 +36,16 @@ C:\Users\Surface\source\repos\cs\backend_cs\CS.Domain\obj\Debug\net8.0\CS.Domain
 C:\Users\Surface\source\repos\cs\backend_cs\CS.Domain\obj\Debug\net8.0\refint\CS.Domain.dll
 C:\Users\Surface\source\repos\cs\backend_cs\CS.Domain\obj\Debug\net8.0\CS.Domain.pdb
 C:\Users\Surface\source\repos\cs\backend_cs\CS.Domain\obj\Debug\net8.0\ref\CS.Domain.dll
+D:\cs\backend_cs\CS.Domain\bin\Debug\net8.0\CS.Domain.deps.json
+D:\cs\backend_cs\CS.Domain\bin\Debug\net8.0\CS.Domain.dll
+D:\cs\backend_cs\CS.Domain\bin\Debug\net8.0\CS.Domain.pdb
+D:\cs\backend_cs\CS.Domain\obj\Debug\net8.0\CS.Domain.csproj.AssemblyReference.cache
+D:\cs\backend_cs\CS.Domain\obj\Debug\net8.0\CS.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\cs\backend_cs\CS.Domain\obj\Debug\net8.0\CS.Domain.AssemblyInfoInputs.cache
+D:\cs\backend_cs\CS.Domain\obj\Debug\net8.0\CS.Domain.AssemblyInfo.cs
+D:\cs\backend_cs\CS.Domain\obj\Debug\net8.0\CS.Domain.csproj.CoreCompileInputs.cache
+D:\cs\backend_cs\CS.Domain\obj\Debug\net8.0\CS.Domain.sourcelink.json
+D:\cs\backend_cs\CS.Domain\obj\Debug\net8.0\CS.Domain.dll
+D:\cs\backend_cs\CS.Domain\obj\Debug\net8.0\refint\CS.Domain.dll
+D:\cs\backend_cs\CS.Domain\obj\Debug\net8.0\CS.Domain.pdb
+D:\cs\backend_cs\CS.Domain\obj\Debug\net8.0\ref\CS.Domain.dll

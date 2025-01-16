@@ -6,6 +6,7 @@ using CS.Application.UseCases.CustomerUseCases;
 using CS.Domain.DBContext;
 using CS.Domain.Entities;
 using CS.Domain.Enumerations;
+using CS.Infrastructure.Hubs;
 using CS.Infrastructure.Repositories;
 using CS.Infrastructure.Services;
 using MediatR;
@@ -25,6 +26,9 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
 });
+
+// Register SignalR
+builder.Services.AddSignalR();
 
 // Register jwt token
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -62,6 +66,7 @@ builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Updat
 // Register Services
 builder.Services.AddScoped<IEmailManagerService, EmailManagerService>();
 builder.Services.AddScoped<ITokenManagerService, TokenManagerService>();
+builder.Services.AddScoped<IChatService, ChatService>();
 
 // Register repositories
 builder.Services.AddScoped<IRequestRepo, RequestRepo>();
@@ -97,6 +102,8 @@ if (app.Environment.IsDevelopment())
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
     });
 }
+
+app.MapHub<ChatHub>("/chatHub");
 
 app.UseHttpsRedirection();
 

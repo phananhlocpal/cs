@@ -10,17 +10,11 @@ import {
     Textarea,
     VStack
 } from "@chakra-ui/react";
-import { RequestStatusEnum, RequestResponseModel } from "@/abstract";
-
-interface UpdateRequestFormData {
-    title: string;
-    description: string;
-    status: RequestStatusEnum;
-}
+import { RequestStatusEnum, RequestResponseModel, RequestUpdateRequestModel } from "@/abstract";
 
 interface UpdateComponentProps {
     request: RequestResponseModel;
-    onSubmit?: (data: UpdateRequestFormData) => void;
+    onSubmit?: (data: RequestUpdateRequestModel) => void;
     onCancel?: () => void;
 }
 
@@ -29,26 +23,23 @@ export const UpdateComponent: React.FC<UpdateComponentProps> = ({
     onSubmit,
     onCancel 
 }) => {
-    const [formData, setFormData] = useState<UpdateRequestFormData>({
-        title: request.title,
+    const [formData, setFormData] = useState<RequestUpdateRequestModel>({
+        id: request.id,
         description: request.description,
         status: request.status
     });
 
-    const [errors, setErrors] = useState<Partial<UpdateRequestFormData>>({});
+    const [errors, setErrors] = useState<Partial<RequestUpdateRequestModel>>({});
     const [isLoading, setIsLoading] = useState(false);
 
     const validateForm = (): boolean => {
-        const newErrors: Partial<UpdateRequestFormData> = {};
+        const newErrors: Partial<RequestUpdateRequestModel> = {};
         
-        if (!formData.title) {
-            newErrors.title = "Title is required";
-        }
         if (!formData.description) {
             newErrors.description = "Description is required";
         }
         if (!formData.status) {
-            newErrors.status = "Status is required";
+            newErrors.status = undefined;
         }
 
         setErrors(newErrors);
@@ -80,16 +71,6 @@ export const UpdateComponent: React.FC<UpdateComponentProps> = ({
     return (
         <Box as="form" onSubmit={handleSubmit} p={4}>
             <VStack spacing={4}>
-                <FormControl isInvalid={!!errors.title}>
-                    <FormLabel>Title</FormLabel>
-                    <Input
-                        name="title"
-                        value={formData.title}
-                        onChange={handleChange}
-                    />
-                    <FormErrorMessage>{errors.title}</FormErrorMessage>
-                </FormControl>
-
                 <FormControl isInvalid={!!errors.description}>
                     <FormLabel>Description</FormLabel>
                     <Textarea

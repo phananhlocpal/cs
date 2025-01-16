@@ -25,6 +25,7 @@ export const RequestListPage: React.FC = () => {
   const loadRequests = async () => {
     try {
       const data = await requestService.getAllRequests();
+      console.log(`Requests list after fetch: ${data}`)
       setRequests(data);
     } catch (error) {
       showErrorToast('Failed to load requests');
@@ -129,7 +130,7 @@ export const RequestListPage: React.FC = () => {
           </Tr>
         </Thead>
         <Tbody>
-          {requests.map((request) => (
+          {requests?.map((request) => (
             <Tr key={request.id}>
               <Td>{request.title}</Td>
               <Td>{request.status}</Td>

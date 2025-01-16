@@ -3,16 +3,20 @@ import { Box, Drawer, DrawerContent, useColorModeValue, useDisclosure } from "@c
 import { FiHome, FiTrendingUp, FiCompass, FiStar, FiSettings } from "react-icons/fi";
 import { LinkItemProps } from "@/abstract/props";
 import { SidebarContent, MobileNav } from "./components";
+import { useNavigate } from "react-router-dom";
 
 export const BasicLayout = () => {
+  const navigate = useNavigate();
+  setNavigateFunction(navigate);
+
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   const LinkItems: Array<LinkItemProps> = [
-    { name: 'Home', icon: FiHome },
-    { name: 'Trending', icon: FiTrendingUp },
-    { name: 'Explore', icon: FiCompass },
-    { name: 'Favourites', icon: FiStar },
-    { name: 'Settings', icon: FiSettings },
+    { name: 'Home', icon: FiHome , href: '/'},
+    { name: 'Customers', icon: FiTrendingUp, href: '/customers' },
+    { name: 'Users', icon: FiCompass, href: '/users' },
+    { name: 'Request Tickets', icon: FiStar, href: '/requests' },
+    { name: 'Chat', icon: FiSettings, href: '/chat' },
   ]
 
   return (

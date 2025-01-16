@@ -1,13 +1,12 @@
 ﻿import axios from 'axios';
 import { 
-  CustomerResponseModel, 
-  CustomerCreateRequestModel, 
-  CustomerUpdateRequestModel 
+  CustomerResponseModel,
+  CustomerCreateRequestModel,
+  CustomerUpdateRequestModel
 } from '@/abstract';
 
 class CustomerService {
-  private baseUrl = 'http://localhost:5099/api/Customers';
-
+  private baseUrl = `${import.meta.env.VITE_REACT_APP_API_URL}/Customers`;
   // Get all customers
   async getAllCustomers(): Promise<CustomerResponseModel[]> {
     try {

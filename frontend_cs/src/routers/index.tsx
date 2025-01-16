@@ -1,8 +1,11 @@
 ﻿import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import { HomePage, LoginPage, NotFoundPage, RequestListPage } from "@/pages";
+import { ChatPage, HomePage, LoginPage, NotFoundPage, RequestListPage, AccountPage, OAuthCallback } from "@/pages";
 import { BasicLayout } from "@/shared";
 
+
 const RouterComponent = () => {
+
+
   return (
     <Router>
       <Routes>
@@ -10,8 +13,11 @@ const RouterComponent = () => {
           <Route path="*" element={<NotFoundPage />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/requests" element={<RequestListPage />} />
+          <Route path='/chat' element={<ChatPage/>} />
+          <Route path='/account' element={<AccountPage />} />
         </Route>
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/auth/callback" element={<OAuthCallback />} />
       </Routes>
     </Router>
   );

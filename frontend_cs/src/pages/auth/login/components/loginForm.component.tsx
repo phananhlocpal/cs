@@ -17,7 +17,8 @@ export const LoginFormComponent: React.FC<LoginFormProps> = ({ onSubmitLogin }) 
         borderRadius={8}
         boxShadow="lg"
       >
-        <Heading mb={6}>Log In</Heading>
+        <Heading mb={6}>Welcome to our customer service system</Heading>
+        <p>Please login first to explore!</p>
         <Input
           placeholder="johndoe@gmail.com"
           type="email"
