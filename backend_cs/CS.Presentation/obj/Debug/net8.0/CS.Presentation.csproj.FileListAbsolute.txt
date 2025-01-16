@@ -248,3 +248,4 @@ C:\Users\Surface\source\repos\cs\backend_cs\CS.Presentation\obj\Debug\net8.0\sco
 C:\Users\Surface\source\repos\cs\backend_cs\CS.Presentation\obj\Debug\net8.0\CS.Prese.4168EDD7.Up2Date
 C:\Users\Surface\source\repos\cs\backend_cs\CS.Presentation\obj\Debug\net8.0\CS.Presentation.genruntimeconfig.cache
 C:\Users\Surface\source\repos\cs\backend_cs\CS.Presentation\obj\Debug\net8.0\ref\CS.Presentation.dll
+C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Presentation\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll

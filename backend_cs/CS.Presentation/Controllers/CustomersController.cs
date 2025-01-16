@@ -20,7 +20,7 @@ namespace CS.Controllers
             _mediator = mediator;
         }
 
-        [Authorize(Roles = "Admin, User")]
+        //[Authorize(Roles = "Admin, User")]
         [HttpGet]
         public async Task<IActionResult> GetCustomers()
         {

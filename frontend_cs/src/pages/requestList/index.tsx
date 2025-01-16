@@ -1,202 +1,189 @@
-﻿import React from "react";
-import { useTable } from "@refinedev/react-table";
-import { type ColumnDef, flexRender } from "@tanstack/react-table";
-import { type GetManyResponse, useMany } from "@refinedev/core";
-import { List, ShowButton, EditButton, DeleteButton, DateField } from "@refinedev/chakra-ui";
-import { Table, Thead, Tbody, Tr, Th, Td, TableContainer, HStack, Box, Select, } from "@chakra-ui/react";
-import { ColumnFilterComponent, ColumnSorterComponent } from "./components";
-import { Pagination } from "@/shared";
-import type { FilterElementProps, ICategory, IPost } from "@/abstract";
+﻿import React, { useState, useEffect } from "react";
+import { Box, Button, HStack,Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody,useDisclosure,Table, Thead, Tbody, Tr, Th, Td,useToast } from "@chakra-ui/react";
+import { requestService, customerService } from "@/services";
+import { RequestResponseModel, RequestCreateRequestModel, RequestUpdateRequestModel, CustomerResponseModel } from "@/abstract";
+import { CreateComponent, UpdateComponent, DetailComponent } from "./components";
 
 export const RequestListPage: React.FC = () => {
-  const columns = React.useMemo<ColumnDef<IPost>[]>(
-    () => [
-      {
-        id: "id",
-        header: "ID",
-        accessorKey: "id",
-        enableColumnFilter: false,
-      },
-      {
-        id: "title",
-        header: "Title",
-        accessorKey: "title",
-        meta: {
-          filterOperator: "contains",
-        },
-      },
-      {
-        id: "status",
-        header: "Status",
-        accessorKey: "status",
-        meta: {
-          filterElement: function render(props: FilterElementProps) {
-            return (
-              <Select
-                borderRadius="md"
-                size="sm"
-                placeholder="All Status"
-                {...props}
-              >
-                <option value="published">published</option>
-                <option value="draft">draft</option>
-                <option value="rejected">rejected</option>
-              </Select>
-            );
-          },
-          filterOperator: "eq",
-        },
-      },
-      {
-        id: "category.id",
-        header: "Category",
-        enableColumnFilter: false,
-        accessorKey: "category.id",
-        cell: function render({ getValue, table }) {
-          const meta = table.options.meta as {
-            categoriesData: GetManyResponse<ICategory>;
-          };
-          const category = meta.categoriesData?.data.find(
-            (item) => item.id === getValue(),
-          );
-          return category?.title ?? "Loading...";
-        },
-      },
-      {
-        id: "createdAt",
-        header: "Created At",
-        accessorKey: "createdAt",
-        cell: function render({ getValue }) {
-          return <DateField value={getValue() as string} format="LLL" />;
-        },
-        enableColumnFilter: false,
-      },
-      {
-        id: "actions",
-        header: "Actions",
-        accessorKey: "id",
-        enableColumnFilter: false,
-        enableSorting: false,
-        cell: function render({ getValue }) {
-          return (
-            <HStack>
-              <ShowButton
-                hideText
-                size="sm"
-                recordItemId={getValue() as number}
-              />
-              <EditButton
-                hideText
-                size="sm"
-                recordItemId={getValue() as number}
-              />
-              <DeleteButton
-                hideText
-                size="sm"
-                recordItemId={getValue() as number}
-              />
-            </HStack>
-          );
-        },
-      },
-    ],
-    [],
-  );
+  // States
+  const [requests, setRequests] = useState<RequestResponseModel[]>([]);
+  const [customers, setCustomers] = useState<CustomerResponseModel[]>([]);
+  const [selectedRequest, setSelectedRequest] = useState<RequestResponseModel | null>(null);
+  const [modalMode, setModalMode] = useState<'create' | 'update' | 'detail'>('create');
 
-  const {
-    getHeaderGroups,
-    getRowModel,
-    setOptions,
-    refineCore: {
-      setCurrent,
-      pageCount,
-      current,
-      tableQuery: { data: tableData },
-    },
-  } = useTable({
-    columns,
-    refineCoreProps: {
-      initialSorter: [
-        {
-          field: "id",
-          order: "desc",
-        },
-      ],
-    },
-  });
+  // Chakra hooks
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const toast = useToast();
 
-  const categoryIds = tableData?.data?.map((item) => item.category.id) ?? [];
-  const { data: categoriesData } = useMany<ICategory>({
-    resource: "categories",
-    ids: categoryIds,
-    queryOptions: {
-      enabled: categoryIds.length > 0,
-    },
-  });
+  // Load requests on mount
+  useEffect(() => {
+    loadRequests();
+    loadCustomers();
+  }, []);
 
-  setOptions((prev) => ({
-    ...prev,
-    meta: {
-      ...prev.meta,
-      categoriesData,
-    },
-  }));
+  // Load all requests, customers
+  const loadRequests = async () => {
+    try {
+      const data = await requestService.getAllRequests();
+      setRequests(data);
+    } catch (error) {
+      showErrorToast('Failed to load requests');
+    }
+  };
+
+  const loadCustomers = async () => {
+    try {
+      const data = await customerService.getAllCustomers();
+      setCustomers(data);
+    } catch (error) {
+      showErrorToast('Failed to load customers');
+    }
+  }
+
+  // Create request
+  const handleCreate = async (data: RequestCreateRequestModel) => {
+    try {
+      await requestService.createRequest(data);
+      loadRequests();
+      onClose();
+      showSuccessToast('Request created successfully');
+    } catch (error) {
+      showErrorToast('Failed to create request');
+    }
+  };
+
+  // Update request
+  const handleUpdate = async (data: RequestUpdateRequestModel) => {
+    try {
+      await requestService.updateRequest(data);
+      loadRequests();
+      onClose();
+      showSuccessToast('Request updated successfully');
+    } catch (error) {
+      showErrorToast('Failed to update request');
+    }
+  };
+
+  // Delete request 
+  const handleDelete = async (id: string) => {
+    try {
+      await requestService.deleteRequest(id);
+      loadRequests();
+      showSuccessToast('Request deleted successfully');
+    } catch (error) {
+      showErrorToast('Failed to delete request');
+    }
+  };
+
+  // Open modal handlers
+  const openCreateModal = () => {
+    setModalMode('create');
+    setSelectedRequest(null);
+    onOpen();
+  };
+
+  const openUpdateModal = (request: RequestResponseModel) => {
+    setModalMode('update');
+    setSelectedRequest(request);
+    onOpen();
+  };
+
+  const openDetailModal = (request: RequestResponseModel) => {
+    setModalMode('detail');
+    setSelectedRequest(request);
+    onOpen();
+  };
+
+  // Toast helpers
+  const showSuccessToast = (message: string) => {
+    toast({
+      title: message,
+      status: 'success',
+      duration: 3000,
+    });
+  };
+
+  const showErrorToast = (message: string) => {
+    toast({
+      title: message,
+      status: 'error', 
+      duration: 3000,
+    });
+  };
 
   return (
-    <List>
-      <TableContainer>
-        <Table variant="simple" whiteSpace="pre-line">
-          <Thead>
-            {getHeaderGroups().map((headerGroup) => (
-              <Tr key={headerGroup.id}>
-                {headerGroup.headers.map((header) => {
-                  return (
-                    <Th key={header.id}>
-                      {!header.isPlaceholder && (
-                        <HStack spacing="xs">
-                          <Box>
-                            {flexRender(
-                              header.column.columnDef.header,
-                              header.getContext(),
-                            )}
-                          </Box>
-                          <HStack spacing="xs">
-                            <ColumnSorterComponent column={header.column} />
-                            <ColumnFilterComponent column={header.column} />
-                          </HStack>
-                        </HStack>
-                      )}
-                    </Th>
-                  );
-                })}
-              </Tr>
-            ))}
-          </Thead>
-          <Tbody>
-            {getRowModel().rows.map((row) => {
-              return (
-                <Tr key={row.id}>
-                  {row.getVisibleCells().map((cell) => {
-                    return (
-                      <Td key={cell.id}>
-                        {flexRender(
-                          cell.column.columnDef.cell,
-                          cell.getContext(),
-                        )}
-                      </Td>
-                    );
-                  })}
-                </Tr>
-              );
-            })}
-          </Tbody>
-        </Table>
-      </TableContainer>
-      <Pagination
-        current={current}
-        pageCount={pageCount}
-        setCurrent={setCurrent}
-      />
-    </List>
+    <Box p={4}>
+      <HStack mb={4} justifyContent="flex-end">
+        <Button colorScheme="blue" onClick={openCreateModal}>
+          Create New Request
+        </Button>
+      </HStack>
+
+      <Table variant="simple">
+        <Thead>
+          <Tr>
+            <Th>Title</Th>
+            <Th>Status</Th>
+            <Th>Created Date</Th>
+            <Th>Actions</Th>
+          </Tr>
+        </Thead>
+        <Tbody>
+          {requests.map((request) => (
+            <Tr key={request.id}>
+              <Td>{request.title}</Td>
+              <Td>{request.status}</Td>
+              <Td>{new Date(request.createdDate).toLocaleDateString()}</Td>
+              <Td>
+                <HStack spacing={2}>
+                  <Button size="sm" onClick={() => openDetailModal(request)}>
+                    View
+                  </Button>
+                  <Button size="sm" colorScheme="blue" onClick={() => openUpdateModal(request)}>
+                    Edit
+                  </Button>
+                  <Button size="sm" colorScheme="red" onClick={() => handleDelete(request.id)}>
+                    Delete
+                  </Button>
+                </HStack>
+              </Td>
+            </Tr>
+          ))}
+        </Tbody>
+      </Table>
+
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>
+            {modalMode === 'create' && 'Create New Request'}
+            {modalMode === 'update' && 'Update Request'}
+            {modalMode === 'detail' && 'Request Details'}
+          </ModalHeader>
+          <ModalBody>
+            {modalMode === 'create' && (
+              <CreateComponent 
+                onSubmit={handleCreate}
+                onCancel={onClose}
+                customers={customers}
+              />
+            )}
+            {modalMode === 'update' && selectedRequest && (
+              <UpdateComponent
+                request={selectedRequest}
+                onSubmit={handleUpdate}
+                onCancel={onClose}
+              />
+            )}
+            {modalMode === 'detail' && selectedRequest && (
+              <DetailComponent
+                request={selectedRequest}
+                onClose={onClose}
+              />
+            )}
+          </ModalBody>
+        </ModalContent>
+      </Modal>
+    </Box>
   );
 };

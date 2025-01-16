@@ -5,3 +5,4 @@ export * from './NavItemProps';
 export * from './LoginFormProps';
 export * from './ColumnButtonProps';
 export * from './FilterElementProps';
+export * from './DetailComponentProps';

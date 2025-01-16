@@ -1,48 +1,78 @@
-﻿import { useShow, useOne } from "@refinedev/core";
-import { Show, MarkdownField } from "@refinedev/chakra-ui";
-import { Heading, Text, Spacer } from "@chakra-ui/react";
-import type { ICategory, IPost } from "@/abstract";
+﻿import React from "react";
+import { Heading, Text, Box, Button, VStack } from "@chakra-ui/react";
+import { RequestResponseModel } from "@/abstract";
 
-export const DetailComponent: React.FC = () => {
-  const { query: queryResult } = useShow<IPost>();
-  const { data, isLoading } = queryResult;
-  const record = data?.data;
+interface DetailComponentProps {
+  request: RequestResponseModel;
+  onClose?: () => void;
+}
 
-  const { data: categoryData } = useOne<ICategory>({
-    resource: "categories",
-    id: record?.category.id || "",
-    queryOptions: {
-      enabled: !!record?.category.id,
-    },
-  });
-
+export const DetailComponent: React.FC<DetailComponentProps> = ({ 
+  request,
+  onClose 
+}) => {
   return (
-    <Show isLoading={isLoading}>
-      <Heading as="h5" size="sm">
-        Id
-      </Heading>
-      <Text mt={2}>{record?.id}</Text>
+    <Box p={4}>
+      <VStack align="stretch" spacing={4}>
+        {/* Request ID */}
+        <Box>
+          <Heading as="h5" size="sm">Request ID</Heading>
+          <Text mt={2}>{request?.id}</Text>
+        </Box>
 
-      <Heading as="h5" size="sm" mt={4}>
-        Title
-      </Heading>
-      <Text mt={2}>{record?.title}</Text>
+        {/* Title */}
+        <Box>
+          <Heading as="h5" size="sm">Title</Heading>
+          <Text mt={2}>{request?.title}</Text>
+        </Box>
 
-      <Heading as="h5" size="sm" mt={4}>
-        Status
-      </Heading>
-      <Text mt={2}>{record?.status}</Text>
+        {/* Description */}
+        <Box>
+          <Heading as="h5" size="sm">Description</Heading>
+          <Text mt={2}>{request?.description}</Text>
+        </Box>
 
-      <Heading as="h5" size="sm" mt={4}>
-        Category
-      </Heading>
-      <Text mt={2}>{categoryData?.data?.title}</Text>
+        {/* Created Date */}
+        <Box>
+          <Heading as="h5" size="sm">Created Date</Heading>
+          <Text mt={2}>
+            {request?.createdDate ? new Date(request.createdDate).toLocaleString() : ""}
+          </Text>
+        </Box>
 
-      <Heading as="h5" size="sm" mt={4}>
-        Content
-      </Heading>
-      <Spacer mt={2} />
-      <MarkdownField value={record?.content} />
-    </Show>
+        {/* Status */}
+        <Box>
+          <Heading as="h5" size="sm">Status</Heading>
+          <Text mt={2}>{request?.status}</Text>
+        </Box>
+
+        {/* Person in Charge */}
+        <Box>
+          <Heading as="h5" size="sm">Person in Charge</Heading>
+          <Box mt={2}>
+            <Text><strong>Name:</strong> {request?.personInCharge.name}</Text>
+            <Text><strong>Email:</strong> {request?.personInCharge.email}</Text>
+            <Text><strong>Phone:</strong> {request?.personInCharge.phoneNumber}</Text>
+            <Text><strong>Role:</strong> {request?.personInCharge.role}</Text>
+            <Text><strong>Status:</strong> {request?.personInCharge.status}</Text>
+          </Box>
+        </Box>
+
+        {/* Customer */}
+        <Box>
+          <Heading as="h5" size="sm">Customer</Heading>
+          <Box mt={2}>
+            <Text><strong>Name:</strong> {request?.customer.name}</Text>
+            <Text><strong>Email:</strong> {request?.customer.email}</Text>
+            <Text><strong>Address:</strong> {request?.customer.address}</Text>
+            <Text><strong>Phone:</strong> {request?.customer.phone}</Text>
+          </Box>
+        </Box>
+
+        <Button onClick={onClose} mt={4}>
+          Close
+        </Button>
+      </VStack>
+    </Box>
   );
 };

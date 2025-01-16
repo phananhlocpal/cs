@@ -1,80 +1,135 @@
-﻿import { useEffect } from "react";
-import { Edit } from "@refinedev/chakra-ui";
+﻿import React, { useState } from "react";
 import {
-  FormControl,
-  FormErrorMessage,
-  FormLabel,
-  Input,
-  Select,
+    Box,
+    Button,
+    FormControl,
+    FormErrorMessage,
+    FormLabel,
+    Input,
+    Select,
+    Textarea,
+    VStack
 } from "@chakra-ui/react";
-import { useSelect } from "@refinedev/core";
-import { useForm } from "@refinedev/react-hook-form";
+import { RequestStatusEnum, RequestResponseModel } from "@/abstract";
 
-import type { IPost } from "@/abstract";
-
-export const UpdateComponent = () => {
-    const {
-        refineCore: { formLoading, query: queryResult },
-        saveButtonProps,
-        register,
-        formState: { errors },
-        resetField,
-      } = useForm<IPost>();
-    
-      const { options } = useSelect({
-        resource: "categories",
-    
-        defaultValue: queryResult?.data?.data.category.id,
-        queryOptions: { enabled: !!queryResult?.data?.data.category.id },
-      });
-    
-      useEffect(() => {
-        resetField("category.id");
-      }, [options]);
-    
-      return (
-        <Edit isLoading={formLoading} saveButtonProps={saveButtonProps}>
-          <FormControl mb="3" isInvalid={!!errors?.title}>
-            <FormLabel>Title</FormLabel>
-            <Input
-              id="title"
-              type="text"
-              {...register("title", { required: "Title is required" })}
-            />
-            <FormErrorMessage>{`${errors.title?.message}`}</FormErrorMessage>
-          </FormControl>
-          <FormControl mb="3" isInvalid={!!errors?.status}>
-            <FormLabel>Status</FormLabel>
-            <Select
-              id="content"
-              placeholder="Select Post Status"
-              {...register("status", {
-                required: "Status is required",
-              })}
-            >
-              <option>published</option>
-              <option>draft</option>
-              <option>rejected</option>
-            </Select>
-            <FormErrorMessage>{`${errors.status?.message}`}</FormErrorMessage>
-          </FormControl>
-          <FormControl mb="3" isInvalid={!!errors?.categoryId}>
-            <FormLabel>Category</FormLabel>
-            <Select
-              id="ca"
-              placeholder="Select Category"
-              {...register("category.id", {
-                required: true,
-              })}
-            >
-              {options?.map((option) => (
-                <option value={option.value} key={option.value}>
-                  {option.label}
-                </option>
-              ))}
-            </Select>
-            <FormErrorMessage>{`${errors.categoryId?.message}`}</FormErrorMessage>
-          </FormControl>
-        </Edit>
-      );
+interface UpdateRequestFormData {
+    title: string;
+    description: string;
+    status: RequestStatusEnum;
 }
+
+interface UpdateComponentProps {
+    request: RequestResponseModel;
+    onSubmit?: (data: UpdateRequestFormData) => void;
+    onCancel?: () => void;
+}
+
+export const UpdateComponent: React.FC<UpdateComponentProps> = ({ 
+    request, 
+    onSubmit,
+    onCancel 
+}) => {
+    const [formData, setFormData] = useState<UpdateRequestFormData>({
+        title: request.title,
+        description: request.description,
+        status: request.status
+    });
+
+    const [errors, setErrors] = useState<Partial<UpdateRequestFormData>>({});
+    const [isLoading, setIsLoading] = useState(false);
+
+    const validateForm = (): boolean => {
+        const newErrors: Partial<UpdateRequestFormData> = {};
+        
+        if (!formData.title) {
+            newErrors.title = "Title is required";
+        }
+        if (!formData.description) {
+            newErrors.description = "Description is required";
+        }
+        if (!formData.status) {
+            newErrors.status = "Status is required";
+        }
+
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!validateForm()) return;
+
+        setIsLoading(true);
+        try {
+            onSubmit?.(formData);
+        } catch (error) {
+            console.error("Error updating request:", error);
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
+    return (
+        <Box as="form" onSubmit={handleSubmit} p={4}>
+            <VStack spacing={4}>
+                <FormControl isInvalid={!!errors.title}>
+                    <FormLabel>Title</FormLabel>
+                    <Input
+                        name="title"
+                        value={formData.title}
+                        onChange={handleChange}
+                    />
+                    <FormErrorMessage>{errors.title}</FormErrorMessage>
+                </FormControl>
+
+                <FormControl isInvalid={!!errors.description}>
+                    <FormLabel>Description</FormLabel>
+                    <Textarea
+                        name="description"
+                        value={formData.description}
+                        onChange={handleChange}
+                    />
+                    <FormErrorMessage>{errors.description}</FormErrorMessage>
+                </FormControl>
+
+                <FormControl isInvalid={!!errors.status}>
+                    <FormLabel>Status</FormLabel>
+                    <Select
+                        name="status"
+                        value={formData.status}
+                        onChange={handleChange}
+                    >
+                        <option value={RequestStatusEnum.Created}>Created</option>
+                        <option value={RequestStatusEnum.OnProcessing}>On Processing</option>
+                        <option value={RequestStatusEnum.Pending}>Pending</option>
+                        <option value={RequestStatusEnum.Done}>Done</option>
+                    </Select>
+                    <FormErrorMessage>{errors.status}</FormErrorMessage>
+                </FormControl>
+
+                <Button
+                    type="submit"
+                    colorScheme="blue"
+                    isLoading={isLoading}
+                    width="full"
+                >
+                    Update
+                </Button>
+                <Button
+                    onClick={onCancel}
+                    width="full"
+                >
+                    Cancel
+                </Button>
+            </VStack>
+        </Box>
+    );
+};

@@ -802,8 +802,7 @@
       "UserRoleEnum": {
         "enum": [
           0,
-          1,
-          2
+          1
         ],
         "type": "integer",
         "format": "int32"

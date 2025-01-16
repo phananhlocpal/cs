@@ -632,7 +632,10 @@
           "Microsoft.Extensions.Identity.Core": "2.2.0"
         },
         "runtime": {
-          "CS.Application.dll": {}
+          "CS.Application.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "CS.Domain/1.0.0": {
@@ -640,7 +643,10 @@
           "Microsoft.Data.SqlClient": "5.2.2"
         },
         "runtime": {
-          "CS.Domain.dll": {}
+          "CS.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
