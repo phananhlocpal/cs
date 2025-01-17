@@ -22,27 +22,11 @@ namespace CS.Presentation.Controllers
             _mediator = mediator;
         }
 
-        private void SetAuthCookie(string token)
-        {
-            var cookieOptions = new CookieOptions
-            {
-                HttpOnly = true,
-                Secure = true,
-                SameSite = SameSiteMode.Strict,
-                Expires = DateTime.UtcNow.AddDays(7) 
-            };
-            Response.Cookies.Append("token", token, cookieOptions);
-        }
-
         [AllowAnonymous]
         [HttpPost("customer-login")]
         public async Task<CustomerLoginResponseViewModel> LoginCustomer(CustomerLoginCommand loginRequest)
         {
             var loginResponse = await _mediator.Send(loginRequest);
-            if (loginResponse != null && !string.IsNullOrEmpty(loginResponse.Token))
-            {
-                SetAuthCookie(loginResponse.Token);
-            }
             return loginResponse;
         }
 
@@ -51,10 +35,6 @@ namespace CS.Presentation.Controllers
         public async Task<UserLoginResponseViewModel> LoginUser(UserLoginCommand loginRequest)
         {
             var loginResponse = await _mediator.Send(loginRequest);
-            if (loginResponse != null && !string.IsNullOrEmpty(loginResponse.Token))
-            {
-                SetAuthCookie(loginResponse.Token);
-            }
             return loginResponse;
         }
 

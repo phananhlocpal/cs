@@ -15,6 +15,10 @@ export const loginCustomer = async (loginRequest: LoginRequestModel) => {
 
 export const loginUser = async (loginRequest: LoginRequestModel) => {
     const response = await axiosInterceptorInstance.post<LoginResponseModel>(`${API_URL}/user-login`, loginRequest);
+    const token = response.data.token;
+    const profile = response.data.user; 
+    Cookies.set('token', token, { expires: 7 }); 
+    localStorage.setItem('userProfile', JSON.stringify(profile)); 
     return response.data;
 };
 

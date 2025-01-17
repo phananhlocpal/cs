@@ -1,6 +1,6 @@
 export enum RequestStatusEnum {
     Created = "Created",
-    OnProcessing = "On_Processing",
+    OnProcessing = "On Processing",
     Pending = "Pending",
     Done = "Done"
 }

@@ -10,6 +10,7 @@ export class RequestService {
   // Get all requests
   async getAllRequests(): Promise<RequestResponseModel[]> {
     const response = await axiosInterceptorInstance.get(this.baseUrl);
+
     return response.data;
   }
 
@@ -39,6 +40,7 @@ export class RequestService {
 
   // Create new request
   async createRequest(request: RequestCreateRequestModel): Promise<RequestResponseModel> {
+    console.log(request);
     const response = await axiosInterceptorInstance.post(this.baseUrl, request);
     return response.data;
   }

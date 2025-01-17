@@ -1,8 +1,10 @@
 ﻿import React, { useState, useEffect } from "react";
-import { Box, Button, HStack,Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody,useDisclosure,Table, Thead, Tbody, Tr, Th, Td,useToast } from "@chakra-ui/react";
+import { Box, Button, HStack, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, useDisclosure, Table, Thead, Tbody, Tr, Th, Td, useToast, Checkbox, Tag } from "@chakra-ui/react";
 import { requestService, customerService } from "@/services";
-import { RequestResponseModel, RequestCreateRequestModel, RequestUpdateRequestModel, CustomerResponseModel } from "@/abstract";
+import { RequestResponseModel, RequestCreateRequestModel, RequestUpdateRequestModel, CustomerResponseModel, RequestStatusEnum } from "@/abstract";
 import { CreateComponent, UpdateComponent, DetailComponent } from "./components";
+import { getRequestStatus, getRequestStatusColorHelper } from "@/helpers";
+import { CiCalendar } from "react-icons/ci";
 
 export const RequestListPage: React.FC = () => {
   // States
@@ -10,6 +12,9 @@ export const RequestListPage: React.FC = () => {
   const [customers, setCustomers] = useState<CustomerResponseModel[]>([]);
   const [selectedRequest, setSelectedRequest] = useState<RequestResponseModel | null>(null);
   const [modalMode, setModalMode] = useState<'create' | 'update' | 'detail'>('create');
+  const [selection, setSelection] = useState<string[]>([]);
+  const indeterminate = selection.length > 0 && selection.length < requests.length;
+
 
   // Chakra hooks
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -107,10 +112,14 @@ export const RequestListPage: React.FC = () => {
   const showErrorToast = (message: string) => {
     toast({
       title: message,
-      status: 'error', 
+      status: 'error',
       duration: 3000,
     });
   };
+
+  function getStatusColor(arg0: RequestStatusEnum): (string & {}) | "whiteAlpha" | "blackAlpha" | "gray" | "red" | "orange" | "yellow" | "green" | "teal" | "blue" | "cyan" | "purple" | "pink" | undefined {
+    throw new Error("Function not implemented.");
+  }
 
   return (
     <Box p={4}>
@@ -120,9 +129,23 @@ export const RequestListPage: React.FC = () => {
         </Button>
       </HStack>
 
-      <Table variant="simple">
-        <Thead>
+      <Table bg="white" boxShadow="md">
+        <Thead bg="white">
           <Tr>
+            <Th w="6">
+              <Checkbox
+                top="1"
+                aria-label="Select all rows"
+                isChecked={selection.length > 0}
+                isIndeterminate={indeterminate}
+                onChange={(e) => {
+                  const checked = e.target.checked;
+                  setSelection(
+                    checked ? requests.map((request) => request.title) : [],
+                  );
+                }}
+              />
+            </Th>
             <Th>Title</Th>
             <Th>Status</Th>
             <Th>Created Date</Th>
@@ -132,9 +155,40 @@ export const RequestListPage: React.FC = () => {
         <Tbody>
           {requests?.map((request) => (
             <Tr key={request.id}>
+              <Td>
+                <Checkbox
+                  top="1"
+                  aria-label="Select row"
+                  onChange={(e) => {
+                    const checked = e.target.checked;
+                    setSelection((prev) =>
+                      checked
+                        ? [...prev, request.title]
+                        : selection.filter((name) => name !== request.title),
+                    )
+                  }}
+                />
+              </Td>
               <Td>{request.title}</Td>
-              <Td>{request.status}</Td>
-              <Td>{new Date(request.createdDate).toLocaleDateString()}</Td>
+              <Td>
+                <Tag
+                rounded="full"
+                size="lg"
+                colorScheme={getRequestStatusColorHelper(getRequestStatus(request.status))}
+                >
+                {getRequestStatus(request.status)}
+                </Tag>
+              </Td>
+              <Td>
+                <Tag
+                  rounded="full"
+                  size="lg"
+                  >
+                    <CiCalendar className="mr-2" />
+
+                  {new Date(request.createdDate).toLocaleDateString('en-CA')}
+                  </Tag>
+                </Td>
               <Td>
                 <HStack spacing={2}>
                   <Button size="sm" onClick={() => openDetailModal(request)}>
@@ -163,7 +217,7 @@ export const RequestListPage: React.FC = () => {
           </ModalHeader>
           <ModalBody>
             {modalMode === 'create' && (
-              <CreateComponent 
+              <CreateComponent
                 onSubmit={handleCreate}
                 onCancel={onClose}
                 customers={customers}
@@ -188,3 +242,4 @@ export const RequestListPage: React.FC = () => {
     </Box>
   );
 };
+

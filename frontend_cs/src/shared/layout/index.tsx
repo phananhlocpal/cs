@@ -4,10 +4,17 @@ import { FiHome, FiTrendingUp, FiCompass, FiStar, FiSettings } from "react-icons
 import { LinkItemProps } from "@/abstract/props";
 import { SidebarContent, MobileNav } from "./components";
 import { useNavigate } from "react-router-dom";
+import { setNavigateFunction } from "@/utils";
+import { useEffect } from "react";
+import { checkAuth } from "@/interceptors/axiosInterceptorInstance";
 
 export const BasicLayout = () => {
   const navigate = useNavigate();
   setNavigateFunction(navigate);
+
+  useEffect(() => {
+    checkAuth();
+  }, []);
 
   const { isOpen, onOpen, onClose } = useDisclosure()
 

@@ -29,6 +29,7 @@ namespace CS.Application.UseCases.RequestUseCases
         {
             var requestTicket = new Request
             {
+                Id = Guid.NewGuid(),
                 Title = request.Title,
                 Description = request.Description,
                 CreatedDate = DateTime.Now,

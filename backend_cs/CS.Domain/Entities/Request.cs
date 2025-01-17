@@ -16,8 +16,5 @@ namespace CS.Domain.Entities
         public RequestStatusEnum Status { get; set; }
         public Guid PersonInChargeId { get; set; }
         public Guid CustomerId { get; set; }
-        public User PersonInCharge { get; set; }
-        public Customer Customer { get; set; }
-
     }
 }

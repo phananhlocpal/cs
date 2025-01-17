@@ -1,4 +1,4 @@
-﻿import axios from 'axios';
+﻿import axiosInterceptorInstance from '@/interceptors/axiosInterceptorInstance';
 import { 
   UserResponseModel,
   UserCreateRequestModel,
@@ -9,7 +9,7 @@ class UserService {
   private baseUrl = `${import.meta.env.VITE_REACT_APP_API_URL}/Users`;
   async getAllUsers(): Promise<UserResponseModel[]> {
     try {
-      const response = await axios.get(this.baseUrl);
+      const response = await axiosInterceptorInstance.get(this.baseUrl);
       return response.data;
     } catch (error) {
       return this.handleError(error);
@@ -18,7 +18,7 @@ class UserService {
 
   async getUserById(id: string): Promise<UserResponseModel> {
     try {
-      const response = await axios.get(`${this.baseUrl}/${id}`);
+      const response = await axiosInterceptorInstance.get(`${this.baseUrl}/${id}`);
       return response.data;
     } catch (error) {
       return this.handleError(error);
@@ -27,7 +27,7 @@ class UserService {
 
   async createUser(user: UserCreateRequestModel): Promise<UserResponseModel> {
     try {
-      const response = await axios.post(this.baseUrl, user);
+      const response = await axiosInterceptorInstance.post(this.baseUrl, user);
       return response.data;
     } catch (error) {
       return this.handleError(error);
@@ -36,7 +36,7 @@ class UserService {
 
   async updateUser(id: string, user: UserUpdateRequestModel): Promise<UserResponseModel> {
     try {
-      const response = await axios.put(`${this.baseUrl}/${id}`, user);
+      const response = await axiosInterceptorInstance.put(`${this.baseUrl}/${id}`, user);
       return response.data;
     } catch (error) {
       return this.handleError(error);

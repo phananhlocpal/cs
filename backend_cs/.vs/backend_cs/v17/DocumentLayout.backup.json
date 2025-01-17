@@ -3,6 +3,74 @@
   "WorkspaceRootPath": "D:\\cs\\backend_cs\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|d:\\cs\\backend_cs\\cs.application\\dtos\\requestdto\\requestreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\dtos\\requestdto\\requestreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|d:\\cs\\backend_cs\\cs.application\\mappings\\requestmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\mappings\\requestmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3793F3F-2D35-485A-8CDD-F12AAC440E83}|CS.Presentation\\CS.Presentation.csproj|d:\\cs\\backend_cs\\cs.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3793F3F-2D35-485A-8CDD-F12AAC440E83}|CS.Presentation\\CS.Presentation.csproj|solutionrelative:cs.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|d:\\cs\\backend_cs\\cs.application\\usecases\\requestusecases\\createrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\usecases\\requestusecases\\createrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|d:\\cs\\backend_cs\\cs.application\\usecases\\userusecases\\createuserhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\usecases\\userusecases\\createuserhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F1C7D5E-87D1-4D5D-B7F8-6C461B02327B}|CS.Infrastructure\\CS.Infrastructure.csproj|d:\\cs\\backend_cs\\cs.infrastructure\\repositories\\baserepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F1C7D5E-87D1-4D5D-B7F8-6C461B02327B}|CS.Infrastructure\\CS.Infrastructure.csproj|solutionrelative:cs.infrastructure\\repositories\\baserepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|d:\\cs\\backend_cs\\cs.application\\abstractions\\repositories\\ibaserepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\abstractions\\repositories\\ibaserepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F1C7D5E-87D1-4D5D-B7F8-6C461B02327B}|CS.Infrastructure\\CS.Infrastructure.csproj|d:\\cs\\backend_cs\\cs.infrastructure\\repositories\\requestrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F1C7D5E-87D1-4D5D-B7F8-6C461B02327B}|CS.Infrastructure\\CS.Infrastructure.csproj|solutionrelative:cs.infrastructure\\repositories\\requestrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|d:\\cs\\backend_cs\\cs.application\\dtos\\requestdto\\requestcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\dtos\\requestdto\\requestcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{328DC2AD-F4AB-4264-BE1C-606418903C5A}|CS.Domain\\CS.Domain.csproj|d:\\cs\\backend_cs\\cs.domain\\entities\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{328DC2AD-F4AB-4264-BE1C-606418903C5A}|CS.Domain\\CS.Domain.csproj|solutionrelative:cs.domain\\entities\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|d:\\cs\\backend_cs\\cs.application\\commands\\usercommands\\createusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\commands\\usercommands\\createusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{328DC2AD-F4AB-4264-BE1C-606418903C5A}|CS.Domain\\CS.Domain.csproj|d:\\cs\\backend_cs\\cs.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{328DC2AD-F4AB-4264-BE1C-606418903C5A}|CS.Domain\\CS.Domain.csproj|solutionrelative:cs.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{328DC2AD-F4AB-4264-BE1C-606418903C5A}|CS.Domain\\CS.Domain.csproj|d:\\cs\\backend_cs\\cs.domain\\enumerations\\requestissuetypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{328DC2AD-F4AB-4264-BE1C-606418903C5A}|CS.Domain\\CS.Domain.csproj|solutionrelative:cs.domain\\enumerations\\requestissuetypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|d:\\cs\\backend_cs\\cs.application\\commands\\requestcommands\\createrequestcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\commands\\requestcommands\\createrequestcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3793F3F-2D35-485A-8CDD-F12AAC440E83}|CS.Presentation\\CS.Presentation.csproj|d:\\cs\\backend_cs\\cs.presentation\\controllers\\requestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3793F3F-2D35-485A-8CDD-F12AAC440E83}|CS.Presentation\\CS.Presentation.csproj|solutionrelative:cs.presentation\\controllers\\requestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3793F3F-2D35-485A-8CDD-F12AAC440E83}|CS.Presentation\\CS.Presentation.csproj|d:\\cs\\backend_cs\\cs.presentation\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3793F3F-2D35-485A-8CDD-F12AAC440E83}|CS.Presentation\\CS.Presentation.csproj|solutionrelative:cs.presentation\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3793F3F-2D35-485A-8CDD-F12AAC440E83}|CS.Presentation\\CS.Presentation.csproj|d:\\cs\\backend_cs\\cs.presentation\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3793F3F-2D35-485A-8CDD-F12AAC440E83}|CS.Presentation\\CS.Presentation.csproj|solutionrelative:cs.presentation\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E3793F3F-2D35-485A-8CDD-F12AAC440E83}|CS.Presentation\\CS.Presentation.csproj|d:\\cs\\backend_cs\\cs.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{E3793F3F-2D35-485A-8CDD-F12AAC440E83}|CS.Presentation\\CS.Presentation.csproj|solutionrelative:cs.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -11,24 +79,12 @@
       "RelativeMoniker": "D:0:0:{7F1C7D5E-87D1-4D5D-B7F8-6C461B02327B}|CS.Infrastructure\\CS.Infrastructure.csproj|solutionrelative:cs.infrastructure\\services\\oauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E3793F3F-2D35-485A-8CDD-F12AAC440E83}|CS.Presentation\\CS.Presentation.csproj|d:\\cs\\backend_cs\\cs.presentation\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3793F3F-2D35-485A-8CDD-F12AAC440E83}|CS.Presentation\\CS.Presentation.csproj|solutionrelative:cs.presentation\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E3793F3F-2D35-485A-8CDD-F12AAC440E83}|CS.Presentation\\CS.Presentation.csproj|d:\\cs\\backend_cs\\cs.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3793F3F-2D35-485A-8CDD-F12AAC440E83}|CS.Presentation\\CS.Presentation.csproj|solutionrelative:cs.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7F1C7D5E-87D1-4D5D-B7F8-6C461B02327B}|CS.Infrastructure\\CS.Infrastructure.csproj|d:\\cs\\backend_cs\\cs.infrastructure\\services\\emailmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7F1C7D5E-87D1-4D5D-B7F8-6C461B02327B}|CS.Infrastructure\\CS.Infrastructure.csproj|solutionrelative:cs.infrastructure\\services\\emailmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|d:\\cs\\backend_cs\\cs.application\\behaviors\\validationpipelinebahavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\behaviors\\validationpipelinebahavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|d:\\cs\\backend_cs\\cs.application\\usecases\\authenusecases\\customerloginhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\usecases\\authenusecases\\customerloginhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E3793F3F-2D35-485A-8CDD-F12AAC440E83}|CS.Presentation\\CS.Presentation.csproj|d:\\cs\\backend_cs\\cs.presentation\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -59,24 +115,8 @@
       "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\validators\\customercommandvalidators\\createcustomercommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|d:\\cs\\backend_cs\\cs.application\\commands\\requestcommands\\createrequestcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\commands\\requestcommands\\createrequestcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|d:\\cs\\backend_cs\\cs.application\\commands\\requestcommands\\updaterequestcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\commands\\requestcommands\\updaterequestcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E3793F3F-2D35-485A-8CDD-F12AAC440E83}|CS.Presentation\\CS.Presentation.csproj|d:\\cs\\backend_cs\\cs.presentation\\controllers\\requestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3793F3F-2D35-485A-8CDD-F12AAC440E83}|CS.Presentation\\CS.Presentation.csproj|solutionrelative:cs.presentation\\controllers\\requestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|d:\\cs\\backend_cs\\cs.application\\dtos\\requestdto\\requestcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\dtos\\requestdto\\requestcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|d:\\cs\\backend_cs\\cs.application\\dtos\\requestdto\\requestreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\dtos\\requestdto\\requestreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|d:\\cs\\backend_cs\\cs.application\\dtos\\customerdto\\customerreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -85,10 +125,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7F1C7D5E-87D1-4D5D-B7F8-6C461B02327B}|CS.Infrastructure\\CS.Infrastructure.csproj|d:\\cs\\backend_cs\\cs.infrastructure\\services\\tokenmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7F1C7D5E-87D1-4D5D-B7F8-6C461B02327B}|CS.Infrastructure\\CS.Infrastructure.csproj|solutionrelative:cs.infrastructure\\services\\tokenmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E3793F3F-2D35-485A-8CDD-F12AAC440E83}|CS.Presentation\\CS.Presentation.csproj|d:\\cs\\backend_cs\\cs.presentation\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3793F3F-2D35-485A-8CDD-F12AAC440E83}|CS.Presentation\\CS.Presentation.csproj|solutionrelative:cs.presentation\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|d:\\cs\\backend_cs\\cs.application\\usecases\\authenusecases\\userloginhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -103,16 +139,8 @@
       "RelativeMoniker": "D:0:0:{E3793F3F-2D35-485A-8CDD-F12AAC440E83}|CS.Presentation\\CS.Presentation.csproj|solutionrelative:cs.presentation\\cs.presentation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{328DC2AD-F4AB-4264-BE1C-606418903C5A}|CS.Domain\\CS.Domain.csproj|d:\\cs\\backend_cs\\cs.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{328DC2AD-F4AB-4264-BE1C-606418903C5A}|CS.Domain\\CS.Domain.csproj|solutionrelative:cs.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|d:\\cs\\backend_cs\\cs.application\\abstractions\\services\\itokenmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\abstractions\\services\\itokenmanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|d:\\cs\\backend_cs\\cs.application\\usecases\\userusecases\\createuserhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\usecases\\userusecases\\createuserhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7F1C7D5E-87D1-4D5D-B7F8-6C461B02327B}|CS.Infrastructure\\CS.Infrastructure.csproj|d:\\cs\\backend_cs\\cs.infrastructure\\repositories\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -121,14 +149,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|d:\\cs\\backend_cs\\cs.application\\mappings\\usermapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\mappings\\usermapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{328DC2AD-F4AB-4264-BE1C-606418903C5A}|CS.Domain\\CS.Domain.csproj|d:\\cs\\backend_cs\\cs.domain\\entities\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{328DC2AD-F4AB-4264-BE1C-606418903C5A}|CS.Domain\\CS.Domain.csproj|solutionrelative:cs.domain\\entities\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F1C7D5E-87D1-4D5D-B7F8-6C461B02327B}|CS.Infrastructure\\CS.Infrastructure.csproj|d:\\cs\\backend_cs\\cs.infrastructure\\repositories\\baserepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F1C7D5E-87D1-4D5D-B7F8-6C461B02327B}|CS.Infrastructure\\CS.Infrastructure.csproj|solutionrelative:cs.infrastructure\\repositories\\baserepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|d:\\cs\\backend_cs\\cs.application\\validators\\usercommandvalidators\\updateusercommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -227,10 +247,6 @@
       "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\usecases\\requestusecases\\deleterequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|d:\\cs\\backend_cs\\cs.application\\usecases\\requestusecases\\createrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\usecases\\requestusecases\\createrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|d:\\cs\\backend_cs\\cs.application\\queries\\userqueries\\getuserbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\queries\\userqueries\\getuserbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -271,10 +287,6 @@
       "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\commands\\usercommands\\updateusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|d:\\cs\\backend_cs\\cs.application\\commands\\usercommands\\createusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\commands\\usercommands\\createusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|d:\\cs\\backend_cs\\cs.application\\commands\\requestcommands\\deleterequestcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\commands\\requestcommands\\deleterequestcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -303,10 +315,6 @@
       "RelativeMoniker": "D:0:0:{7F1C7D5E-87D1-4D5D-B7F8-6C461B02327B}|CS.Infrastructure\\CS.Infrastructure.csproj|solutionrelative:cs.infrastructure\\repositories\\customerrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F1C7D5E-87D1-4D5D-B7F8-6C461B02327B}|CS.Infrastructure\\CS.Infrastructure.csproj|d:\\cs\\backend_cs\\cs.infrastructure\\repositories\\requestrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F1C7D5E-87D1-4D5D-B7F8-6C461B02327B}|CS.Infrastructure\\CS.Infrastructure.csproj|solutionrelative:cs.infrastructure\\repositories\\requestrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|d:\\cs\\backend_cs\\cs.application\\abstractions\\iquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\abstractions\\iquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -323,10 +331,6 @@
       "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\abstractions\\repositories\\icustomerrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|d:\\cs\\backend_cs\\cs.application\\abstractions\\repositories\\ibaserepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\abstractions\\repositories\\ibaserepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7F1C7D5E-87D1-4D5D-B7F8-6C461B02327B}|CS.Infrastructure\\CS.Infrastructure.csproj|d:\\cs\\backend_cs\\cs.infrastructure\\dbcontext\\dappercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7F1C7D5E-87D1-4D5D-B7F8-6C461B02327B}|CS.Infrastructure\\CS.Infrastructure.csproj|solutionrelative:cs.infrastructure\\dbcontext\\dappercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -339,10 +343,6 @@
       "RelativeMoniker": "D:0:0:{328DC2AD-F4AB-4264-BE1C-606418903C5A}|CS.Domain\\CS.Domain.csproj|solutionrelative:cs.domain\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{328DC2AD-F4AB-4264-BE1C-606418903C5A}|CS.Domain\\CS.Domain.csproj|d:\\cs\\backend_cs\\cs.domain\\enumerations\\requestissuetypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{328DC2AD-F4AB-4264-BE1C-606418903C5A}|CS.Domain\\CS.Domain.csproj|solutionrelative:cs.domain\\enumerations\\requestissuetypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|d:\\cs\\backend_cs\\cs.application\\dtos\\userdto\\usercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\dtos\\userdto\\usercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -353,10 +353,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|d:\\cs\\backend_cs\\cs.application\\dtos\\customerdto\\customercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\dtos\\customerdto\\customercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|d:\\cs\\backend_cs\\cs.application\\mappings\\requestmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D517C3F-3160-41F6-89A2-E88CC57C14A2}|CS.Application\\CS.Application.csproj|solutionrelative:cs.application\\mappings\\requestmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Surface\\source\\repos\\backend_cs\\backend_cs\\CS.WebAPI.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
@@ -381,59 +377,167 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OAuthService.cs",
-              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Infrastructure\\Services\\OAuthService.cs",
-              "RelativeDocumentMoniker": "CS.Infrastructure\\Services\\OAuthService.cs",
-              "ToolTip": "D:\\cs\\backend_cs\\CS.Infrastructure\\Services\\OAuthService.cs",
-              "RelativeToolTip": "CS.Infrastructure\\Services\\OAuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "CreateRequestHandler.cs",
+              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\UseCases\\RequestUseCases\\CreateRequestHandler.cs",
+              "RelativeDocumentMoniker": "CS.Application\\UseCases\\RequestUseCases\\CreateRequestHandler.cs",
+              "ToolTip": "D:\\cs\\backend_cs\\CS.Application\\UseCases\\RequestUseCases\\CreateRequestHandler.cs",
+              "RelativeToolTip": "CS.Application\\UseCases\\RequestUseCases\\CreateRequestHandler.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACQAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T09:43:53.026Z"
+              "WhenOpened": "2025-01-09T09:17:17.704Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
+              "Title": "RequestCreateDTO.cs",
+              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\DTOs\\RequestDTO\\RequestCreateDTO.cs",
+              "RelativeDocumentMoniker": "CS.Application\\DTOs\\RequestDTO\\RequestCreateDTO.cs",
+              "ToolTip": "D:\\cs\\backend_cs\\CS.Application\\DTOs\\RequestDTO\\RequestCreateDTO.cs",
+              "RelativeToolTip": "CS.Application\\DTOs\\RequestDTO\\RequestCreateDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T01:50:43.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IBaseRepo.cs",
+              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Abstractions\\Repositories\\IBaseRepo.cs",
+              "RelativeDocumentMoniker": "CS.Application\\Abstractions\\Repositories\\IBaseRepo.cs",
+              "ToolTip": "D:\\cs\\backend_cs\\CS.Application\\Abstractions\\Repositories\\IBaseRepo.cs",
+              "RelativeToolTip": "CS.Application\\Abstractions\\Repositories\\IBaseRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T02:55:58.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BaseRepo.cs",
+              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Infrastructure\\Repositories\\BaseRepo.cs",
+              "RelativeDocumentMoniker": "CS.Infrastructure\\Repositories\\BaseRepo.cs",
+              "ToolTip": "D:\\cs\\backend_cs\\CS.Infrastructure\\Repositories\\BaseRepo.cs",
+              "RelativeToolTip": "CS.Infrastructure\\Repositories\\BaseRepo.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAArwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T06:36:38.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Presentation\\Program.cs",
               "RelativeDocumentMoniker": "CS.Presentation\\Program.cs",
               "ToolTip": "D:\\cs\\backend_cs\\CS.Presentation\\Program.cs",
               "RelativeToolTip": "CS.Presentation\\Program.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAEoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAUwHMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T08:30:35.254Z"
+              "WhenOpened": "2025-01-09T08:30:35.254Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "UpdateRequestCommand.cs",
-              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Commands\\RequestCommands\\UpdateRequestCommand.cs",
-              "RelativeDocumentMoniker": "CS.Application\\Commands\\RequestCommands\\UpdateRequestCommand.cs",
-              "ToolTip": "D:\\cs\\backend_cs\\CS.Application\\Commands\\RequestCommands\\UpdateRequestCommand.cs",
-              "RelativeToolTip": "CS.Application\\Commands\\RequestCommands\\UpdateRequestCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA2AAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "RequestReadDTO.cs",
+              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\DTOs\\RequestDTO\\RequestReadDTO.cs",
+              "RelativeDocumentMoniker": "CS.Application\\DTOs\\RequestDTO\\RequestReadDTO.cs",
+              "ToolTip": "D:\\cs\\backend_cs\\CS.Application\\DTOs\\RequestDTO\\RequestReadDTO.cs*",
+              "RelativeToolTip": "CS.Application\\DTOs\\RequestDTO\\RequestReadDTO.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:25:53.71Z"
+              "WhenOpened": "2025-01-09T09:26:13.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RequestMapping.cs",
+              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Mappings\\RequestMapping.cs",
+              "RelativeDocumentMoniker": "CS.Application\\Mappings\\RequestMapping.cs",
+              "ToolTip": "D:\\cs\\backend_cs\\CS.Application\\Mappings\\RequestMapping.cs",
+              "RelativeToolTip": "CS.Application\\Mappings\\RequestMapping.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAuwAcAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T02:19:07.88Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "CustomersController.cs",
-              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Presentation\\Controllers\\CustomersController.cs",
-              "RelativeDocumentMoniker": "CS.Presentation\\Controllers\\CustomersController.cs",
-              "ToolTip": "D:\\cs\\backend_cs\\CS.Presentation\\Controllers\\CustomersController.cs",
-              "RelativeToolTip": "CS.Presentation\\Controllers\\CustomersController.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAIwCsAAAAhAAAAAAAAAA==",
+              "Title": "RequestRepo.cs",
+              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Infrastructure\\Repositories\\RequestRepo.cs",
+              "RelativeDocumentMoniker": "CS.Infrastructure\\Repositories\\RequestRepo.cs",
+              "ToolTip": "D:\\cs\\backend_cs\\CS.Infrastructure\\Repositories\\RequestRepo.cs",
+              "RelativeToolTip": "CS.Infrastructure\\Repositories\\RequestRepo.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAuwAUAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T08:46:20.588Z"
+              "WhenOpened": "2025-01-10T02:29:59.993Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
+              "Title": "CreateRequestCommand.cs",
+              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Commands\\RequestCommands\\CreateRequestCommand.cs",
+              "RelativeDocumentMoniker": "CS.Application\\Commands\\RequestCommands\\CreateRequestCommand.cs",
+              "ToolTip": "D:\\cs\\backend_cs\\CS.Application\\Commands\\RequestCommands\\CreateRequestCommand.cs",
+              "RelativeToolTip": "CS.Application\\Commands\\RequestCommands\\CreateRequestCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T03:25:37.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RequestIssueTypeEnum.cs",
+              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Domain\\Enumerations\\RequestIssueTypeEnum.cs",
+              "RelativeDocumentMoniker": "CS.Domain\\Enumerations\\RequestIssueTypeEnum.cs",
+              "ToolTip": "D:\\cs\\backend_cs\\CS.Domain\\Enumerations\\RequestIssueTypeEnum.cs",
+              "RelativeToolTip": "CS.Domain\\Enumerations\\RequestIssueTypeEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T09:35:45.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CreateUserHandler.cs",
+              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\UseCases\\UserUseCases\\CreateUserHandler.cs",
+              "RelativeDocumentMoniker": "CS.Application\\UseCases\\UserUseCases\\CreateUserHandler.cs",
+              "ToolTip": "D:\\cs\\backend_cs\\CS.Application\\UseCases\\UserUseCases\\CreateUserHandler.cs",
+              "RelativeToolTip": "CS.Application\\UseCases\\UserUseCases\\CreateUserHandler.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAUwB8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T08:50:31.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RequestsController.cs",
+              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Presentation\\Controllers\\RequestsController.cs",
+              "RelativeDocumentMoniker": "CS.Presentation\\Controllers\\RequestsController.cs",
+              "ToolTip": "D:\\cs\\backend_cs\\CS.Presentation\\Controllers\\RequestsController.cs",
+              "RelativeToolTip": "CS.Presentation\\Controllers\\RequestsController.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAkwEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T08:45:20.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "CreateCustomerCommand.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Commands\\CustomerCommands\\CreateCustomerCommand.cs",
               "RelativeDocumentMoniker": "CS.Application\\Commands\\CustomerCommands\\CreateCustomerCommand.cs",
@@ -445,56 +549,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Presentation\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "CS.Presentation\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\cs\\backend_cs\\CS.Presentation\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "CS.Presentation\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAYwC4AAAAJAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Domain\\Entities\\Customer.cs",
+              "RelativeDocumentMoniker": "CS.Domain\\Entities\\Customer.cs",
+              "ToolTip": "D:\\cs\\backend_cs\\CS.Domain\\Entities\\Customer.cs",
+              "RelativeToolTip": "CS.Domain\\Entities\\Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T08:29:57.138Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EmailManagerService.cs",
-              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Infrastructure\\Services\\EmailManagerService.cs",
-              "RelativeDocumentMoniker": "CS.Infrastructure\\Services\\EmailManagerService.cs",
-              "ToolTip": "D:\\cs\\backend_cs\\CS.Infrastructure\\Services\\EmailManagerService.cs",
-              "RelativeToolTip": "CS.Infrastructure\\Services\\EmailManagerService.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowC4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T08:21:33.361Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Presentation\\appsettings.json",
-              "RelativeDocumentMoniker": "CS.Presentation\\appsettings.json",
-              "ToolTip": "D:\\cs\\backend_cs\\CS.Presentation\\appsettings.json",
-              "RelativeToolTip": "CS.Presentation\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-16T04:07:03.305Z",
+              "WhenOpened": "2025-01-09T09:37:24.66Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CustomerLoginHandler.cs",
-              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\UseCases\\AuthenUseCases\\CustomerLoginHandler.cs",
-              "RelativeDocumentMoniker": "CS.Application\\UseCases\\AuthenUseCases\\CustomerLoginHandler.cs",
-              "ToolTip": "D:\\cs\\backend_cs\\CS.Application\\UseCases\\AuthenUseCases\\CustomerLoginHandler.cs",
-              "RelativeToolTip": "CS.Application\\UseCases\\AuthenUseCases\\CustomerLoginHandler.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAIwCoAAAASAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "CreateUserCommand.cs",
+              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Commands\\UserCommands\\CreateUserCommand.cs",
+              "RelativeDocumentMoniker": "CS.Application\\Commands\\UserCommands\\CreateUserCommand.cs",
+              "ToolTip": "D:\\cs\\backend_cs\\CS.Application\\Commands\\UserCommands\\CreateUserCommand.cs",
+              "RelativeToolTip": "CS.Application\\Commands\\UserCommands\\CreateUserCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T08:38:11.782Z"
+              "WhenOpened": "2025-01-10T03:26:03.162Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "CS.Domain\\Entities\\User.cs",
+              "ToolTip": "D:\\cs\\backend_cs\\CS.Domain\\Entities\\User.cs",
+              "RelativeToolTip": "CS.Domain\\Entities\\User.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAowBAAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T06:43:04.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Presentation\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "CS.Presentation\\Controllers\\UsersController.cs",
+              "ToolTip": "D:\\cs\\backend_cs\\CS.Presentation\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "CS.Presentation\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwCwAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T08:45:04.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "ValidationPipelineBahavior.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Behaviors\\ValidationPipelineBahavior.cs",
               "RelativeDocumentMoniker": "CS.Application\\Behaviors\\ValidationPipelineBahavior.cs",
@@ -506,7 +613,81 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 17,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Presentation\\appsettings.json",
+              "RelativeDocumentMoniker": "CS.Presentation\\appsettings.json",
+              "ToolTip": "D:\\cs\\backend_cs\\CS.Presentation\\appsettings.json",
+              "RelativeToolTip": "CS.Presentation\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-16T04:07:03.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "EmailManagerService.cs",
+              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Infrastructure\\Services\\EmailManagerService.cs",
+              "RelativeDocumentMoniker": "CS.Infrastructure\\Services\\EmailManagerService.cs",
+              "ToolTip": "D:\\cs\\backend_cs\\CS.Infrastructure\\Services\\EmailManagerService.cs",
+              "RelativeToolTip": "CS.Infrastructure\\Services\\EmailManagerService.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T08:21:33.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Presentation\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "CS.Presentation\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\cs\\backend_cs\\CS.Presentation\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "CS.Presentation\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAuwCMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T08:29:57.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CustomersController.cs",
+              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Presentation\\Controllers\\CustomersController.cs",
+              "RelativeDocumentMoniker": "CS.Presentation\\Controllers\\CustomersController.cs",
+              "ToolTip": "D:\\cs\\backend_cs\\CS.Presentation\\Controllers\\CustomersController.cs",
+              "RelativeToolTip": "CS.Presentation\\Controllers\\CustomersController.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAIwCsAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T08:46:20.588Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "UpdateRequestCommand.cs",
+              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Commands\\RequestCommands\\UpdateRequestCommand.cs",
+              "RelativeDocumentMoniker": "CS.Application\\Commands\\RequestCommands\\UpdateRequestCommand.cs",
+              "ToolTip": "D:\\cs\\backend_cs\\CS.Application\\Commands\\RequestCommands\\UpdateRequestCommand.cs",
+              "RelativeToolTip": "CS.Application\\Commands\\RequestCommands\\UpdateRequestCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T03:25:53.71Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "OAuthService.cs",
+              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Infrastructure\\Services\\OAuthService.cs",
+              "RelativeDocumentMoniker": "CS.Infrastructure\\Services\\OAuthService.cs",
+              "ToolTip": "D:\\cs\\backend_cs\\CS.Infrastructure\\Services\\OAuthService.cs",
+              "RelativeToolTip": "CS.Infrastructure\\Services\\OAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T09:43:53.026Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "UpdateCustomerCommand.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Commands\\CustomerCommands\\UpdateCustomerCommand.cs",
               "RelativeDocumentMoniker": "CS.Application\\Commands\\CustomerCommands\\UpdateCustomerCommand.cs",
@@ -518,7 +699,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 27,
               "Title": "CreateCustomerCommandValidator.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Validators\\CustomerCommandValidators\\CreateCustomerCommandValidator.cs",
               "RelativeDocumentMoniker": "CS.Application\\Validators\\CustomerCommandValidators\\CreateCustomerCommandValidator.cs",
@@ -530,7 +711,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 26,
               "Title": "ChatHub.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Infrastructure\\Hubs\\ChatHub.cs",
               "RelativeDocumentMoniker": "CS.Infrastructure\\Hubs\\ChatHub.cs",
@@ -542,7 +723,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 25,
               "Title": "IChatService.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Abstractions\\Services\\IChatService.cs",
               "RelativeDocumentMoniker": "CS.Application\\Abstractions\\Services\\IChatService.cs",
@@ -554,7 +735,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 24,
               "Title": "ChatService.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Infrastructure\\Services\\ChatService.cs",
               "RelativeDocumentMoniker": "CS.Infrastructure\\Services\\ChatService.cs",
@@ -566,43 +747,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "RequestsController.cs",
-              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Presentation\\Controllers\\RequestsController.cs",
-              "RelativeDocumentMoniker": "CS.Presentation\\Controllers\\RequestsController.cs",
-              "ToolTip": "D:\\cs\\backend_cs\\CS.Presentation\\Controllers\\RequestsController.cs",
-              "RelativeToolTip": "CS.Presentation\\Controllers\\RequestsController.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAYwFgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T08:45:20.1Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CreateRequestCommand.cs",
-              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Commands\\RequestCommands\\CreateRequestCommand.cs",
-              "RelativeDocumentMoniker": "CS.Application\\Commands\\RequestCommands\\CreateRequestCommand.cs",
-              "ToolTip": "D:\\cs\\backend_cs\\CS.Application\\Commands\\RequestCommands\\CreateRequestCommand.cs",
-              "RelativeToolTip": "CS.Application\\Commands\\RequestCommands\\CreateRequestCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:25:37.372Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "RequestReadDTO.cs",
-              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\DTOs\\RequestDTO\\RequestReadDTO.cs",
-              "RelativeDocumentMoniker": "CS.Application\\DTOs\\RequestDTO\\RequestReadDTO.cs",
-              "ToolTip": "D:\\cs\\backend_cs\\CS.Application\\DTOs\\RequestDTO\\RequestReadDTO.cs",
-              "RelativeToolTip": "CS.Application\\DTOs\\RequestDTO\\RequestReadDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T09:26:13.665Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 29,
               "Title": "CustomerReadDTO.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\DTOs\\CustomerDTO\\CustomerReadDTO.cs",
               "RelativeDocumentMoniker": "CS.Application\\DTOs\\CustomerDTO\\CustomerReadDTO.cs",
@@ -614,19 +759,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "RequestCreateDTO.cs",
-              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\DTOs\\RequestDTO\\RequestCreateDTO.cs",
-              "RelativeDocumentMoniker": "CS.Application\\DTOs\\RequestDTO\\RequestCreateDTO.cs",
-              "ToolTip": "D:\\cs\\backend_cs\\CS.Application\\DTOs\\RequestDTO\\RequestCreateDTO.cs",
-              "RelativeToolTip": "CS.Application\\DTOs\\RequestDTO\\RequestCreateDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T01:50:43.318Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 30,
               "Title": "TokenManagerService.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Infrastructure\\Services\\TokenManagerService.cs",
               "RelativeDocumentMoniker": "CS.Infrastructure\\Services\\TokenManagerService.cs",
@@ -638,19 +771,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Presentation\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "CS.Presentation\\Controllers\\UsersController.cs",
-              "ToolTip": "D:\\cs\\backend_cs\\CS.Presentation\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "CS.Presentation\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAgwC4AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T08:45:04.04Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 31,
               "Title": "UserLoginHandler.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\UseCases\\AuthenUseCases\\UserLoginHandler.cs",
               "RelativeDocumentMoniker": "CS.Application\\UseCases\\AuthenUseCases\\UserLoginHandler.cs",
@@ -662,7 +783,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 32,
               "Title": "UserRoleEnum.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Domain\\Enumerations\\UserRoleEnum.cs",
               "RelativeDocumentMoniker": "CS.Domain\\Enumerations\\UserRoleEnum.cs",
@@ -674,7 +795,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 33,
               "Title": "CS.Presentation.csproj",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Presentation\\CS.Presentation.csproj",
               "RelativeDocumentMoniker": "CS.Presentation\\CS.Presentation.csproj",
@@ -686,19 +807,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Domain\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "CS.Domain\\Entities\\User.cs",
-              "ToolTip": "D:\\cs\\backend_cs\\CS.Domain\\Entities\\User.cs",
-              "RelativeToolTip": "CS.Domain\\Entities\\User.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAowBAAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T06:43:04.86Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 34,
               "Title": "ITokenManagerService.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Abstractions\\Services\\ITokenManagerService.cs",
               "RelativeDocumentMoniker": "CS.Application\\Abstractions\\Services\\ITokenManagerService.cs",
@@ -710,19 +819,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "CreateUserHandler.cs",
-              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\UseCases\\UserUseCases\\CreateUserHandler.cs",
-              "RelativeDocumentMoniker": "CS.Application\\UseCases\\UserUseCases\\CreateUserHandler.cs",
-              "ToolTip": "D:\\cs\\backend_cs\\CS.Application\\UseCases\\UserUseCases\\CreateUserHandler.cs",
-              "RelativeToolTip": "CS.Application\\UseCases\\UserUseCases\\CreateUserHandler.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAIwDUAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T08:50:31.597Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 35,
               "Title": "UserRepo.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Infrastructure\\Repositories\\UserRepo.cs",
               "RelativeDocumentMoniker": "CS.Infrastructure\\Repositories\\UserRepo.cs",
@@ -734,7 +831,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 36,
               "Title": "UserMapping.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Mappings\\UserMapping.cs",
               "RelativeDocumentMoniker": "CS.Application\\Mappings\\UserMapping.cs",
@@ -746,19 +843,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Domain\\Entities\\Customer.cs",
-              "RelativeDocumentMoniker": "CS.Domain\\Entities\\Customer.cs",
-              "ToolTip": "D:\\cs\\backend_cs\\CS.Domain\\Entities\\Customer.cs",
-              "RelativeToolTip": "CS.Domain\\Entities\\Customer.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAmwBMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T09:37:24.66Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 37,
               "Title": "UpdateUserCommandValidator.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Validators\\UserCommandValidators\\UpdateUserCommandValidator.cs",
               "RelativeDocumentMoniker": "CS.Application\\Validators\\UserCommandValidators\\UpdateUserCommandValidator.cs",
@@ -770,19 +855,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "BaseRepo.cs",
-              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Infrastructure\\Repositories\\BaseRepo.cs",
-              "RelativeDocumentMoniker": "CS.Infrastructure\\Repositories\\BaseRepo.cs",
-              "ToolTip": "D:\\cs\\backend_cs\\CS.Infrastructure\\Repositories\\BaseRepo.cs",
-              "RelativeToolTip": "CS.Infrastructure\\Repositories\\BaseRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T06:36:38.896Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 38,
               "Title": "CreateUserCommandValidator.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Validators\\UserCommandValidators\\CreateUserCommandValidator.cs",
               "RelativeDocumentMoniker": "CS.Application\\Validators\\UserCommandValidators\\CreateUserCommandValidator.cs",
@@ -794,7 +867,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 39,
               "Title": "UpdateRequestCommandValidator.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Validators\\RequestCommandValidators\\UpdateRequestCommandValidator.cs",
               "RelativeDocumentMoniker": "CS.Application\\Validators\\RequestCommandValidators\\UpdateRequestCommandValidator.cs",
@@ -806,7 +879,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 40,
               "Title": "CreateRequestCommandValidator.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Validators\\RequestCommandValidators\\CreateRequestCommandValidator.cs",
               "RelativeDocumentMoniker": "CS.Application\\Validators\\RequestCommandValidators\\CreateRequestCommandValidator.cs",
@@ -818,7 +891,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 41,
               "Title": "UserLoginCommandValidator.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Validators\\AuthenCommandValidators\\UserLoginCommandValidator.cs",
               "RelativeDocumentMoniker": "CS.Application\\Validators\\AuthenCommandValidators\\UserLoginCommandValidator.cs",
@@ -830,7 +903,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 42,
               "Title": "CustomerLoginCommandValidator.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Validators\\AuthenCommandValidators\\CustomerLoginCommandValidator.cs",
               "RelativeDocumentMoniker": "CS.Application\\Validators\\AuthenCommandValidators\\CustomerLoginCommandValidator.cs",
@@ -842,7 +915,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 43,
               "Title": "UpdateCustomerCommandValidator.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Validators\\CustomerCommandValidators\\UpdateCustomerCommandValidator.cs",
               "RelativeDocumentMoniker": "CS.Application\\Validators\\CustomerCommandValidators\\UpdateCustomerCommandValidator.cs",
@@ -854,7 +927,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 45,
               "Title": "DependencyInjection.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\DependencyInjection.cs",
               "RelativeDocumentMoniker": "CS.Application\\DependencyInjection.cs",
@@ -866,7 +939,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 44,
               "Title": "CS.http",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Presentation\\CS.http",
               "RelativeDocumentMoniker": "CS.Presentation\\CS.http",
@@ -878,7 +951,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 46,
               "Title": "CustomerLoginCommand.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Commands\\AuthenCommands\\CustomerLoginCommand.cs",
               "RelativeDocumentMoniker": "CS.Application\\Commands\\AuthenCommands\\CustomerLoginCommand.cs",
@@ -890,7 +963,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 47,
               "Title": "UpdateCustomerHandler.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\UseCases\\CustomerUseCases\\UpdateCustomerHandler.cs",
               "RelativeDocumentMoniker": "CS.Application\\UseCases\\CustomerUseCases\\UpdateCustomerHandler.cs",
@@ -902,7 +975,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 48,
               "Title": "GetCustomerByIdHandler.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\UseCases\\CustomerUseCases\\GetCustomerByIdHandler.cs",
               "RelativeDocumentMoniker": "CS.Application\\UseCases\\CustomerUseCases\\GetCustomerByIdHandler.cs",
@@ -914,7 +987,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 49,
               "Title": "GetAllCustomerHandler.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\UseCases\\CustomerUseCases\\GetAllCustomerHandler.cs",
               "RelativeDocumentMoniker": "CS.Application\\UseCases\\CustomerUseCases\\GetAllCustomerHandler.cs",
@@ -926,7 +999,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 50,
               "Title": "CreateCustomerHandler.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\UseCases\\CustomerUseCases\\CreateCustomerHandler.cs",
               "RelativeDocumentMoniker": "CS.Application\\UseCases\\CustomerUseCases\\CreateCustomerHandler.cs",
@@ -938,7 +1011,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 51,
               "Title": "UpdateUserHandler.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\UseCases\\UserUseCases\\UpdateUserHandler.cs",
               "RelativeDocumentMoniker": "CS.Application\\UseCases\\UserUseCases\\UpdateUserHandler.cs",
@@ -950,7 +1023,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 52,
               "Title": "GetUserByIdHandler.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\UseCases\\UserUseCases\\GetUserByIdHandler.cs",
               "RelativeDocumentMoniker": "CS.Application\\UseCases\\UserUseCases\\GetUserByIdHandler.cs",
@@ -962,7 +1035,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 53,
               "Title": "GetAllUsersHandler.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\UseCases\\UserUseCases\\GetAllUsersHandler.cs",
               "RelativeDocumentMoniker": "CS.Application\\UseCases\\UserUseCases\\GetAllUsersHandler.cs",
@@ -974,7 +1047,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 54,
               "Title": "UpdateRequestHandler.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\UseCases\\RequestUseCases\\UpdateRequestHandler.cs",
               "RelativeDocumentMoniker": "CS.Application\\UseCases\\RequestUseCases\\UpdateRequestHandler.cs",
@@ -986,7 +1059,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 55,
               "Title": "GetRequestsByUserIdHandler.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\UseCases\\RequestUseCases\\GetRequestsByUserIdHandler.cs",
               "RelativeDocumentMoniker": "CS.Application\\UseCases\\RequestUseCases\\GetRequestsByUserIdHandler.cs",
@@ -998,7 +1071,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 56,
               "Title": "GetRequestsByStatusHandler.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\UseCases\\RequestUseCases\\GetRequestsByStatusHandler.cs",
               "RelativeDocumentMoniker": "CS.Application\\UseCases\\RequestUseCases\\GetRequestsByStatusHandler.cs",
@@ -1010,7 +1083,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 57,
               "Title": "GetRequestsByCustomerIdHandler.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\UseCases\\RequestUseCases\\GetRequestsByCustomerIdHandler.cs",
               "RelativeDocumentMoniker": "CS.Application\\UseCases\\RequestUseCases\\GetRequestsByCustomerIdHandler.cs",
@@ -1022,7 +1095,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 58,
               "Title": "GetRequestByIdHandler.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\UseCases\\RequestUseCases\\GetRequestByIdHandler.cs",
               "RelativeDocumentMoniker": "CS.Application\\UseCases\\RequestUseCases\\GetRequestByIdHandler.cs",
@@ -1034,7 +1107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 59,
               "Title": "GetAllRequestsHandler.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\UseCases\\RequestUseCases\\GetAllRequestsHandler.cs",
               "RelativeDocumentMoniker": "CS.Application\\UseCases\\RequestUseCases\\GetAllRequestsHandler.cs",
@@ -1046,7 +1119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 60,
               "Title": "DeleteRequestHandler.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\UseCases\\RequestUseCases\\DeleteRequestHandler.cs",
               "RelativeDocumentMoniker": "CS.Application\\UseCases\\RequestUseCases\\DeleteRequestHandler.cs",
@@ -1058,19 +1131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "CreateRequestHandler.cs",
-              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\UseCases\\RequestUseCases\\CreateRequestHandler.cs",
-              "RelativeDocumentMoniker": "CS.Application\\UseCases\\RequestUseCases\\CreateRequestHandler.cs",
-              "ToolTip": "D:\\cs\\backend_cs\\CS.Application\\UseCases\\RequestUseCases\\CreateRequestHandler.cs",
-              "RelativeToolTip": "CS.Application\\UseCases\\RequestUseCases\\CreateRequestHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T09:17:17.704Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 61,
               "Title": "GetUserByIdQuery.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Queries\\UserQueries\\GetUserByIdQuery.cs",
               "RelativeDocumentMoniker": "CS.Application\\Queries\\UserQueries\\GetUserByIdQuery.cs",
@@ -1082,7 +1143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 62,
               "Title": "GetAllUsersQuery.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Queries\\UserQueries\\GetAllUsersQuery.cs",
               "RelativeDocumentMoniker": "CS.Application\\Queries\\UserQueries\\GetAllUsersQuery.cs",
@@ -1094,7 +1155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 63,
               "Title": "GetRequestsByUserIdQuery.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Queries\\RequestQueries\\GetRequestsByUserIdQuery.cs",
               "RelativeDocumentMoniker": "CS.Application\\Queries\\RequestQueries\\GetRequestsByUserIdQuery.cs",
@@ -1106,7 +1167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 64,
               "Title": "GetRequestsByStatusQuery.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Queries\\RequestQueries\\GetRequestsByStatusQuery.cs",
               "RelativeDocumentMoniker": "CS.Application\\Queries\\RequestQueries\\GetRequestsByStatusQuery.cs",
@@ -1118,7 +1179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 65,
               "Title": "GetRequestsByCustomerIdQuery.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Queries\\RequestQueries\\GetRequestsByCustomerIdQuery.cs",
               "RelativeDocumentMoniker": "CS.Application\\Queries\\RequestQueries\\GetRequestsByCustomerIdQuery.cs",
@@ -1130,7 +1191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 66,
               "Title": "GetRequestByIdQuery.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Queries\\RequestQueries\\GetRequestByIdQuery.cs",
               "RelativeDocumentMoniker": "CS.Application\\Queries\\RequestQueries\\GetRequestByIdQuery.cs",
@@ -1142,7 +1203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 67,
               "Title": "GetAllRequestsQuery.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Queries\\RequestQueries\\GetAllRequestsQuery.cs",
               "RelativeDocumentMoniker": "CS.Application\\Queries\\RequestQueries\\GetAllRequestsQuery.cs",
@@ -1154,7 +1215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 68,
               "Title": "GetCustomerByIdQuery.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Queries\\CustomerQueries\\GetCustomerByIdQuery.cs",
               "RelativeDocumentMoniker": "CS.Application\\Queries\\CustomerQueries\\GetCustomerByIdQuery.cs",
@@ -1166,7 +1227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 69,
               "Title": "GetAllCustomersQuery.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Queries\\CustomerQueries\\GetAllCustomersQuery.cs",
               "RelativeDocumentMoniker": "CS.Application\\Queries\\CustomerQueries\\GetAllCustomersQuery.cs",
@@ -1178,7 +1239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 70,
               "Title": "UpdateUserCommand.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Commands\\UserCommands\\UpdateUserCommand.cs",
               "RelativeDocumentMoniker": "CS.Application\\Commands\\UserCommands\\UpdateUserCommand.cs",
@@ -1190,19 +1251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
-              "Title": "CreateUserCommand.cs",
-              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Commands\\UserCommands\\CreateUserCommand.cs",
-              "RelativeDocumentMoniker": "CS.Application\\Commands\\UserCommands\\CreateUserCommand.cs",
-              "ToolTip": "D:\\cs\\backend_cs\\CS.Application\\Commands\\UserCommands\\CreateUserCommand.cs",
-              "RelativeToolTip": "CS.Application\\Commands\\UserCommands\\CreateUserCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:26:03.162Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 71,
               "Title": "DeleteRequestCommand.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Commands\\RequestCommands\\DeleteRequestCommand.cs",
               "RelativeDocumentMoniker": "CS.Application\\Commands\\RequestCommands\\DeleteRequestCommand.cs",
@@ -1214,7 +1263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 72,
               "Title": "UserLoginCommand.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Commands\\AuthenCommands\\UserLoginCommand.cs",
               "RelativeDocumentMoniker": "CS.Application\\Commands\\AuthenCommands\\UserLoginCommand.cs",
@@ -1226,7 +1275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 74,
               "Title": "IQueryHandler.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Abstractions\\IQueryHandler.cs",
               "RelativeDocumentMoniker": "CS.Application\\Abstractions\\IQueryHandler.cs",
@@ -1238,7 +1287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 75,
               "Title": "ICommandHandler.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Abstractions\\ICommandHandler.cs",
               "RelativeDocumentMoniker": "CS.Application\\Abstractions\\ICommandHandler.cs",
@@ -1250,7 +1299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 73,
               "Title": "ICommand.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Abstractions\\ICommand.cs",
               "RelativeDocumentMoniker": "CS.Application\\Abstractions\\ICommand.cs",
@@ -1262,7 +1311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 76,
               "Title": "IUserRepo.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Abstractions\\Repositories\\IUserRepo.cs",
               "RelativeDocumentMoniker": "CS.Application\\Abstractions\\Repositories\\IUserRepo.cs",
@@ -1274,7 +1323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 77,
               "Title": "CustomerRepo.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Infrastructure\\Repositories\\CustomerRepo.cs",
               "RelativeDocumentMoniker": "CS.Infrastructure\\Repositories\\CustomerRepo.cs",
@@ -1286,19 +1335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
-              "Title": "RequestRepo.cs",
-              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Infrastructure\\Repositories\\RequestRepo.cs",
-              "RelativeDocumentMoniker": "CS.Infrastructure\\Repositories\\RequestRepo.cs",
-              "ToolTip": "D:\\cs\\backend_cs\\CS.Infrastructure\\Repositories\\RequestRepo.cs",
-              "RelativeToolTip": "CS.Infrastructure\\Repositories\\RequestRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T02:29:59.993Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 78,
               "Title": "IQuery.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Abstractions\\IQuery.cs",
               "RelativeDocumentMoniker": "CS.Application\\Abstractions\\IQuery.cs",
@@ -1310,7 +1347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 80,
               "Title": "IRequestRepo.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Abstractions\\Repositories\\IRequestRepo.cs",
               "RelativeDocumentMoniker": "CS.Application\\Abstractions\\Repositories\\IRequestRepo.cs",
@@ -1322,7 +1359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 81,
               "Title": "ICustomerRepo.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Abstractions\\Repositories\\ICustomerRepo.cs",
               "RelativeDocumentMoniker": "CS.Application\\Abstractions\\Repositories\\ICustomerRepo.cs",
@@ -1334,19 +1371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
-              "Title": "IBaseRepo.cs",
-              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Abstractions\\Repositories\\IBaseRepo.cs",
-              "RelativeDocumentMoniker": "CS.Application\\Abstractions\\Repositories\\IBaseRepo.cs",
-              "ToolTip": "D:\\cs\\backend_cs\\CS.Application\\Abstractions\\Repositories\\IBaseRepo.cs",
-              "RelativeToolTip": "CS.Application\\Abstractions\\Repositories\\IBaseRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T02:55:58.333Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 79,
               "Title": "IEmailManagerService.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Abstractions\\Services\\IEmailManagerService.cs",
               "RelativeDocumentMoniker": "CS.Application\\Abstractions\\Services\\IEmailManagerService.cs",
@@ -1358,7 +1383,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 84,
               "Title": "BaseEntity.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Domain\\Entities\\BaseEntity.cs",
               "RelativeDocumentMoniker": "CS.Domain\\Entities\\BaseEntity.cs",
@@ -1370,19 +1395,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
-              "Title": "RequestIssueTypeEnum.cs",
-              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Domain\\Enumerations\\RequestIssueTypeEnum.cs",
-              "RelativeDocumentMoniker": "CS.Domain\\Enumerations\\RequestIssueTypeEnum.cs",
-              "ToolTip": "D:\\cs\\backend_cs\\CS.Domain\\Enumerations\\RequestIssueTypeEnum.cs",
-              "RelativeToolTip": "CS.Domain\\Enumerations\\RequestIssueTypeEnum.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T09:35:45.304Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 82,
               "Title": "DapperContext.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Infrastructure\\DBContext\\DapperContext.cs",
               "RelativeDocumentMoniker": "CS.Infrastructure\\DBContext\\DapperContext.cs",
@@ -1394,7 +1407,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 83,
               "Title": "ExceptionHandlingMiddleware.cs",
               "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Presentation\\Middlewares\\ExceptionHandlingMiddleware.cs",
               "RelativeDocumentMoniker": "CS.Presentation\\Middlewares\\ExceptionHandlingMiddleware.cs",
@@ -1430,7 +1443,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 91,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\lphan\\Documents\\Paul\u0027s Workspace\\My Project\\cs\\backend_cs\\CS\\Program.cs",
               "ToolTip": "C:\\Users\\lphan\\Documents\\Paul\u0027s Workspace\\My Project\\cs\\backend_cs\\CS\\Program.cs",
@@ -1439,7 +1452,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 92,
               "Title": "CustomersController.cs",
               "DocumentMoniker": "C:\\Users\\lphan\\Documents\\Paul\u0027s Workspace\\My Project\\cs\\backend_cs\\CS\\Controllers\\CustomersController.cs",
               "ToolTip": "C:\\Users\\lphan\\Documents\\Paul\u0027s Workspace\\My Project\\cs\\backend_cs\\CS\\Controllers\\CustomersController.cs",
@@ -1460,19 +1473,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
-              "Title": "RequestMapping.cs",
-              "DocumentMoniker": "D:\\cs\\backend_cs\\CS.Application\\Mappings\\RequestMapping.cs",
-              "RelativeDocumentMoniker": "CS.Application\\Mappings\\RequestMapping.cs",
-              "ToolTip": "D:\\cs\\backend_cs\\CS.Application\\Mappings\\RequestMapping.cs",
-              "RelativeToolTip": "CS.Application\\Mappings\\RequestMapping.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T02:19:07.88Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 89,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Surface\\source\\repos\\backend_cs\\backend_cs\\Program.cs",
               "ToolTip": "C:\\Users\\Surface\\source\\repos\\backend_cs\\backend_cs\\Program.cs",
@@ -1481,7 +1482,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 88,
               "Title": "CS.WebAPI.csproj",
               "DocumentMoniker": "C:\\Users\\Surface\\source\\repos\\backend_cs\\backend_cs\\CS.WebAPI.csproj",
               "ToolTip": "C:\\Users\\Surface\\source\\repos\\backend_cs\\backend_cs\\CS.WebAPI.csproj",
@@ -1490,7 +1491,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 90,
               "Title": "appsettings.Production.json",
               "DocumentMoniker": "C:\\Users\\Surface\\source\\repos\\backend_cs\\backend_cs\\appsettings.Production.json",
               "ToolTip": "C:\\Users\\Surface\\source\\repos\\backend_cs\\backend_cs\\appsettings.Production.json",

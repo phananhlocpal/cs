@@ -1,21 +1,22 @@
 ﻿import React, { useState } from "react";
 import { Box, Button, FormControl, FormErrorMessage, FormLabel, Input, Select, Textarea, VStack } from "@chakra-ui/react";
-import { RequestCreateRequestModel, RequestStatusEnum, RequestUpdateRequestModel, CreateComponentProps } from "@/abstract";
+import { RequestCreateRequestModel, RequestIssueTypeEnum, CreateComponentProps } from "@/abstract";
 
 export const CreateComponent: React.FC<CreateComponentProps> = ({ onSubmit, onCancel, customers }) => {
     const [formData, setFormData] = useState<RequestCreateRequestModel>({
         title: "",
         description: "",
-        personInChargeId: '1',
-        customerId: '1',
+        issueType: undefined,
+        personInChargeId: JSON.parse(localStorage.getItem("userProfile") || '{}').id || '',
+        customerId: '',
     });
 
-    const [errors, setErrors] = useState<Partial<CreateRequestFormData>>({});
+    const [errors, setErrors] = useState<Partial<RequestCreateRequestModel>>({});
     const [isLoading, setIsLoading] = useState(false);
 
     const validateForm = (): boolean => {
-        const newErrors: Partial<CreateRequestFormData> = {};
-        
+        const newErrors: Partial<RequestCreateRequestModel> = {};
+
         if (!formData.title) {
             newErrors.title = "Title is required";
         }
@@ -45,7 +46,7 @@ export const CreateComponent: React.FC<CreateComponentProps> = ({ onSubmit, onCa
         const { name, value } = e.target;
         setFormData(prev => ({
             ...prev,
-            [name]: value
+            [name]: name === "issueType"? parseInt(value) : value
         }));
     };
 
@@ -71,13 +72,31 @@ export const CreateComponent: React.FC<CreateComponentProps> = ({ onSubmit, onCa
                     />
                     <FormErrorMessage>{errors.description}</FormErrorMessage>
                 </FormControl>
+                <FormControl>
+                    <FormLabel>Issue Type</FormLabel>
+                    <Select
+                        name="issueType"
+                        value={formData.issueType}
+                        onChange={handleChange}
+                        placeholder="Choose an issue type"
+                        required
+                    >
+                        {Object.entries(RequestIssueTypeEnum).map(([keyEnum, value], key) => (
+                            <option key={key} value={key}>
+                                {value}
+                            </option>
+                        ))}
+                    </Select>
+                </FormControl>
 
                 <FormControl>
-                    <FormLabel>Person In Charge</FormLabel>
+                    <FormLabel>Customer</FormLabel>
                     <Select
-                        name="personInChargeId"
-                        value={formData.personInChargeId}
+                        name="customerId"
+                        value={formData.customerId}
                         onChange={handleChange}
+                        placeholder="Choose a customer"
+                        required
                     >
                         {customers.map((customer: any) => (
                             <option key={customer.id} value={customer.id}>{customer.name}</option>

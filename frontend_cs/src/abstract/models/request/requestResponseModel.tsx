@@ -1,12 +1,13 @@
-import { CustomerResponseModel, UserResponseModel, RequestStatusEnum  } from "@/abstract";
+import { CustomerResponseModel, UserResponseModel, RequestStatusEnum, RequestIssueTypeEnum  } from "@/abstract";
 
 export interface RequestResponseModel {
-    id: string;
-    title: string;
-    description: string;
-    createdDate: Date;
-    status: RequestStatusEnum;
-    personInCharge: UserResponseModel;
-    customer: CustomerResponseModel;
+    id: string
+    title: string
+    description: string
+    issueType: number
+    createdDate: Date
+    status: number
+    personInChargeId: string
+    customerId: string
 }
 

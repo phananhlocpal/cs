@@ -9,21 +9,16 @@ const axiosInterceptorInstance = axios.create({
 const checkAuth = async () => {
   const token = Cookies.get('token');
   if (token) {
-    try {
-      const response = await axiosInterceptorInstance.get('/api/me');
-      return response.data;
-    } catch (error) {
-      Cookies.remove('token');
-      localStorage.removeItem('customerProfile');
-      return null;
-    }
+    return localStorage.getItem("customerProfile");
   }
+  navigateToLogin();
   return null;
 };
 
 axiosInterceptorInstance.interceptors.request.use((config) => {
   const token = Cookies.get('token');
   if (token) {
+    console.log("Vào đây");
     config.headers.Authorization = `Bearer ${token}`;
   }
   return config;

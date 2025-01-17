@@ -1,4 +1,4 @@
-﻿import axios from 'axios';
+﻿import axiosInterceptorInstance from '@/interceptors/axiosInterceptorInstance';
 import { 
   CustomerResponseModel,
   CustomerCreateRequestModel,
@@ -10,7 +10,7 @@ class CustomerService {
   // Get all customers
   async getAllCustomers(): Promise<CustomerResponseModel[]> {
     try {
-      const response = await axios.get(this.baseUrl);
+      const response = await axiosInterceptorInstance.get(this.baseUrl);
       return response.data;
     } catch (error) {
       return this.handleError(error);
@@ -20,7 +20,7 @@ class CustomerService {
   // Get customer by ID
   async getCustomerById(id: string): Promise<CustomerResponseModel> {
     try {
-      const response = await axios.get(`${this.baseUrl}/${id}`);
+      const response = await axiosInterceptorInstance.get(`${this.baseUrl}/${id}`);
       return response.data;
     } catch (error) {
       return this.handleError(error);
@@ -30,7 +30,7 @@ class CustomerService {
   // Create new customer
   async createCustomer(customer: CustomerCreateRequestModel): Promise<CustomerResponseModel> {
     try {
-      const response = await axios.post(this.baseUrl, customer);
+      const response = await axiosInterceptorInstance.post(this.baseUrl, customer);
       return response.data;
     } catch (error) {
       return this.handleError(error);
@@ -40,7 +40,7 @@ class CustomerService {
   // Update customer
   async updateCustomer(id: string, customer: CustomerUpdateRequestModel): Promise<CustomerResponseModel> {
     try {
-      const response = await axios.put(`${this.baseUrl}/${id}`, customer);
+      const response = await axiosInterceptorInstance.put(`${this.baseUrl}/${id}`, customer);
       return response.data;
     } catch (error) {
       return this.handleError(error);

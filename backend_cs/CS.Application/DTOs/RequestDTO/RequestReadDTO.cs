@@ -1,4 +1,6 @@
-﻿using CS.Domain.Entities;
+﻿using CS.Application.DTOs.CustomerDTO;
+using CS.Application.DTOs.UserDTO;
+using CS.Domain.Entities;
 using CS.Domain.Enumerations;
 using System;
 using System.Collections.Generic;
@@ -15,7 +17,7 @@ namespace CS.Application.DTOs.RequestDTO
         public string Description { get; set; }
         public DateTime CreatedDate { get; set; }
         public RequestStatusEnum Status { get; set; }
-        public User PersonInCharge { get; set; }
-        public Customer Customer { get; set; }
+        public Guid PersonInChargeId { get; set; }
+        public Guid CustomerId { get; set; }
     }
 }
