@@ -5,7 +5,7 @@ import { LoginFormProps } from "@/abstract";
 export const LoginFormComponent: React.FC<LoginFormProps> = ({ onSubmitLogin }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [checked, setChecked] = useState(false)
+  const [checked, setChecked] = useState(true);
   const formBackground = useColorModeValue("gray.100", "gray.700");
 
   return (

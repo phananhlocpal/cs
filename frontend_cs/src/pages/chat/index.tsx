@@ -1,59 +1,84 @@
-import { useState, useEffect } from "react";
-import { HubConnectionBuilder, HubConnection } from "@microsoft/signalr";
-
-export const ChatPage = () => {
-
-    const [connection, setConnection] = useState<HubConnection | null>(null);
-    const [messages, setMessages] = useState<{ user: string; message: string }[]>([]);
-    const [user, setUser] = useState("");
+import { 
+    Box, 
+    Container, 
+    Input, 
+    Button, 
+    VStack, 
+    HStack, 
+    Text,
+    Flex 
+  } from "@chakra-ui/react";
+  import { useState } from "react";
+  
+  export const ChatPage = () => {
     const [message, setMessage] = useState("");
-
-    useEffect(() => {
-        const connect = new HubConnectionBuilder()
-            .withUrl("https://localhost:5001/chatHub")
-            .withAutomaticReconnect()
-            .build();
-
-        connect.start().then(() => console.log("Connected to SignalR"));
-
-        connect.on("ReceiveMessage", (user, message) => {
-            setMessages((prev) => [...prev, { user, message }]);
-        });
-
-        setConnection(connect);
-
-        return () => {
-            connect.stop();
-        };
-    }, []);
-
-    const sendMessage = async () => {
-        if (connection) {
-            await connection.invoke("SendMessage", user, message);
-        }
+    const [messages, setMessages] = useState([]);
+  
+    const sendMessage = () => {
+      if (!message.trim()) return;
+      setMessages([...messages, {
+        id: Date.now(),
+        text: message,
+        sender: "me",
+        timestamp: new Date().toLocaleTimeString()
+      }]);
+      setMessage("");
     };
-
+  
     return (
-        <div>
-            <h1>Chat App</h1>
-            <div>
-                {messages.map((msg, index) => (
-                    <div key={index}>
-                        <strong>{msg.user}: </strong>{msg.message}
-                    </div>
-                ))}
-            </div>
-            <input
-                type="text"
-                placeholder="User"
-                onChange={(e) => setUser(e.target.value)}
+      <Container maxW="container.md" h="calc(100vh - 95px)" p={4}>
+        <Flex direction="column" h="full">
+          {/* Chat History */}
+          <Box 
+            flex={1} 
+            overflowY="auto" 
+            borderWidth={1} 
+            borderRadius="xl" 
+            p={4} 
+            mb={4}
+            bg="white"
+            boxShadow="lg"
+          >
+            <VStack spacing={4} align="stretch">
+              {messages.map((msg) => (
+                <Box 
+                  key={msg.id}
+                  alignSelf={msg.sender === "me" ? "flex-end" : "flex-start"}
+                  bg={msg.sender === "me" ? "blue.500" : "gray.100"}
+                  color={msg.sender === "me" ? "white" : "black"}
+                  p={3}
+                  borderRadius="lg"
+                  maxW="70%"
+                >
+                  <Text>{msg.text}</Text>
+                  <Text fontSize="xs" opacity={0.8} mt={1}>
+                    {msg.timestamp}
+                  </Text>
+                </Box>
+              ))}
+            </VStack>
+          </Box>
+  
+          {/* Message Input */}
+          <HStack spacing={2} >
+            <Input
+                bg="white"
+                borderRadius="xl"
+                className="py-6"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              placeholder="Type a message..."
+              onKeyPress={(e) => e.key === "Enter" && sendMessage()}
             />
-            <input
-                type="text"
-                placeholder="Message"
-                onChange={(e) => setMessage(e.target.value)}
-            />
-            <button onClick={sendMessage}>Send</button>
-        </div>
+            <Button 
+              colorScheme="blue"
+              onClick={sendMessage}
+              px={8}
+            >
+              Send
+            </Button>
+          </HStack>
+        </Flex>
+      </Container>
     );
-}
+  };

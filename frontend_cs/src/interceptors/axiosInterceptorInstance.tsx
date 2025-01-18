@@ -18,7 +18,6 @@ const checkAuth = async () => {
 axiosInterceptorInstance.interceptors.request.use((config) => {
   const token = Cookies.get('token');
   if (token) {
-    console.log("Vào đây");
     config.headers.Authorization = `Bearer ${token}`;
   }
   return config;

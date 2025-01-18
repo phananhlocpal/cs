@@ -6,3 +6,4 @@ export * from './chat';
 export * from './account';
 export * from './requests';
 export * from './OAuthCallBack';
+export * from './customerDemo';

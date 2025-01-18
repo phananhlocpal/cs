@@ -1,13 +1,14 @@
 ﻿import { LoginRequestModel, SignupRequestModel, LoginResponseModel } from '@/abstract';
+import { CustomerLoginResponseModel } from '@/abstract/models/login/customerLoginResponseModel';
 import axiosInterceptorInstance from '@/interceptors/axiosInterceptorInstance';
 import Cookies from 'js-cookie';
 
 const API_URL = `${import.meta.env.VITE_REACT_APP_API_URL}/Auth`;
 
 export const loginCustomer = async (loginRequest: LoginRequestModel) => {
-    const response = await axiosInterceptorInstance.post<LoginResponseModel>(`${API_URL}/customer-login`, loginRequest);
+    const response = await axiosInterceptorInstance.post<CustomerLoginResponseModel>(`${API_URL}/customer-login`, loginRequest);
     const token = response.data.token;
-    const profile = response.data.user; 
+    const profile = response.data.customer; 
     Cookies.set('token', token, { expires: 7 }); 
     localStorage.setItem('customerProfile', JSON.stringify(profile)); 
     return response.data;

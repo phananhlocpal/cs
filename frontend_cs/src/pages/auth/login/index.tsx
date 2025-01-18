@@ -16,8 +16,8 @@ export const LoginPage = () => {
             }
         } else {
             const response = await loginCustomer({ email, password });
-            if (response.user) {
-                navigate("/home");
+            if (response.customer) {
+                navigate("/customer-demo");
             } else {
                 alert("Invalid credentials");
             }

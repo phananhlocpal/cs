@@ -1,7 +1,6 @@
 ﻿import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import { ChatPage, HomePage, LoginPage, NotFoundPage, RequestListPage, AccountPage, OAuthCallback } from "@/pages";
+import { ChatPage, HomePage, LoginPage, NotFoundPage, RequestListPage, AccountPage, OAuthCallback, CustomerDemoPage } from "@/pages";
 import { BasicLayout } from "@/shared";
-
 
 const RouterComponent = () => {
 
@@ -18,6 +17,7 @@ const RouterComponent = () => {
         </Route>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/auth/callback" element={<OAuthCallback />} />
+        <Route path="/customer-demo" element={<CustomerDemoPage />} />
       </Routes>
     </Router>
   );

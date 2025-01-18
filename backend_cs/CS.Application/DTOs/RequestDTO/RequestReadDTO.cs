@@ -16,6 +16,7 @@ namespace CS.Application.DTOs.RequestDTO
         public string Title { get; set; }
         public string Description { get; set; }
         public DateTime CreatedDate { get; set; }
+        public RequestIssueTypeEnum IssueType { get; set; }
         public RequestStatusEnum Status { get; set; }
         public Guid PersonInChargeId { get; set; }
         public Guid CustomerId { get; set; }

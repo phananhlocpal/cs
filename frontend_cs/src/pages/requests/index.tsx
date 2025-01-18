@@ -51,7 +51,6 @@ export const RequestListPage: React.FC = () => {
     try {
       await requestService.createRequest(data);
       loadRequests();
-      onClose();
       showSuccessToast('Request created successfully');
     } catch (error) {
       showErrorToast('Failed to create request');
@@ -172,23 +171,23 @@ export const RequestListPage: React.FC = () => {
               <Td>{request.title}</Td>
               <Td>
                 <Tag
-                rounded="full"
-                size="lg"
-                colorScheme={getRequestStatusColorHelper(getRequestStatus(request.status))}
+                  rounded="full"
+                  size="lg"
+                  colorScheme={getRequestStatusColorHelper(getRequestStatus(request.status))}
                 >
-                {getRequestStatus(request.status)}
+                  {getRequestStatus(request.status)}
                 </Tag>
               </Td>
               <Td>
                 <Tag
                   rounded="full"
                   size="lg"
-                  >
-                    <CiCalendar className="mr-2" />
+                >
+                  <CiCalendar className="mr-2" />
 
                   {new Date(request.createdDate).toLocaleDateString('en-CA')}
-                  </Tag>
-                </Td>
+                </Tag>
+              </Td>
               <Td>
                 <HStack spacing={2}>
                   <Button size="sm" onClick={() => openDetailModal(request)}>
@@ -207,13 +206,13 @@ export const RequestListPage: React.FC = () => {
         </Tbody>
       </Table>
 
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <Modal isOpen={isOpen} onClose={onClose} >
         <ModalOverlay />
-        <ModalContent>
+        <ModalContent maxW="800px">
           <ModalHeader>
-            {modalMode === 'create' && 'Create New Request'}
-            {modalMode === 'update' && 'Update Request'}
-            {modalMode === 'detail' && 'Request Details'}
+            {modalMode === 'create' && 'Create New Request Support Ticket'}
+            {modalMode === 'update' && 'Update Request Support Ticket'}
+            {modalMode === 'detail' && 'Request Support Ticket Details'}
           </ModalHeader>
           <ModalBody>
             {modalMode === 'create' && (

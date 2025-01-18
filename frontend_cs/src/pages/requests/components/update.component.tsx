@@ -7,10 +7,12 @@ import {
     FormLabel,
     Input,
     Select,
+    Text,
     Textarea,
     VStack
 } from "@chakra-ui/react";
 import { RequestStatusEnum, RequestResponseModel, RequestUpdateRequestModel } from "@/abstract";
+import { getRequestIssueTypeHelper } from "@/helpers";
 
 interface UpdateComponentProps {
     request: RequestResponseModel;
@@ -31,6 +33,7 @@ export const UpdateComponent: React.FC<UpdateComponentProps> = ({
 
     const [errors, setErrors] = useState<Partial<RequestUpdateRequestModel>>({});
     const [isLoading, setIsLoading] = useState(false);
+    const [newDescription, setNewDescription] = useState(""); 
 
     const validateForm = (): boolean => {
         const newErrors: Partial<RequestUpdateRequestModel> = {};
@@ -49,11 +52,29 @@ export const UpdateComponent: React.FC<UpdateComponentProps> = ({
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!validateForm()) return;
-
-        console.log(formData);
+    
+        let updatedFormData: RequestUpdateRequestModel;
+    
+        if (newDescription.trim()) { 
+            const currentDate = new Date().toLocaleString();
+            const userProfile = localStorage.getItem("userProfile");
+            const userName = userProfile ? JSON.parse(userProfile).name : "Unknown User";
+            const formattedUpdate = `\n[${currentDate}] - ${userName}: ${newDescription}`;
+            
+            updatedFormData = {
+                ...formData,
+                description: formData.description + formattedUpdate
+            };
+        } else {
+            updatedFormData = {
+                ...formData,
+                description: formData.description
+            };
+        }
+    
         setIsLoading(true);
         try {
-            onSubmit?.(formData);
+            onSubmit?.(updatedFormData);
         } catch (error) {
             console.error("Error updating request:", error);
         } finally {
@@ -74,29 +95,34 @@ export const UpdateComponent: React.FC<UpdateComponentProps> = ({
             <VStack spacing={4}>
                 <FormControl>
                     <FormLabel>Title</FormLabel>
-                    <Input
-                        name="title"
-                        value={request.title}
-                        disabled
-                    />
+                    <Text>
+                        {request.title}
+                    </Text>
                     <FormErrorMessage>{errors.description}</FormErrorMessage>
                 </FormControl>
                 <FormControl>
                     <FormLabel>Issue Type</FormLabel>
-                    <Input
-                        name="issueType"
-                        value={request.issueType}
-                        disabled
-                    />
+                    <Text>
+                        {getRequestIssueTypeHelper(request.issueType)}
+                    </Text>
                     <FormErrorMessage>{errors.description}</FormErrorMessage>
                 </FormControl>
 
-                <FormControl isInvalid={!!errors.description}>
+                <FormControl>
                     <FormLabel>Description</FormLabel>
                     <Textarea
-                        name="description"
                         value={formData.description}
-                        onChange={handleChange}
+                        isReadOnly
+                        minHeight="200px"
+                    />
+                </FormControl>
+
+                <FormControl isInvalid={!!errors.description}>
+                    <FormLabel>New Update</FormLabel>
+                    <Textarea
+                        value={newDescription}
+                        onChange={(e) => setNewDescription(e.target.value)}
+                        placeholder="Enter your update here..."
                     />
                     <FormErrorMessage>{errors.description}</FormErrorMessage>
                 </FormControl>

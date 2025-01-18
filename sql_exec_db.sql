@@ -47,3 +47,4 @@ CREATE TABLE Requests (
 GO
 
 SELECT * FROM Requests;
+SELECT * FROM Customers;

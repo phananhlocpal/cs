@@ -31,10 +31,21 @@ export const CreateComponent: React.FC<CreateComponentProps> = ({ onSubmit, onCa
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!validateForm()) return;
-
+    
         setIsLoading(true);
         try {
-            onSubmit?.(formData);
+            const currentDate = new Date().toLocaleString();
+            const userProfile = localStorage.getItem("userProfile");
+            const userName = userProfile ? JSON.parse(userProfile).name : "Unknown User";
+            
+            const formattedDescription = `[${currentDate}] - ${userName}: ${formData.description}`;
+            
+            const updatedFormData = {
+                ...formData,
+                description: formattedDescription
+            };
+    
+            onSubmit?.(updatedFormData);
         } catch (error) {
             console.error("Error creating request:", error);
         } finally {

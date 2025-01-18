@@ -344,3 +344,11 @@ D:\cs\backend_cs\CS.Presentation\bin\Debug\net8.0\Microsoft.Extensions.ObjectPoo
 D:\cs\backend_cs\CS.Presentation\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 D:\cs\backend_cs\CS.Presentation\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\cs\backend_cs\CS.Presentation\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
+C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Presentation\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Presentation\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Presentation\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Presentation\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Presentation\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Presentation\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Presentation\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Presentation\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
