@@ -6,40 +6,41 @@ import {
     FormErrorMessage,
     FormLabel,
     Input,
-    Select,
     Textarea,
     VStack
 } from "@chakra-ui/react";
-import { RequestStatusEnum, RequestResponseModel, RequestUpdateRequestModel } from "@/abstract";
+import { CustomerUpdateRequestModel, CustomerResponseModel } from "@/abstract";
 
 interface UpdateComponentProps {
-    request: RequestResponseModel;
-    onSubmit?: (data: RequestUpdateRequestModel) => void;
+    customer: CustomerResponseModel;
+    onSubmit?: (data: CustomerUpdateRequestModel) => void;
     onCancel?: () => void;
 }
 
 export const UpdateComponent: React.FC<UpdateComponentProps> = ({
-    request,
+    customer,
     onSubmit,
     onCancel
 }) => {
-    const [formData, setFormData] = useState<RequestUpdateRequestModel>({
-        id: request.id,
-        description: request.description,
-        status: request.status
+    const [formData, setFormData] = useState<CustomerUpdateRequestModel>({
+        id: customer.id,
+        name: customer.name,
+        address: customer.address,
+        phone: customer.phone,
+        password: "**********",
     });
 
-    const [errors, setErrors] = useState<Partial<RequestUpdateRequestModel>>({});
+    const [errors, setErrors] = useState<Partial<CustomerUpdateRequestModel>>({});
     const [isLoading, setIsLoading] = useState(false);
 
     const validateForm = (): boolean => {
-        const newErrors: Partial<RequestUpdateRequestModel> = {};
+        const newErrors: Partial<CustomerUpdateRequestModel> = {};
 
-        if (!formData.description) {
-            newErrors.description = "Description is required";
+        if (!formData.name) {
+            newErrors.name = "Description is required";
         }
-        if (!formData.status) {
-            newErrors.status = undefined;
+        if (!formData.phone) {
+            newErrors.phone = undefined;
         }
 
         setErrors(newErrors);
@@ -73,47 +74,38 @@ export const UpdateComponent: React.FC<UpdateComponentProps> = ({
         <Box as="form" onSubmit={handleSubmit} p={4}>
             <VStack spacing={4}>
                 <FormControl>
-                    <FormLabel>Title</FormLabel>
+                    <FormLabel>Customer Id</FormLabel>
                     <Input
-                        name="title"
-                        value={request.title}
+                        name="id"
+                        value={customer.id}
                         disabled
                     />
-                    <FormErrorMessage>{errors.description}</FormErrorMessage>
                 </FormControl>
                 <FormControl>
-                    <FormLabel>Issue Type</FormLabel>
+                    <FormLabel>Customer Name</FormLabel>
                     <Input
-                        name="issueType"
-                        value={request.issueType}
-                        disabled
+                        name="title"
+                        value={customer.name}
                     />
-                    <FormErrorMessage>{errors.description}</FormErrorMessage>
+                    <FormErrorMessage>{errors.name}</FormErrorMessage>
+                </FormControl>
+                <FormControl>
+                    <FormLabel>Address</FormLabel>
+                    <Input
+                        name="address"
+                        value={customer.address}
+                    />
+                    <FormErrorMessage>{errors.address}</FormErrorMessage>
                 </FormControl>
 
-                <FormControl isInvalid={!!errors.description}>
-                    <FormLabel>Description</FormLabel>
-                    <Textarea
-                        name="description"
-                        value={formData.description}
+                <FormControl isInvalid={!!errors.phone}>
+                    <FormLabel>Phone</FormLabel>
+                    <Input
+                        name="phone"
+                        value={formData.phone}
                         onChange={handleChange}
                     />
-                    <FormErrorMessage>{errors.description}</FormErrorMessage>
-                </FormControl>
-
-                <FormControl isInvalid={!!errors.status}>
-                    <FormLabel>Status</FormLabel>
-                    <Select
-                        name="status"
-                        value={formData.status}
-                        onChange={handleChange}
-                    >
-                        <option value={0}>Created</option>
-                        <option value={1}>On Processing</option>
-                        <option value={2}>Pending</option>
-                        <option value={3}>Done</option>
-                    </Select>
-                    <FormErrorMessage>{errors.status}</FormErrorMessage>
+                    <FormErrorMessage>{errors.phone}</FormErrorMessage>
                 </FormControl>
 
                 <Button

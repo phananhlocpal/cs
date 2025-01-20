@@ -1,30 +1,40 @@
-import { Box, Container, Input, Button, VStack, HStack, Text, Flex } from "@chakra-ui/react";
-import { useState, useEffect } from "react";
-import { HubConnectionBuilder, HubConnection } from '@microsoft/signalr';
-import { conversationService } from "@/services";
-import { ConversationResponseModel, MessageResponseModel } from "@/abstract";
+import { useState, useEffect, useRef } from 'react';
+import { Box, Container, Flex } from '@chakra-ui/react';
+import * as signalR from '@microsoft/signalr';
+import { conversationService, customerService } from '@/services';
+import { ConversationInfo, ConversationList, MessageBox } from './components';
+import { ConversationResponseModel, CustomerResponseModel, MessageResponseModel } from '@/abstract'
 
 export const ChatPage = () => {
-  const [message, setMessage] = useState("");
-  const [connection, setConnection] = useState<HubConnection | null>(null);
-  const [conversation, setConversation] = useState<ConversationResponseModel | null>(null);
   const [conversations, setConversations] = useState<ConversationResponseModel[]>([]);
-  const [messages, setMessages] = useState<MessageResponseModel[]>([]);
+  const [messages, setMessages] = useState<any[]>([]);
+  const [conversation, setConversation] = useState<ConversationResponseModel | null>(null);
+  const [message, setMessage] = useState('');
+  const [connection, setConnection] = useState<signalR.HubConnection | null>(null);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const [customer, setCustomer] = useState<CustomerResponseModel | null>(null);
 
   useEffect(() => {
-    conversationService.getAllConversation()
-      .then((res) => {
-        setConversations(res);
-      })
-      .catch((err) => {
-        console.error("Error loading conversation:", err);
-      });
-  }, [connection]);
+    if (connection && conversation?.id) {
+      connection
+        .invoke("JoinConversation", conversation.id)
+        .then(() => console.log(`Joined group for conversation ${conversation.id}`))
+        .catch((err) => console.error("Error joining group:", err));
+    }
+  }, [connection, conversation?.id]);
 
   useEffect(() => {
-    // Tạo kết nối SignalR
-    const newConnection = new HubConnectionBuilder()
-      .withUrl("http://localhost:5099/chatHub")
+    // Scroll to the bottom when messages change
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [messages]);
+
+  // Set up SignalR connection
+  useEffect(() => {
+    const newConnection = new signalR.HubConnectionBuilder()
+      .withUrl(`http://localhost:5099/chatHub`)
+      .withAutomaticReconnect()
       .build();
 
     newConnection
@@ -55,22 +65,45 @@ export const ChatPage = () => {
     });
 
     return () => {
-      newConnection.stop();
+      if (connection) {
+        connection.off("ReceiveMessage");
+      }
     };
   }, []);
 
-  const sendMessage = () => {
+  // Load all conversations
+  useEffect(() => {
+    conversationService.getAllConversation()
+      .then((res) => {
+        setConversations(res);
+      })
+      .catch((err) => {
+        console.error("Error loading conversation:", err);
+      });
+  }, [connection]);
+
+  // Load messages for the selected conversation
+  const loadConversationMessages = async (conversationId: string) => {
+    if (conversation?.customerId) {
+      var customer = await customerService.getCustomerById(conversation.customerId);
+      console.log(customer);
+      setCustomer(customer);
+    }
+    connection?.invoke("GetConversationMessages", conversationId);
+  };
+
+  // Send a message
+  const sendMessage = async () => {
     if (!message.trim()) return;
 
-    if (connection?.state === "Connected") {
+    if (connection?.state.trim() === "Connected") {
       const newMessage = {
         conversationId: conversation?.id ?? null,
         messageText: message,
         sender: localStorage.getItem("userProfile") ? JSON.parse(localStorage.getItem("userProfile") as string).id : null,
-        customerId: null,
+        customerId: conversation?.customerId ?? null,
       };
 
-      // Gửi tin nhắn tới SignalR Hub
       connection.invoke(
         "SendMessage",
         newMessage.conversationId,
@@ -85,118 +118,17 @@ export const ChatPage = () => {
     }
   };
 
+  const getCustomerById = (customerId: string): Promise<CustomerResponseModel> => {
+    return customerService.getCustomerById(customerId);
+  }
+
   return (
-    <Container maxW="container.lg" h="calc(100vh - 95px)" p={4}>
-      <Flex direction="row" h="full">
-        <Box
-          flex="1"
-          borderWidth={1}
-          borderRadius="lg"
-          p={4}
-          bg="white"
-          boxShadow="lg"
-          overflowY="auto"
-        >
-          <VStack spacing={4} align="stretch">
-            {conversations.length > 0 ? (
-              conversations.map((conv) => (
-                <Box
-                  key={conv.id}
-                  p={3}
-                  borderRadius="lg"
-                  bg={conversation?.id === conv.id ? "blue.100" : "gray.50"}
-                  onClick={() => setConversation(conv)}
-                  cursor="pointer"
-                >
-                  <Text fontWeight="bold">{conv.sender}</Text>
-                  <Text fontSize="sm" noOfLines={1}>{conv.conversationId}</Text>
-                </Box>
-              ))
-            ) : (
-              <Text color="gray.500" textAlign="center">
-                No conversations yet.
-              </Text>
-            )}
-          </VStack>
-        </Box>
-
-        {/* Cột 2: Ô chat */}
-        <Box
-          flex="2"
-          borderWidth={1}
-          borderRadius="lg"
-          p={4}
-          bg="white"
-          boxShadow="lg"
-          display="flex"
-          flexDirection="column"
-        >
-          {/* Chat History */}
-          <Box flex={1} overflowY="auto" mb={4}>
-            <VStack spacing={4} align="stretch">
-              {Array.isArray(messages) && messages.length > 0 ? (
-                messages.map((msg) => (
-                  <Box
-                    key={msg.id}
-                    alignSelf={msg.sender === "00000000-0000-0000-0000-000000000000" ? "flex-start" : "flex-end"}
-                    bg={msg.sender === "00000000-0000-0000-0000-000000000000" ? "gray.100" : "blue.500"}
-                    color={msg.sender === "00000000-0000-0000-0000-000000000000" ? "black" : "white" }
-                    p={3}
-                    borderRadius="lg"
-                    maxW="70%"
-                  >
-                    <Text>{msg.messageText}</Text>
-                    <Text fontSize="xs" opacity={0.8} mt={1}>
-                      {new Date(msg.timestamp).toLocaleString()}
-                    </Text>
-                  </Box>
-                ))
-              ) : (
-                <Text color="gray.500" textAlign="center">
-                  No messages yet.
-                </Text>
-              )}
-            </VStack>
-          </Box>
-
-          {/* Message Input */}
-          <HStack spacing={2}>
-            <Input
-              bg="white"
-              borderRadius="xl"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              placeholder="Type a message..."
-              onKeyPress={(e) => e.key === "Enter" && sendMessage()}
-            />
-            <Button colorScheme="blue" onClick={sendMessage}>
-              Send
-            </Button>
-          </HStack>
-        </Box>
-
-        {/* Cột 3: Chi tiết cuộc đối thoại */}
-        <Box
-          flex="1"
-          borderWidth={1}
-          borderRadius="lg"
-          p={4}
-          bg="white"
-          boxShadow="lg"
-        >
-          {conversation ? (
-            <VStack spacing={4} align="stretch">
-              <Text fontWeight="bold" fontSize="lg">{conversation.id}</Text>
-              <Text fontSize="sm">Created at: {new Date(conversation.timestamp).toLocaleString()}</Text>
-              {/* Các thông tin chi tiết khác */}
-            </VStack>
-          ) : (
-            <Text color="gray.500" textAlign="center">
-              Select a conversation to see details.
-            </Text>
-          )}
-        </Box>
+    <Box h="calc(100vh - 95px)" p={4}  className='box'>
+      <Flex direction="row" h="full" style={{width:"100%"}}>
+        <ConversationList conversations={conversations} conversation={conversation} setConversation={setConversation} loadConversationMessages={loadConversationMessages} getCustomerById={getCustomerById}/>
+        <MessageBox messages={messages} message={message} setMessage={setMessage} sendMessage={sendMessage} messagesEndRef={messagesEndRef} customer={customer}/>
+        <ConversationInfo conversation={conversation} customer={customer}/>
       </Flex>
-    </Container>
+    </Box>
   );
 };

@@ -1,6 +1,6 @@
 import { Box, Input, Button, VStack, Text, Flex, IconButton, useDisclosure, SlideFade } from "@chakra-ui/react";
 import { CloseIcon, ChatIcon } from "@chakra-ui/icons";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { HubConnectionBuilder, HubConnection } from '@microsoft/signalr';
 import { conversationService } from "@/services";
 import { ConversationResponseModel, MessageResponseModel } from "@/abstract";
@@ -11,19 +11,27 @@ export const ChatComponent = () => {
   const [connection, setConnection] = useState<HubConnection | null>(null);
   const [conversation, setConversation] = useState<ConversationResponseModel | null>(null);
   const [messages, setMessages] = useState<MessageResponseModel[]>([]);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Kiểm tra trạng thái đăng nhập
+    if (connection && conversation?.id) {
+      connection
+        .invoke("JoinConversation", conversation.id)
+        .then(() => console.log(`Joined group for conversation ${conversation.id}`))
+        .catch((err) => console.error("Error joining group:", err));
+    }
+  }, [connection, conversation?.id]);
+
+  useEffect(() => {
     const customerProfile = localStorage.getItem("customerProfile");
     if (customerProfile) {
       const customerId = JSON.parse(customerProfile).id;
 
-      // Lấy thông tin cuộc trò chuyện
       conversationService.getConversationByCustomerId(customerId)
         .then((res) => {
+          console.log("Response is", res)
           setConversation(res);
 
-          // Lấy tin nhắn của cuộc trò chuyện
           if (res.id) {
             connection?.invoke("GetConversationMessages", res.id);
           }
@@ -38,8 +46,9 @@ export const ChatComponent = () => {
     // Tạo kết nối SignalR
     const newConnection = new HubConnectionBuilder()
       .withUrl("http://localhost:5099/chatHub")
+      .withAutomaticReconnect()
       .build();
-  
+
     newConnection
       .start()
       .then(() => {
@@ -49,7 +58,7 @@ export const ChatComponent = () => {
       .catch((err) => {
         console.error("Error while starting connection: ", err);
       });
-  
+
     // Lắng nghe sự kiện nhận tin nhắn
     newConnection.on("ReceiveMessage", (message) => {
       setMessages((prevMessages) => {
@@ -60,17 +69,26 @@ export const ChatComponent = () => {
       });
       console.log("Received message: ", message);
     });
-  
+
     // Lắng nghe sự kiện tải tin nhắn
     newConnection.on("LoadMessages", (loadedMessages) => {
       const sortedMessages: MessageResponseModel[] = loadedMessages.sort((a: MessageResponseModel, b: MessageResponseModel) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime());
       setMessages(sortedMessages);
     });
-  
+
     return () => {
-      newConnection.stop();
+      if (connection) {
+        connection.off("ReceiveMessage");
+      }
     };
-  }, []);  
+  }, []);
+
+  useEffect(() => {
+    // Scroll to the bottom when messages change
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [messages]);
 
   const sendMessage = () => {
     if (!message.trim()) return;
@@ -93,7 +111,7 @@ export const ChatComponent = () => {
         newMessage.sender,
         newMessage.customerId
       ).catch((err) => console.error("Error while sending message: ", err));
-      
+
       setMessage("");
     } else {
       console.error("Unable to send message: SignalR connection is not in 'Connected' state.");
@@ -130,16 +148,16 @@ export const ChatComponent = () => {
               messages.map((msg) => (
                 <Box
                   key={msg.id}
-                  alignSelf={msg.sender === "00000000-0000-0000-0000-000000000000" ? "flex-end" : "flex-start"}
-                  bg={msg.sender === "00000000-0000-0000-0000-000000000000" ? "blue.500" : "gray.100"}
-                  color={msg.sender === "00000000-0000-0000-0000-000000000000" ? "white" : "black"}
+                  alignSelf={msg.sender === "00000000-0000-0000-0000-000000000000" || null ? "flex-end" : "flex-start"}
+                  bg={msg.sender === "00000000-0000-0000-0000-000000000000" || null ? "blue.500" : "gray.100"}
+                  color={msg.sender === "00000000-0000-0000-0000-000000000000" || null ? "white" : "black"}
                   p={3}
                   borderRadius="lg"
                   maxW="70%"
                 >
                   <Text>{msg.messageText}</Text>
                   <Text fontSize="xs" opacity={0.8} mt={1}>
-                  {new Date(msg.timestamp).toLocaleString()}
+                    {new Date(msg.timestamp).toLocaleString()}
                   </Text>
                 </Box>
               ))
@@ -148,6 +166,7 @@ export const ChatComponent = () => {
                 No messages yet.
               </Text>
             )}
+            <div ref={messagesEndRef} />
           </VStack>
 
 

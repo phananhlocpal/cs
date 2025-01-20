@@ -1,27 +1,27 @@
 import React, { useState } from "react";
 import { Box, Button, FormControl, FormErrorMessage, FormLabel, Input, Select, Textarea, VStack } from "@chakra-ui/react";
-import { RequestCreateRequestModel, RequestIssueTypeEnum, CreateComponentProps } from "@/abstract";
+import { CreateCustomerComponentProps, CustomerCreateRequestModel } from "@/abstract";
 
-export const CreateComponent: React.FC<CreateComponentProps> = ({ onSubmit, onCancel, customers }) => {
-    const [formData, setFormData] = useState<RequestCreateRequestModel>({
-        title: "",
-        description: "",
-        issueType: undefined,
-        personInChargeId: JSON.parse(localStorage.getItem("userProfile") || '{}').id || '',
-        customerId: '',
+export const CreateComponent: React.FC<CreateCustomerComponentProps> = ({ onSubmit, onCancel }) => {
+    const [formData, setFormData] = useState<CustomerCreateRequestModel>({
+        name: '',
+        email: '',
+        address: '',
+        phone: '',
+        password: ''
     });
 
-    const [errors, setErrors] = useState<Partial<RequestCreateRequestModel>>({});
+    const [errors, setErrors] = useState<Partial<CustomerCreateRequestModel>>({});
     const [isLoading, setIsLoading] = useState(false);
 
     const validateForm = (): boolean => {
-        const newErrors: Partial<RequestCreateRequestModel> = {};
+        const newErrors: Partial<CustomerCreateRequestModel> = {};
 
-        if (!formData.title) {
-            newErrors.title = "Title is required";
+        if (!formData.name) {
+            newErrors.name = "Name is required";
         }
-        if (!formData.description) {
-            newErrors.description = "Description is required";
+        if (!formData.email) {
+            newErrors.email = "Email is required";
         }
 
         setErrors(newErrors);
@@ -53,55 +53,42 @@ export const CreateComponent: React.FC<CreateComponentProps> = ({ onSubmit, onCa
     return (
         <Box as="form" onSubmit={handleSubmit} p={4}>
             <VStack spacing={4}>
-                <FormControl isInvalid={!!errors.title}>
-                    <FormLabel>Title</FormLabel>
+                <FormControl isInvalid={!!errors.name}>
+                    <FormLabel>Name</FormLabel>
                     <Input
-                        name="title"
-                        value={formData.title}
+                        name="name"
+                        value={formData.name}
                         onChange={handleChange}
                     />
-                    <FormErrorMessage>{errors.title}</FormErrorMessage>
+                    <FormErrorMessage>{errors.name}</FormErrorMessage>
                 </FormControl>
 
-                <FormControl isInvalid={!!errors.description}>
-                    <FormLabel>Description</FormLabel>
-                    <Textarea
-                        name="description"
-                        value={formData.description}
+                <FormControl isInvalid={!!errors.email}>
+                    <FormLabel>Email</FormLabel>
+                    <Input
+                        name="email"
+                        value={formData.email}
                         onChange={handleChange}
                     />
-                    <FormErrorMessage>{errors.description}</FormErrorMessage>
+                    <FormErrorMessage>{errors.email}</FormErrorMessage>
                 </FormControl>
                 <FormControl>
-                    <FormLabel>Issue Type</FormLabel>
-                    <Select
-                        name="issueType"
-                        value={formData.issueType}
+                    <FormLabel>Address</FormLabel>
+                    <Input
+                        name="address"
+                        value={formData.address}
                         onChange={handleChange}
-                        placeholder="Choose an issue type"
-                        required
-                    >
-                        {Object.entries(RequestIssueTypeEnum).map(([keyEnum, value], key) => (
-                            <option key={key} value={key}>
-                                {value}
-                            </option>
-                        ))}
-                    </Select>
+                    />
+                    <FormErrorMessage>{errors.phone}</FormErrorMessage>
                 </FormControl>
-
-                <FormControl>
-                    <FormLabel>Customer</FormLabel>
-                    <Select
-                        name="customerId"
-                        value={formData.customerId}
+                <FormControl isInvalid={!!errors.phone}>
+                    <FormLabel>Phone</FormLabel>
+                    <Input
+                        name="phone"
+                        value={formData.phone}
                         onChange={handleChange}
-                        placeholder="Choose a customer"
-                        required
-                    >
-                        {customers.map((customer: any) => (
-                            <option key={customer.id} value={customer.id}>{customer.name}</option>
-                        ))}
-                    </Select>
+                    />
+                    <FormErrorMessage>{errors.phone}</FormErrorMessage>
                 </FormControl>
 
                 <Button

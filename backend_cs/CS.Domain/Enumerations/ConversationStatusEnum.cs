@@ -9,6 +9,7 @@ namespace CS.Domain.Enumerations
     public enum ConversationStatusEnum
     {
         Opened,
+        On_Processing,
         Closed
     }
 }

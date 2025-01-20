@@ -50,7 +50,7 @@ namespace CS.Presentation.Hubs
             }
             else
             {
-                await _mediator.Send(new CreateMessageCommand
+                var message = await _mediator.Send(new CreateMessageCommand
                 {
                     ConversationId = conversationId.Value,
                     Sender = senderId ?? (Guid?)null,  
@@ -61,10 +61,10 @@ namespace CS.Presentation.Hubs
                 var messages = await _mediator.Send(new GetMessagesByConversationIdQuery { ConversationId = conversationId.Value });
                 await Clients.Group(conversationId.ToString()).SendAsync("ReceiveMessage", new
                 {
-                    ConversationId = conversationId,
-                    Sender = senderId ?? (Guid?)null, 
-                    MessageText = messageText,
-                    Timestamp = DateTime.Now
+                    ConversationId = message.ConversationId,
+                    Sender = message.Sender,
+                    MessageText = message.MessageText,
+                    Timestamp = message.Timestamp
                 });
                 await Clients.Caller.SendAsync("LoadMessages", messages);
             }

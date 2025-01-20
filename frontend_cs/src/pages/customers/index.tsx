@@ -1,20 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Box, Button, HStack, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, useDisclosure, Table, Thead, Tbody, Tr, Th, Td, useToast, Checkbox, Tag } from "@chakra-ui/react";
-import { requestService, customerService } from "@/services";
-import { RequestResponseModel, RequestCreateRequestModel, RequestUpdateRequestModel, CustomerResponseModel, RequestStatusEnum } from "@/abstract";
+import { customerService } from "@/services";
+import { CustomerCreateRequestModel, CustomerUpdateRequestModel, CustomerResponseModel } from "@/abstract";
 import { CreateComponent, UpdateComponent, DetailComponent } from "./components";
-import { getRequestStatus, getRequestStatusColorHelper } from "@/helpers";
-import { CiCalendar } from "react-icons/ci";
 
 export const CustomerPage: React.FC = () => {
   // States
-  const [requests, setRequests] = useState<RequestResponseModel[]>([]);
   const [customers, setCustomers] = useState<CustomerResponseModel[]>([]);
-  const [selectedRequest, setSelectedRequest] = useState<RequestResponseModel | null>(null);
+  const [selectedCustomer, setSelectedCustomer] = useState<CustomerResponseModel | null>(null);
   const [modalMode, setModalMode] = useState<'create' | 'update' | 'detail'>('create');
   const [selection, setSelection] = useState<string[]>([]);
-  const indeterminate = selection.length > 0 && selection.length < requests.length;
-
+  const indeterminate = selection.length > 0 && selection.length < customers.length;
 
   // Chakra hooks
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -22,20 +18,9 @@ export const CustomerPage: React.FC = () => {
 
   // Load requests on mount
   useEffect(() => {
-    loadRequests();
+    loadCustomers();
     loadCustomers();
   }, []);
-
-  // Load all requests, customers
-  const loadRequests = async () => {
-    try {
-      const data = await requestService.getAllRequests();
-      console.log(`Requests list after fetch: ${data}`)
-      setRequests(data);
-    } catch (error) {
-      showErrorToast('Failed to load requests');
-    }
-  };
 
   const loadCustomers = async () => {
     try {
@@ -46,57 +31,46 @@ export const CustomerPage: React.FC = () => {
     }
   }
 
-  // Create request
-  const handleCreate = async (data: RequestCreateRequestModel) => {
+  // Create customer
+  const handleCreate = async (data: CustomerCreateRequestModel) => {
     try {
-      await requestService.createRequest(data);
-      loadRequests();
+      await customerService.createCustomer(data);
+      loadCustomers();
       onClose();
-      showSuccessToast('Request created successfully');
+      showSuccessToast('Customer created successfully');
     } catch (error) {
-      showErrorToast('Failed to create request');
+      showErrorToast('Failed to create customer');
     }
   };
 
-  // Update request
-  const handleUpdate = async (data: RequestUpdateRequestModel) => {
+  // Update customer
+  const handleUpdate = async (data: CustomerUpdateRequestModel) => {
     try {
-      await requestService.updateRequest(data);
-      loadRequests();
+      await customerService.updateCustomer(data);
+      loadCustomers();
       onClose();
-      showSuccessToast('Request updated successfully');
+      showSuccessToast('Customer updated successfully');
     } catch (error) {
-      showErrorToast('Failed to update request');
-    }
-  };
-
-  // Delete request 
-  const handleDelete = async (id: string) => {
-    try {
-      await requestService.deleteRequest(id);
-      loadRequests();
-      showSuccessToast('Request deleted successfully');
-    } catch (error) {
-      showErrorToast('Failed to delete request');
+      showErrorToast('Failed to update customer');
     }
   };
 
   // Open modal handlers
   const openCreateModal = () => {
     setModalMode('create');
-    setSelectedRequest(null);
+    setSelectedCustomer(null);
     onOpen();
   };
 
-  const openUpdateModal = (request: RequestResponseModel) => {
+  const openUpdateModal = (customer: CustomerResponseModel) => {
     setModalMode('update');
-    setSelectedRequest(request);
+    setSelectedCustomer(customer);
     onOpen();
   };
 
-  const openDetailModal = (request: RequestResponseModel) => {
+  const openDetailModal = (customer: CustomerResponseModel) => {
     setModalMode('detail');
-    setSelectedRequest(request);
+    setSelectedCustomer(customer);
     onOpen();
   };
 
@@ -117,15 +91,11 @@ export const CustomerPage: React.FC = () => {
     });
   };
 
-  function getStatusColor(arg0: RequestStatusEnum): (string & {}) | "whiteAlpha" | "blackAlpha" | "gray" | "red" | "orange" | "yellow" | "green" | "teal" | "blue" | "cyan" | "purple" | "pink" | undefined {
-    throw new Error("Function not implemented.");
-  }
-
   return (
     <Box p={4}>
       <HStack mb={4} justifyContent="flex-end">
         <Button colorScheme="blue" onClick={openCreateModal}>
-          Create New Request
+          Create New Customer
         </Button>
       </HStack>
 
@@ -141,20 +111,20 @@ export const CustomerPage: React.FC = () => {
                 onChange={(e) => {
                   const checked = e.target.checked;
                   setSelection(
-                    checked ? requests.map((request) => request.title) : [],
+                    checked ? customers.map((customer) => customer.name) : [],
                   );
                 }}
               />
             </Th>
-            <Th>Title</Th>
-            <Th>Status</Th>
-            <Th>Created Date</Th>
+            <Th>Name</Th>
+            <Th>Email</Th>
+            <Th>Phone</Th>
             <Th>Actions</Th>
           </Tr>
         </Thead>
         <Tbody>
-          {requests?.map((request) => (
-            <Tr key={request.id}>
+          {customers?.map((customer) => (
+            <Tr key={customer.id}>
               <Td>
                 <Checkbox
                   top="1"
@@ -163,41 +133,24 @@ export const CustomerPage: React.FC = () => {
                     const checked = e.target.checked;
                     setSelection((prev) =>
                       checked
-                        ? [...prev, request.title]
-                        : selection.filter((name) => name !== request.title),
+                        ? [...prev, customer.name]
+                        : selection.filter((name) => name !== customer.name),
                     )
                   }}
                 />
               </Td>
-              <Td>{request.title}</Td>
-              <Td>
-                <Tag
-                rounded="full"
-                size="lg"
-                colorScheme={getRequestStatusColorHelper(getRequestStatus(request.status))}
-                >
-                {getRequestStatus(request.status)}
-                </Tag>
-              </Td>
-              <Td>
-                <Tag
-                  rounded="full"
-                  size="lg"
-                  >
-                    <CiCalendar className="mr-2" />
-
-                  {new Date(request.createdDate).toLocaleDateString('en-CA')}
-                  </Tag>
-                </Td>
+              <Td>{customer.name}</Td>
+              <Td>{customer.email}</Td>
+              <Td>{customer.phone}</Td>
               <Td>
                 <HStack spacing={2}>
-                  <Button size="sm" onClick={() => openDetailModal(request)}>
+                  <Button size="sm" onClick={() => openDetailModal(customer)}>
                     View
                   </Button>
-                  <Button size="sm" colorScheme="blue" onClick={() => openUpdateModal(request)}>
+                  <Button size="sm" colorScheme="blue" onClick={() => openUpdateModal(customer)}>
                     Edit
                   </Button>
-                  <Button size="sm" colorScheme="red" onClick={() => handleDelete(request.id)}>
+                  <Button size="sm" colorScheme="red">
                     Delete
                   </Button>
                 </HStack>
@@ -211,28 +164,27 @@ export const CustomerPage: React.FC = () => {
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>
-            {modalMode === 'create' && 'Create New Request'}
-            {modalMode === 'update' && 'Update Request'}
-            {modalMode === 'detail' && 'Request Details'}
+            {modalMode === 'create' && 'Create New Customer'}
+            {modalMode === 'update' && 'Update Customer'}
+            {modalMode === 'detail' && 'Customer Details'}
           </ModalHeader>
           <ModalBody>
             {modalMode === 'create' && (
               <CreateComponent
                 onSubmit={handleCreate}
                 onCancel={onClose}
-                customers={customers}
               />
             )}
-            {modalMode === 'update' && selectedRequest && (
+            {modalMode === 'update' && selectedCustomer && (
               <UpdateComponent
-                request={selectedRequest}
+                customer={selectedCustomer}
                 onSubmit={handleUpdate}
                 onCancel={onClose}
               />
             )}
-            {modalMode === 'detail' && selectedRequest && (
+            {modalMode === 'detail' && selectedCustomer && (
               <DetailComponent
-                request={selectedRequest}
+                customer={selectedCustomer}
                 onClose={onClose}
               />
             )}

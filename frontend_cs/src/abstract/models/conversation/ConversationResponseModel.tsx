@@ -1,7 +1,6 @@
 ﻿export interface ConversationResponseModel {
     id: string;
-    conversationId: string;
-    sender: string;
-    messageText: string;
-    timestamp: string;
+    customerId: string;
+    createdAt: string;
+    status: string;
 }

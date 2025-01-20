@@ -38,9 +38,9 @@ class CustomerService {
   }
 
   // Update customer
-  async updateCustomer(id: string, customer: CustomerUpdateRequestModel): Promise<CustomerResponseModel> {
+  async updateCustomer(customer: CustomerUpdateRequestModel): Promise<CustomerResponseModel> {
     try {
-      const response = await axiosInterceptorInstance.put(`${this.baseUrl}/${id}`, customer);
+      const response = await axiosInterceptorInstance.put(`${this.baseUrl}`, customer);
       return response.data;
     } catch (error) {
       return this.handleError(error);

@@ -68,6 +68,85 @@
     ]
   },
   {
+    "ContainingType": "CS.Presentation.Controllers.ConversationsController",
+    "Method": "GetConversations",
+    "RelativePath": "api/Conversations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CS.Presentation.Controllers.ConversationsController",
+    "Method": "CreateConversation",
+    "RelativePath": "api/Conversations",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "CS.Application.Commands.ConversationCommands.CreateConversationCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CS.Presentation.Controllers.ConversationsController",
+    "Method": "GetConversationById",
+    "RelativePath": "api/Conversations/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CS.Presentation.Controllers.ConversationsController",
+    "Method": "UpdateConversation",
+    "RelativePath": "api/Conversations/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "command",
+        "Type": "CS.Application.Commands.ConversationCommands.UpdateConversationCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CS.Presentation.Controllers.ConversationsController",
+    "Method": "GetConversationByCustomerId",
+    "RelativePath": "api/Conversations/customer/{customerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CS.Controllers.CustomersController",
     "Method": "GetCustomers",
     "RelativePath": "api/Customers",
@@ -125,6 +204,148 @@
       {
         "Name": "command",
         "Type": "CS.Application.Commands.CustomerCommands.UpdateCustomerCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CS.Presentation.Controllers.EmployeesTaggedsController",
+    "Method": "GetEmployeeTaggeds",
+    "RelativePath": "api/EmployeesTaggeds",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CS.Presentation.Controllers.EmployeesTaggedsController",
+    "Method": "CreateEmployeeTagged",
+    "RelativePath": "api/EmployeesTaggeds",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "CS.Application.Commands.EmployeeTaggedCommands.CreateEmployeeTaggedCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CS.Presentation.Controllers.EmployeesTaggedsController",
+    "Method": "GetEmployeeTaggedById",
+    "RelativePath": "api/EmployeesTaggeds/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CS.Presentation.Controllers.EmployeesTaggedsController",
+    "Method": "UpdateEmployeeTagged",
+    "RelativePath": "api/EmployeesTaggeds/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "command",
+        "Type": "CS.Application.Commands.EmployeeTaggedCommands.UpdateEmployeeTaggedCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CS.Presentation.Controllers.MessagesController",
+    "Method": "GetMessages",
+    "RelativePath": "api/Messages",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CS.Presentation.Controllers.MessagesController",
+    "Method": "CreateMessage",
+    "RelativePath": "api/Messages",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "CS.Application.Commands.MessageCommands.CreateMessageCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CS.Presentation.Controllers.MessagesController",
+    "Method": "GetMessageById",
+    "RelativePath": "api/Messages/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CS.Presentation.Controllers.MessagesController",
+    "Method": "UpdateMessage",
+    "RelativePath": "api/Messages/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "command",
+        "Type": "CS.Application.Commands.MessageCommands.UpdateMessageCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CS.Presentation.Controllers.MessagesController",
+    "Method": "GetMessagesByConversationId",
+    "RelativePath": "api/Messages/conversationId/{conversationId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "conversationId",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],

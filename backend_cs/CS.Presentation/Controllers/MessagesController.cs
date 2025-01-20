@@ -1,5 +1,6 @@
 ﻿using CS.Application.Commands.MessageCommands;
 using CS.Application.Queries.MessageQueries;
+using CS.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -33,6 +34,15 @@ namespace CS.Presentation.Controllers
             var query = new GetMessageByIdQuery(id);
             var result = await _mediator.Send(query);
             return Ok(result);
+        }
+
+        [Authorize(Roles = "Admin, User, Customer")]
+        [HttpGet("conversationId/{conversationId}")]
+        public async Task<IActionResult> GetMessagesByConversationId(Guid conversationId)
+        {
+            var query = new GetMessagesByConversationIdQuery { ConversationId = conversationId };
+            var results = await _mediator.Send(query);
+            return Ok(results);
         }
 
         [Authorize(Roles = "Admin, User, Customer")]

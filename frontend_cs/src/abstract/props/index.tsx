@@ -1,9 +1,5 @@
-﻿export * from './SidebarProps';
-export * from './LinkItemProps';
-export * from './MobileProps';
-export * from './NavItemProps';
-export * from './LoginFormProps';
-export * from './ColumnButtonProps';
-export * from './FilterElementProps';
+﻿export * from './others/ColumnButtonProps';
 export * from './requestProps';
-
+export * from './chatProps'
+export * from './customerProps';
+export * from './others';
