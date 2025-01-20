@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CS.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace CS.Application.Abstractions.Services
 {
     public interface IChatService
     {
-        Task SendMessageAsync(string user, string message);
+        Task SendMessage(Guid conversationId, string messageText, Guid? senderId);
+        Task<IEnumerable<Message>> GetMessages(Guid conversationId);
     }
 }

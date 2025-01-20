@@ -6,9 +6,9 @@ using CS.Application.UseCases.CustomerUseCases;
 using CS.Domain.DBContext;
 using CS.Domain.Entities;
 using CS.Domain.Enumerations;
-using CS.Infrastructure.Hubs;
 using CS.Infrastructure.Repositories;
 using CS.Infrastructure.Services;
+using CS.Presentation.Hubs;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -72,6 +72,9 @@ builder.Services.AddScoped<IChatService, ChatService>();
 builder.Services.AddScoped<IRequestRepo, RequestRepo>();
 builder.Services.AddScoped<ICustomerRepo, CustomerRepo>();
 builder.Services.AddScoped<IUserRepo, UserRepo>();
+builder.Services.AddScoped<IEmployeeTaggedRepo, EmployeeTagggedRepo>();
+builder.Services.AddScoped<IMessageRepo, MessageRepo>();
+builder.Services.AddScoped<IConversationRepo, ConversationRepo>();
 
 // Register password hasher
 builder.Services.AddScoped<IPasswordHasher<Customer>, PasswordHasher<Customer>>();
@@ -85,9 +88,10 @@ builder.Services.AddCors(setupAction =>
 {
     setupAction.AddPolicy("AllowAll", policy =>
     {
-        policy.AllowAnyOrigin()
+        policy.WithOrigins("http://localhost:5173")
               .AllowAnyMethod()
-              .AllowAnyHeader();
+              .AllowAnyHeader()
+              .AllowCredentials();
     });
 });
 
@@ -103,11 +107,12 @@ if (app.Environment.IsDevelopment())
     });
 }
 
-app.MapHub<ChatHub>("/chatHub");
 
 app.UseHttpsRedirection();
 
 app.UseCors("AllowAll");
+
+app.MapHub<ChatHub>("/chatHub");
 
 app.UseAuthentication();
 app.UseAuthorization();

@@ -48,7 +48,7 @@ class CustomerService {
   }
 
   // Error handler
-  private handleError(error: any): never {
+  private handleError(error: unknown): never {
     console.error('API Error:', error);
     throw error;
   }

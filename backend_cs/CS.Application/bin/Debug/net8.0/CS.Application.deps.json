@@ -553,10 +553,7 @@
           "Microsoft.Data.SqlClient": "5.2.2"
         },
         "runtime": {
-          "CS.Domain.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "CS.Domain.dll": {}
         }
       }
     }

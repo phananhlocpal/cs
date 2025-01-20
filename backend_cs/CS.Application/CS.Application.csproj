@@ -24,4 +24,9 @@
     <ProjectReference Include="..\CS.Domain\CS.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Validators\MessageCommandValidators\" />
+    <Folder Include="Validators\EmployeeTaggedCommandValidators\" />
+  </ItemGroup>
+
 </Project>

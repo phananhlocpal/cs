@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lphan\\Documents\\Paul's Workspace\\My Project\\cs\\backend_cs\\CS.Infrastructure\\CS.Infrastructure.csproj": {}
+    "C:\\Users\\Surface\\source\\repos\\cs\\backend_cs\\CS.Infrastructure\\CS.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lphan\\Documents\\Paul's Workspace\\My Project\\cs\\backend_cs\\CS.Application\\CS.Application.csproj": {
+    "C:\\Users\\Surface\\source\\repos\\cs\\backend_cs\\CS.Application\\CS.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lphan\\Documents\\Paul's Workspace\\My Project\\cs\\backend_cs\\CS.Application\\CS.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Surface\\source\\repos\\cs\\backend_cs\\CS.Application\\CS.Application.csproj",
         "projectName": "CS.Application",
-        "projectPath": "C:\\Users\\lphan\\Documents\\Paul's Workspace\\My Project\\cs\\backend_cs\\CS.Application\\CS.Application.csproj",
-        "packagesPath": "C:\\Users\\lphan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lphan\\Documents\\Paul's Workspace\\My Project\\cs\\backend_cs\\CS.Application\\obj\\",
+        "projectPath": "C:\\Users\\Surface\\source\\repos\\cs\\backend_cs\\CS.Application\\CS.Application.csproj",
+        "packagesPath": "C:\\Users\\Surface\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Surface\\source\\repos\\cs\\backend_cs\\CS.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\lphan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Surface\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\lphan\\Documents\\Paul's Workspace\\My Project\\cs\\backend_cs\\CS.Domain\\CS.Domain.csproj": {
-                "projectPath": "C:\\Users\\lphan\\Documents\\Paul's Workspace\\My Project\\cs\\backend_cs\\CS.Domain\\CS.Domain.csproj"
+              "C:\\Users\\Surface\\source\\repos\\cs\\backend_cs\\CS.Domain\\CS.Domain.csproj": {
+                "projectPath": "C:\\Users\\Surface\\source\\repos\\cs\\backend_cs\\CS.Domain\\CS.Domain.csproj"
               }
             }
           }
@@ -47,8 +48,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -91,24 +91,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\lphan\\Documents\\Paul's Workspace\\My Project\\cs\\backend_cs\\CS.Domain\\CS.Domain.csproj": {
+    "C:\\Users\\Surface\\source\\repos\\cs\\backend_cs\\CS.Domain\\CS.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lphan\\Documents\\Paul's Workspace\\My Project\\cs\\backend_cs\\CS.Domain\\CS.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Surface\\source\\repos\\cs\\backend_cs\\CS.Domain\\CS.Domain.csproj",
         "projectName": "CS.Domain",
-        "projectPath": "C:\\Users\\lphan\\Documents\\Paul's Workspace\\My Project\\cs\\backend_cs\\CS.Domain\\CS.Domain.csproj",
-        "packagesPath": "C:\\Users\\lphan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lphan\\Documents\\Paul's Workspace\\My Project\\cs\\backend_cs\\CS.Domain\\obj\\",
+        "projectPath": "C:\\Users\\Surface\\source\\repos\\cs\\backend_cs\\CS.Domain\\CS.Domain.csproj",
+        "packagesPath": "C:\\Users\\Surface\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Surface\\source\\repos\\cs\\backend_cs\\CS.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\lphan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Surface\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -117,6 +117,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -134,8 +135,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -162,24 +162,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\lphan\\Documents\\Paul's Workspace\\My Project\\cs\\backend_cs\\CS.Infrastructure\\CS.Infrastructure.csproj": {
+    "C:\\Users\\Surface\\source\\repos\\cs\\backend_cs\\CS.Infrastructure\\CS.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lphan\\Documents\\Paul's Workspace\\My Project\\cs\\backend_cs\\CS.Infrastructure\\CS.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Surface\\source\\repos\\cs\\backend_cs\\CS.Infrastructure\\CS.Infrastructure.csproj",
         "projectName": "CS.Infrastructure",
-        "projectPath": "C:\\Users\\lphan\\Documents\\Paul's Workspace\\My Project\\cs\\backend_cs\\CS.Infrastructure\\CS.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\lphan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lphan\\Documents\\Paul's Workspace\\My Project\\cs\\backend_cs\\CS.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\Surface\\source\\repos\\cs\\backend_cs\\CS.Infrastructure\\CS.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Surface\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Surface\\source\\repos\\cs\\backend_cs\\CS.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\lphan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Surface\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -188,17 +188,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\lphan\\Documents\\Paul's Workspace\\My Project\\cs\\backend_cs\\CS.Application\\CS.Application.csproj": {
-                "projectPath": "C:\\Users\\lphan\\Documents\\Paul's Workspace\\My Project\\cs\\backend_cs\\CS.Application\\CS.Application.csproj"
+              "C:\\Users\\Surface\\source\\repos\\cs\\backend_cs\\CS.Application\\CS.Application.csproj": {
+                "projectPath": "C:\\Users\\Surface\\source\\repos\\cs\\backend_cs\\CS.Application\\CS.Application.csproj"
               },
-              "C:\\Users\\lphan\\Documents\\Paul's Workspace\\My Project\\cs\\backend_cs\\CS.Domain\\CS.Domain.csproj": {
-                "projectPath": "C:\\Users\\lphan\\Documents\\Paul's Workspace\\My Project\\cs\\backend_cs\\CS.Domain\\CS.Domain.csproj"
+              "C:\\Users\\Surface\\source\\repos\\cs\\backend_cs\\CS.Domain\\CS.Domain.csproj": {
+                "projectPath": "C:\\Users\\Surface\\source\\repos\\cs\\backend_cs\\CS.Domain\\CS.Domain.csproj"
               }
             }
           }
@@ -212,8 +213,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -256,7 +256,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

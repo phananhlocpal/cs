@@ -29,8 +29,6 @@ CREATE TABLE Users (
 );
 GO
 
-DROP TABLE Requests;
-
 -- Table Request
 CREATE TABLE Requests (
     Id UNIQUEIDENTIFIER PRIMARY KEY,
@@ -46,5 +44,39 @@ CREATE TABLE Requests (
 );
 GO
 
-SELECT * FROM Requests;
-SELECT * FROM Customers;
+
+CREATE TABLE Conversations (
+    Id UNIQUEIDENTIFIER PRIMARY KEY,
+    CustomerId UNIQUEIDENTIFIER NULL, 
+    CreatedAt DATETIME, 
+    Status INT
+);
+
+
+CREATE TABLE Messages (
+    Id UNIQUEIDENTIFIER PRIMARY KEY,
+    ConversationId UNIQUEIDENTIFIER NOT NULL, 
+    Sender UNIQUEIDENTIFIER NULL, 
+    MessageText NVARCHAR(MAX) NOT NULL, 
+    Timestamp DATETIME DEFAULT GETDATE(), 
+    FOREIGN KEY (ConversationId) REFERENCES Conversations(Id),
+	FOREIGN KEY (Sender) REFERENCES Users(Id)
+);
+
+
+CREATE TABLE EmployeesTaggeds (
+    Id UNIQUEIDENTIFIER PRIMARY KEY,
+    ConversationId UNIQUEIDENTIFIER NOT NULL,
+    EmployeeId UNIQUEIDENTIFIER NULL, 
+    TaggedBy UNIQUEIDENTIFIER NOT NULL, 
+    TagTime DATETIME DEFAULT GETDATE(),
+    FOREIGN KEY (ConversationId) REFERENCES Conversations(Id),
+	FOREIGN KEY (EmployeeId) REFERENCES Users(Id),
+	FOREIGN KEY (TaggedBy) REFERENCES Users(Id),
+);
+
+
+SELECT * FROM dbo.Messages;
+SELECT * FROM dbo.Conversations;
+DELETE FROM dbo.Messages;
+DELETE FROM dbo.Conversations;

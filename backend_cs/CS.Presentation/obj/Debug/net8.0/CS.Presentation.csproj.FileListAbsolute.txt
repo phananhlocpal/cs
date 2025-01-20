@@ -170,7 +170,6 @@ C:\Users\Surface\source\repos\cs\backend_cs\CS.Presentation\obj\Debug\net8.0\CS.
 C:\Users\Surface\source\repos\cs\backend_cs\CS.Presentation\obj\Debug\net8.0\CS.Presentation.AssemblyInfoInputs.cache
 C:\Users\Surface\source\repos\cs\backend_cs\CS.Presentation\obj\Debug\net8.0\CS.Presentation.AssemblyInfo.cs
 C:\Users\Surface\source\repos\cs\backend_cs\CS.Presentation\obj\Debug\net8.0\CS.Presentation.csproj.CoreCompileInputs.cache
-C:\Users\Surface\source\repos\cs\backend_cs\CS.Presentation\obj\Debug\net8.0\CS.Presentation.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Surface\source\repos\cs\backend_cs\CS.Presentation\obj\Debug\net8.0\CS.Presentation.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Surface\source\repos\cs\backend_cs\CS.Presentation\obj\Debug\net8.0\CS.Presentation.sourcelink.json
 C:\Users\Surface\source\repos\cs\backend_cs\CS.Presentation\obj\Debug\net8.0\CS.Presentation.dll
@@ -352,3 +351,11 @@ C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Presentati
 C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Presentation\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Presentation\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\lphan\Documents\Paul's Workspace\My Project\cs\backend_cs\CS.Presentation\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Presentation\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Presentation\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Presentation\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Presentation\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Presentation\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Presentation\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Presentation\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Surface\source\repos\cs\backend_cs\CS.Presentation\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
