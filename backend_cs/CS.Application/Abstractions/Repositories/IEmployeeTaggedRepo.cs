@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace CS.Application.Abstractions.Repositories
 {
-    public interface IEmployeeTaggedRepo : IBaseRepo<EmployeeTagged>
+    public interface IEmployeeTaggedRepo : IBaseRepo<EmployeesTagged>
     {
+        Task<IEnumerable<EmployeesTagged>> GetByConversationId(Guid conversationId);
     }
 }

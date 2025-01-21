@@ -273,6 +273,38 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CS.Presentation.Controllers.EmployeesTaggedsController",
+    "Method": "DeleteEmployeeTagged",
+    "RelativePath": "api/EmployeesTaggeds/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CS.Presentation.Controllers.EmployeesTaggedsController",
+    "Method": "GetByConversationId",
+    "RelativePath": "api/EmployeesTaggeds/conversation/{conversationId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "conversationId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CS.Presentation.Controllers.MessagesController",
     "Method": "GetMessages",
     "RelativePath": "api/Messages",

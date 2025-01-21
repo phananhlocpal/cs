@@ -1,9 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
-import { Box, Container, Flex } from '@chakra-ui/react';
+import { Box, Container, Flex, useDisclosure } from '@chakra-ui/react';
 import * as signalR from '@microsoft/signalr';
-import { conversationService, customerService } from '@/services';
+import { conversationService, customerService, requestService, userService } from '@/services';
 import { ConversationInfo, ConversationList, MessageBox } from './components';
-import { ConversationResponseModel, CustomerResponseModel, MessageResponseModel } from '@/abstract'
+import { ConversationResponseModel, CustomerResponseModel, MessageResponseModel, RequestCreateRequestModel } from '@/abstract'
+import { employeeTaggedService } from '@/services/employeeTagged.service';
+import { showSuccessToast, showErrorToast } from '@/utils';
 
 export const ChatPage = () => {
   const [conversations, setConversations] = useState<ConversationResponseModel[]>([]);
@@ -13,6 +15,22 @@ export const ChatPage = () => {
   const [connection, setConnection] = useState<signalR.HubConnection | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [customer, setCustomer] = useState<CustomerResponseModel | null>(null);
+  const [users, setUsers] = useState<any[]>([]);
+  const [employeesTagged, setEmployeesTagged] = useState<any[]>([]);
+  const [requests, setRequests] = useState<any[]>([]);
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [customers, setCustomers] = useState<any[]>([]);
+
+  useEffect(() => {
+    loadUsers();
+    if (conversation) {
+      loadEmployeesTagged(conversation.id);
+    }
+    if (customer) {
+      loadRequestByCustomerId(customer.id);
+    }
+    loadCustomers();
+  });
 
   useEffect(() => {
     if (connection && conversation?.id) {
@@ -92,6 +110,35 @@ export const ChatPage = () => {
     connection?.invoke("GetConversationMessages", conversationId);
   };
 
+  const loadUsers = async () => {
+    const users = await userService.getAllUsers();
+    setUsers(users);
+  }
+
+  const loadEmployeesTagged = async (conversationId: string) => {
+    const employeesTagged = await employeeTaggedService.getByConversationId(conversationId);
+    setEmployeesTagged(employeesTagged);
+  }
+
+  const loadRequestByCustomerId = async (customerId: string) => {
+    const requests = await requestService.getRequestsByCustomerId(customerId);
+    setRequests(requests);
+  }
+
+  const loadCustomers = async () => {
+    const customers = await customerService.getAllCustomers();
+    setCustomers(customers);
+  }
+
+  const handleCreate = async (data: RequestCreateRequestModel) => {
+    try {
+      await requestService.createRequest(data);
+      showSuccessToast('Request created successfully');
+    } catch (error) {
+      showErrorToast('Failed to create request');
+    }
+  };
+
   // Send a message
   const sendMessage = async () => {
     if (!message.trim()) return;
@@ -118,16 +165,51 @@ export const ChatPage = () => {
     }
   };
 
+  const handleUserSelect = async (conversationId: string, employeeId: string, taggedBy: string) => {
+    const data = {
+      conversationId,
+      employeeId,
+      taggedBy,
+    };
+    console.log("Tagged employee need to be saved: ", data);
+    try {
+      await employeeTaggedService.create(data);
+      showSuccessToast('Employee tagged successfully');
+    } catch (error) {
+      showErrorToast('Failed to tag employee');
+    }
+  }
+
+  const handlerUserRemove = async (taggedId : string) => {
+    try {
+      await employeeTaggedService.delete(taggedId);
+      showSuccessToast('Employee removed successfully');
+    } catch (error) {
+      showErrorToast('Failed to remove employee');
+    }
+  }
+
   const getCustomerById = (customerId: string): Promise<CustomerResponseModel> => {
     return customerService.getCustomerById(customerId);
   }
 
   return (
-    <Box h="calc(100vh - 95px)" p={4}  className='box'>
-      <Flex direction="row" h="full" style={{width:"100%"}}>
-        <ConversationList conversations={conversations} conversation={conversation} setConversation={setConversation} loadConversationMessages={loadConversationMessages} getCustomerById={getCustomerById}/>
-        <MessageBox messages={messages} message={message} setMessage={setMessage} sendMessage={sendMessage} messagesEndRef={messagesEndRef} customer={customer}/>
-        <ConversationInfo conversation={conversation} customer={customer}/>
+    <Box h="calc(100vh - 95px)" p={4} className='box'>
+      <Flex direction="row" h="full" style={{ width: "100%" }}>
+        <ConversationList conversations={conversations} conversation={conversation} setConversation={setConversation} loadConversationMessages={loadConversationMessages} getCustomerById={getCustomerById} />
+        <MessageBox messages={messages} message={message} setMessage={setMessage} sendMessage={sendMessage} messagesEndRef={messagesEndRef} customer={customer} />
+        <ConversationInfo 
+          conversation={conversation} 
+          customer={customer}
+          employeesTagged={employeesTagged}
+          requests={requests}
+          onSubmit={handleCreate}
+          onCancel={onClose}
+          customers={customers}
+          users={users}
+          handleUserSelect={handleUserSelect}
+          handlerUserRemove={handlerUserRemove}
+          />
       </Flex>
     </Box>
   );

@@ -465,6 +465,50 @@
             "description": "OK"
           }
         }
+      },
+      "delete": {
+        "tags": [
+          "EmployeesTaggeds"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EmployeesTaggeds/conversation/{conversationId}": {
+      "get": {
+        "tags": [
+          "EmployeesTaggeds"
+        ],
+        "parameters": [
+          {
+            "name": "conversationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/api/Messages": {
@@ -886,7 +930,8 @@
       "ConversationStatusEnum": {
         "enum": [
           0,
-          1
+          1,
+          2
         ],
         "type": "integer",
         "format": "int32"

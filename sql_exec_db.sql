@@ -80,7 +80,8 @@ CREATE TABLE EmployeesTaggeds (
 
 SELECT * FROM dbo.Messages;
 SELECT * FROM dbo.Conversations;
-
+SELECT * FROM EmployeesTaggeds;
 
 DELETE FROM dbo.Messages;
 DELETE FROM dbo.Conversations;
+DELETE FROM dbo.EmployeesTaggeds;

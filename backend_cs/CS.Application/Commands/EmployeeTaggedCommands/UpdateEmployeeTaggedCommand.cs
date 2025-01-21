@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CS.Application.Commands.EmployeeTaggedCommands
 {
-    public class UpdateEmployeeTaggedCommand : IRequest<EmployeeTagged>
+    public class UpdateEmployeeTaggedCommand : IRequest<EmployeesTagged>
     {
         public Guid Id { get; set; }
         public Guid? EmployeeId { get; set; }

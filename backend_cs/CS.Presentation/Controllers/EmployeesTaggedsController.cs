@@ -35,6 +35,15 @@ namespace CS.Presentation.Controllers
             return Ok(result);
         }
 
+        [Authorize(Roles ="Admin, User")]
+        [HttpGet("conversation/{conversationId}")]
+        public async Task<IActionResult> GetByConversationId(Guid conversationId)
+        {
+            var query = new GetEmployeeTaggedByConversationIdQuery { ConversationId = conversationId };
+            var result = await _mediator.Send(query);
+            return Ok(result);
+        }
+
         [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> CreateEmployeeTagged([FromBody] CreateEmployeeTaggedCommand command)
@@ -48,6 +57,15 @@ namespace CS.Presentation.Controllers
         public async Task<IActionResult> UpdateEmployeeTagged(Guid id, [FromBody] UpdateEmployeeTaggedCommand command)
         {
             command.Id = id;
+            var result = await _mediator.Send(command);
+            return Ok(result);
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteEmployeeTagged(Guid id)
+        {
+            var command = new DeleteEmployeeTaggedCommand { Id = id };
             var result = await _mediator.Send(command);
             return Ok(result);
         }

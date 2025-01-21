@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CS.Domain.Entities
 {
-    public class EmployeeTagged : BaseEntity
+    public class EmployeesTagged : BaseEntity
     {
         public Guid ConversationId { get; set; }
         public Guid? EmployeeId { get; set; }

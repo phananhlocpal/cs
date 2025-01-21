@@ -5,3 +5,4 @@ export * from './customer';
 export * from './request';
 export * from './conversation';
 export * from './message';
+export * from './employeeTagged';

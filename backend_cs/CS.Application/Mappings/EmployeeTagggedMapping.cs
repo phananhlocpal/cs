@@ -13,8 +13,8 @@ namespace CS.Application.Mappings
     {
         public EmployeeTaggedMapping()
         {
-            CreateMap<EmployeeTagged, EmployeeTaggedReadDTO>();
-            CreateMap<EmployeeTaggedCreateDTO, EmployeeTagged>();
+            CreateMap<EmployeesTagged, EmployeeTaggedReadDTO>();
+            CreateMap<EmployeeTaggedCreateDTO, EmployeesTagged>();
         }
     }
 }

@@ -5,5 +5,5 @@ export interface RequestCreateRequestModel {
     description: string
     issueType: number | undefined
     personInChargeId: string
-    customerId: string
+    customerId: string | undefined
 }

@@ -1,5 +1,7 @@
-﻿using CS.Application.Abstractions.Repositories;
+﻿using AutoMapper;
+using CS.Application.Abstractions.Repositories;
 using CS.Application.Commands.EmployeeTaggedCommands;
+using CS.Application.DTOs.EmployeeTaggedDTO;
 using CS.Domain.Entities;
 using MediatR;
 using System;
@@ -10,26 +12,30 @@ using System.Threading.Tasks;
 
 namespace CS.Application.UseCases.EmployeeTaggedUseCases
 {
-    public class CreateEmployeeTaggedHandler : IRequestHandler<CreateEmployeeTaggedCommand, EmployeeTagged>
+    public class CreateEmployeeTaggedHandler : IRequestHandler<CreateEmployeeTaggedCommand, EmployeeTaggedReadDTO>
     {
         private readonly IEmployeeTaggedRepo _employeeTaggedRepo;
+        private readonly IMapper _mapper;
 
-        public CreateEmployeeTaggedHandler(IEmployeeTaggedRepo employeeTaggedRepo)
+        public CreateEmployeeTaggedHandler(IEmployeeTaggedRepo employeeTaggedRepo, IMapper mapper)
         {
             _employeeTaggedRepo = employeeTaggedRepo;
+            _mapper = mapper;
         }
 
-        public async Task<EmployeeTagged> Handle(CreateEmployeeTaggedCommand request, CancellationToken cancellationToken)
+        public async Task<EmployeeTaggedReadDTO> Handle(CreateEmployeeTaggedCommand request, CancellationToken cancellationToken)
         {
-            var employeeTagged = new EmployeeTagged
+            var employeeTagged = new EmployeesTagged
             {
+                Id = Guid.NewGuid(),
                 ConversationId = request.ConversationId,
                 EmployeeId = request.EmployeeId,
                 TaggedBy = request.TaggedBy,
                 TagTime = DateTime.Now
             };
 
-            return await _employeeTaggedRepo.Create(employeeTagged);
+            var newEmployeeTagged = await _employeeTaggedRepo.Create(employeeTagged);
+            return _mapper.Map<EmployeeTaggedReadDTO>(newEmployeeTagged);
         }
     }
 }

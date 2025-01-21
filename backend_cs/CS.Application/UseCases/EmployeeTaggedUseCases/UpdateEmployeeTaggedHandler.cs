@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace CS.Application.UseCases.EmployeeTaggedUseCases
 {
-    public class UpdateEmployeeTaggedHandler : IRequestHandler<UpdateEmployeeTaggedCommand, EmployeeTagged>
+    public class UpdateEmployeeTaggedHandler : IRequestHandler<UpdateEmployeeTaggedCommand, EmployeesTagged>
     {
         private readonly IEmployeeTaggedRepo _employeeTaggedRepo;
 
@@ -19,7 +19,7 @@ namespace CS.Application.UseCases.EmployeeTaggedUseCases
             _employeeTaggedRepo = employeeTaggedRepo;
         }
 
-        public async Task<EmployeeTagged> Handle(UpdateEmployeeTaggedCommand request, CancellationToken cancellationToken)
+        public async Task<EmployeesTagged> Handle(UpdateEmployeeTaggedCommand request, CancellationToken cancellationToken)
         {
             var employeeTagged = await _employeeTaggedRepo.Get(request.Id);
             if (employeeTagged == null)

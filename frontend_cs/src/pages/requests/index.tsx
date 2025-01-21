@@ -1,10 +1,11 @@
 ﻿import React, { useState, useEffect } from "react";
-import { Box, Button, HStack, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, useDisclosure, Table, Thead, Tbody, Tr, Th, Td, useToast, Checkbox, Tag } from "@chakra-ui/react";
+import { Box, Button, HStack, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, useDisclosure, Table, Thead, Tbody, Tr, Th, Td, Checkbox, Tag } from "@chakra-ui/react";
 import { requestService, customerService } from "@/services";
 import { RequestResponseModel, RequestCreateRequestModel, RequestUpdateRequestModel, CustomerResponseModel, RequestStatusEnum } from "@/abstract";
 import { CreateComponent, UpdateComponent, DetailComponent } from "./components";
 import { getRequestStatus, getRequestStatusColorHelper } from "@/helpers";
 import { CiCalendar } from "react-icons/ci";
+import { showSuccessToast, showErrorToast } from "@/utils";
 
 export const RequestListPage: React.FC = () => {
   // States
@@ -18,7 +19,6 @@ export const RequestListPage: React.FC = () => {
 
   // Chakra hooks
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const toast = useToast();
 
   // Load requests on mount
   useEffect(() => {
@@ -97,23 +97,6 @@ export const RequestListPage: React.FC = () => {
     setModalMode('detail');
     setSelectedRequest(request);
     onOpen();
-  };
-
-  // Toast helpers
-  const showSuccessToast = (message: string) => {
-    toast({
-      title: message,
-      status: 'success',
-      duration: 3000,
-    });
-  };
-
-  const showErrorToast = (message: string) => {
-    toast({
-      title: message,
-      status: 'error',
-      duration: 3000,
-    });
   };
 
   function getStatusColor(arg0: RequestStatusEnum): (string & {}) | "whiteAlpha" | "blackAlpha" | "gray" | "red" | "orange" | "yellow" | "green" | "teal" | "blue" | "cyan" | "purple" | "pink" | undefined {
