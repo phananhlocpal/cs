@@ -1,10 +1,11 @@
 ﻿import { useEffect, useState } from "react";
-import { Box, VStack, Text, Tag } from "@chakra-ui/react";
+import { Box, VStack, Text, Tag, Spinner } from "@chakra-ui/react";
 import { ConversationListProp } from "@/abstract";
 import { getConversationStatusHelper } from "@/helpers";
 
 export const ConversationList = ({ conversations, conversation, setConversation, loadConversationMessages, getCustomerById }: ConversationListProp) => {
     const [customerNames, setCustomerNames] = useState<{ [key: string]: string }>({});
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         const fetchCustomerNames = async () => {
@@ -18,6 +19,13 @@ export const ConversationList = ({ conversations, conversation, setConversation,
 
         fetchCustomerNames();
     }, [conversations]);
+
+    const handleConversationClick =  (conv: any) => {
+        setLoading(true);
+        loadConversationMessages(conv);
+        setConversation(conv);
+        setLoading(false);
+    };
 
     return (
         <Box
@@ -37,10 +45,7 @@ export const ConversationList = ({ conversations, conversation, setConversation,
                             p={3}
                             borderRadius="lg"
                             bg={conversation?.id === conv.id ? "blue.100" : "gray.50"}
-                            onClick={() => {
-                                setConversation(conv);
-                                loadConversationMessages(conv.id);
-                            }}
+                            onClick={() => handleConversationClick(conv)}
                             cursor="pointer"
                         >
                             <Text fontWeight="bold" className="mb-2">
@@ -57,6 +62,11 @@ export const ConversationList = ({ conversations, conversation, setConversation,
                     </Text>
                 )}
             </VStack>
+            {loading && (
+                <Box position="absolute" top="50%" left="50%" transform="translate(-50%, -50%)">
+                    <Spinner size="xl" />
+                </Box>
+            )}
         </Box>
     );
 };

@@ -5,7 +5,8 @@
 - [x] Dapper
 - [x] Fluent Validation
 - [x] CQRS and mediator
-- [x] Attribute and RABC
+- [x] Authorize, RABC
+- [x] SignalR
 
 ## Features in my project
 - [x] CRUD Users
@@ -13,3 +14,4 @@
 - [x] CRUD Supportive ticket (Request)
 - [x] Authentication and Authorization (with JWT token and RABC)
 - [x] Email service
+- [x] Chatbox service

@@ -210,6 +210,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CS.Controllers.CustomersController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/Customers/resetedPassword/{customerId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CS.Presentation.Controllers.EmployeesTaggedsController",
     "Method": "GetEmployeeTaggeds",
     "RelativePath": "api/EmployeesTaggeds",
@@ -563,6 +579,22 @@
       {
         "Name": "command",
         "Type": "CS.Application.Commands.UserCommands.UpdateUserCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CS.Presentation.Controllers.UsersController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/Users/resetedPassword/{userId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],

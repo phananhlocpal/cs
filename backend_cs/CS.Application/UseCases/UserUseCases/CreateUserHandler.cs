@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using CS.Application.Abstractions;
 using CS.Application.Abstractions.Repositories;
+using CS.Application.Abstractions.Services;
 using CS.Application.Commands.UserCommands;
 using CS.Application.DTOs.UserDTO;
 using CS.Domain.Entities;
@@ -20,12 +21,14 @@ namespace CS.Application.UseCases.UserUseCases
         private readonly IUserRepo _userRepo;
         private readonly IMapper _mapper;
         private readonly IPasswordHasher<User> _passwordHasher;
+        private readonly IEmailManagerService _emailService;
 
-        public CreateUserHandler(IUserRepo userRepo, IMapper mapper, IPasswordHasher<User> passwordHasher)
+        public CreateUserHandler(IUserRepo userRepo, IMapper mapper, IPasswordHasher<User> passwordHasher, IEmailManagerService emailManagerService)
         {
             _userRepo = userRepo;
             _mapper = mapper;
             _passwordHasher = passwordHasher;
+            _emailService = emailManagerService;
         }
 
         public async Task<UserReadDTO> Handle(CreateUserCommand request, CancellationToken cancellationToken)
@@ -49,6 +52,9 @@ namespace CS.Application.UseCases.UserUseCases
 
             userRequest.Password = _passwordHasher.HashPassword(userRequest, request.Password);
             var user = await _userRepo.Create(userRequest);
+
+            var body = $"Hi there,\nThis is your account:\nEmail: {user.Email}\nPassword:{request.Password}\nBest Regard!";
+            _emailService.SendEmailAsync(user.Email, "Your account for accessing to system", body);
 
             return _mapper.Map<UserReadDTO>(user);
         }

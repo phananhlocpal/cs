@@ -27,6 +27,7 @@ class UserService {
 
   async createUser(user: UserCreateRequestModel): Promise<UserResponseModel> {
     try {
+      console.log(user);
       const response = await axiosInterceptorInstance.post(this.baseUrl, user);
       return response.data;
     } catch (error) {
@@ -34,10 +35,18 @@ class UserService {
     }
   }
 
-  async updateUser(id: string, user: UserUpdateRequestModel): Promise<UserResponseModel> {
+  async updateUser(user: UserUpdateRequestModel): Promise<UserResponseModel> {
     try {
-      const response = await axiosInterceptorInstance.put(`${this.baseUrl}/${id}`, user);
+      const response = await axiosInterceptorInstance.put(`${this.baseUrl}`, user);
       return response.data;
+    } catch (error) {
+      return this.handleError(error);
+    }
+  }
+
+  async resetPassword(userId: string) {
+    try {
+      await axiosInterceptorInstance.post(`${this.baseUrl}/resetedPassword`, userId)
     } catch (error) {
       return this.handleError(error);
     }

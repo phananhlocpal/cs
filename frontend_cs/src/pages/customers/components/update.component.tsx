@@ -6,10 +6,10 @@ import {
     FormErrorMessage,
     FormLabel,
     Input,
-    Textarea,
     VStack
 } from "@chakra-ui/react";
 import { CustomerUpdateRequestModel, CustomerResponseModel } from "@/abstract";
+import { customerService } from "@/services";
 
 interface UpdateComponentProps {
     customer: CustomerResponseModel;
@@ -115,6 +115,15 @@ export const UpdateComponent: React.FC<UpdateComponentProps> = ({
                     width="full"
                 >
                     Update
+                </Button>
+                <Button
+                    type="submit"
+                    colorScheme="blue"
+                    isLoading={isLoading}
+                    width="full"
+                    onClick={() => {customerService.resetPassword(customer.id)}}
+                >
+                    Reset password
                 </Button>
                 <Button
                     onClick={onCancel}

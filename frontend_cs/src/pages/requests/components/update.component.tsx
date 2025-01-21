@@ -61,15 +61,19 @@ export const UpdateComponent: React.FC<UpdateComponentProps> = ({
             const userName = userProfile ? JSON.parse(userProfile).name : "Unknown User";
             const formattedUpdate = `\n[${currentDate}] - ${userName}: ${newDescription}`;
             
+            const des = formData.description + formattedUpdate;
             updatedFormData = {
                 ...formData,
-                description: formData.description + formattedUpdate
+                description: des,
             };
+            formData.description = des;
+            setNewDescription("");
         } else {
             updatedFormData = {
                 ...formData,
-                description: formData.description
+                description: formData.description,
             };
+            setNewDescription("");
         }
     
         setIsLoading(true);

@@ -1,7 +1,10 @@
 ﻿import { MessageBoxProp } from "@/abstract/props/chatProps/MessageBoxProp";
-import { Box, VStack, Text, Flex, Input, Button } from "@chakra-ui/react";
+import { Box, VStack, Text, Flex, Input, Button, Avatar } from "@chakra-ui/react";
 
-export const MessageBox = ({ messages, message, setMessage, sendMessage, messagesEndRef, customer }: MessageBoxProp) => {
+export const MessageBox = ({ employeesTagged, messages, message, setMessage, sendMessage, messagesEndRef, customer }: MessageBoxProp) => {
+    const userProfile = localStorage.getItem("userProfile");
+    const userId = userProfile ? JSON.parse(userProfile).id : null;
+
     return (
         <Box
             className="mx-3"
@@ -16,7 +19,14 @@ export const MessageBox = ({ messages, message, setMessage, sendMessage, message
         >
             {customer && (
                 <Box>
-                    <Flex className="mb-5 rounded-lg" bg="blue.500" p={3} color="white" justifyContent="space-between" alignItems="center">
+                    <Flex className="mb-5 rounded-lg" bg="blue.500" p={3} color="white"  alignItems="center">
+                        <Avatar
+                            size={'sm'}
+                            className="mr-3"
+                            src={
+                                'https://th.bing.com/th/id/R.030e8808f8c61d4145840f4ad2bd8629?rik=xwfwJrfgeTxaBg&riu=http%3a%2f%2fimg1.wikia.nocookie.net%2f__cb20140505230441%2fdragonball%2fimages%2fc%2fc3%2fSplit-test-success-kid-meme-300x300.jpg&ehk=1rUnv63VnwJnyuXkhFRD4ifeJV1CVSEi58KRE5J2oTo%3d&risl=&pid=ImgRaw&r=0'
+                            }
+                        />
                         <Text fontWeight="bold">{customer?.name}</Text>
                     </Flex>
                 </Box>
@@ -64,9 +74,19 @@ export const MessageBox = ({ messages, message, setMessage, sendMessage, message
                             sendMessage();
                         }
                     }}
+                    disabled={employeesTagged.length > 0 && !employeesTagged.some(employee => employee.employeeId === userId)}
                 />
                 <Button colorScheme="blue" onClick={sendMessage}>Send</Button>
             </Flex>
+            <Box ml={4}>
+                {
+                    employeesTagged.length > 0 && !employeesTagged.some(employee => employee.employeeId === userId) ?
+                        (
+                            <Text mt={3} color="red" fontStyle="italic">You don't have permission to send message to this customer!</Text>
+                        ) : (null)
+                }
+            </Box>
+
         </Box>
     );
 }

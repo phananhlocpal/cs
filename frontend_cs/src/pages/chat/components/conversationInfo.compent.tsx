@@ -1,24 +1,32 @@
 ﻿import {
   Box, VStack, Text, Heading, Divider, Badge, Tag, TagLabel, Button, FormControl, FormLabel, FormErrorMessage,
-  Textarea, Select, Input, Popover, PopoverTrigger, InputGroup, PopoverBody, PopoverContent, Stack
+  Textarea, Select, Input, Popover, PopoverTrigger, InputGroup, PopoverBody, PopoverContent, Stack, IconButton, Tooltip,
+  Flex, Collapse
 } from "@chakra-ui/react";
-import { AddIcon } from "@chakra-ui/icons";
+import { AddIcon, CloseIcon, EditIcon } from "@chakra-ui/icons";
 import { useState } from "react";
-import { RequestIssueTypeEnum, ConversationInfoProp, CustomerResponseModel, UserResponseModel } from "@/abstract";
+import { RequestIssueTypeEnum, ConversationInfoProp, CustomerResponseModel, UserResponseModel, RequestStatusEnum } from "@/abstract";
+import { useErrorToast } from "@/utils";
+import { getConversationStatusHelper, getRequestStatus, getRequestStatusColorHelper } from "@/helpers";
 
-export const ConversationInfo = ({ conversation, customer, employeesTagged, requests, onSubmit, users, handleUserSelect, handlerUserRemove }: ConversationInfoProp) => {
+export const ConversationInfo = ({ conversation, customer, employeesTagged, requests, onSubmit, users, handleUserSelect, handlerUserRemove, setSelectedRequest, onOpen }: ConversationInfoProp) => {
   const [isOpenCreateTicket, setIsOpenCreateTicket] = useState(false);
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [issueType, setIssueType] = useState<number | undefined>();
-  const [customerId, setCustomerId] = useState(customer?.id || '');
   const [userNameInput, setUserNameInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [isEditConversationStatus, setIsEditConversationStatus] = useState(false);
   const [errors, setErrors] = useState({
     title: '',
     description: '',
   });
-  const [personInChargeId, setPersonInChargeId] = useState(localStorage.getItem('userProfile') ? JSON.parse(localStorage.getItem('userProfile') as string).id : '');
+  const personInChargeId = localStorage.getItem('userProfile') ? JSON.parse(localStorage.getItem('userProfile') as string).id : "";
+
+  const userProfile = localStorage.getItem("userProfile") ? JSON.parse(localStorage.getItem("userProfile") as string) : null
+  const userRole = userProfile?.role
+
+  const showErrorToast = useErrorToast();
 
   // Lọc khách hàng dựa trên số điện thoại nhập vào
   const filteredUsers = users.filter((user: UserResponseModel) =>
@@ -34,6 +42,41 @@ export const ConversationInfo = ({ conversation, customer, employeesTagged, requ
     <Box flex="1" borderWidth={1} borderRadius="lg" p={4} bg="white" boxShadow="lg" overflowY="auto">
       {conversation ? (
         <VStack spacing={4} align="stretch">
+          <Box>
+            <Heading size="sm" mb={3}>Conservation Information</Heading>
+            <VStack align="start" spacing={2}>
+              <Text>  <strong>Created Time:</strong> {new Date(conversation.createdAt).toLocaleString()}</Text>
+              <Text>
+                <strong>Status:</strong>
+                <Tag><TagLabel>{conversation.status}</TagLabel></Tag>
+                <IconButton
+                  icon={<EditIcon />}
+                  size="xs"
+                  variant="ghost"
+                  onClick={() => setIsEditConversationStatus(true)}
+                  aria-label="Remove user"
+                  _hover={{ bg: "transparent" }}
+                />
+              </Text>
+              <Box mt={2} w={"100%"}>
+                <Collapse in={isEditConversationStatus} animateOpacity>
+                  <Flex direction="column" align="flex-start" p={4} borderWidth="1px" borderRadius="md" bg="gray.50">
+                    <Select placeholder="Select status" mb={3}>
+                      <option value={0}>Opened</option>
+                      <option value={1}>In Progress</option>
+                      <option value={2}>Closed</option>
+                      <option value={3}>Resolved</option>
+                    </Select>
+                    <Flex>
+                      <Button colorScheme="blue" mr={2}>Save</Button>
+                      <Button onClick={() => setIsEditConversationStatus(false)}>Close</Button>
+                    </Flex>
+                  </Flex>
+                </Collapse>
+              </Box>
+            </VStack>
+          </Box>
+          <Divider />
           {/* Thông tin khách hàng */}
           <Box>
             <Heading size="sm" mb={3}>Customer Information</Heading>
@@ -53,10 +96,13 @@ export const ConversationInfo = ({ conversation, customer, employeesTagged, requ
             <Heading size="sm" mb={3}>Recent Requests</Heading>
             <VStack align="stretch" spacing={2}>
               {requests ? requests?.map((request) => (
-                <Box key={request.id} p={2} borderWidth="1px" borderRadius="md">
+                <Box key={request.id} p={2} borderWidth="1px" borderRadius="md" cursor="pointer" onClick={() => {
+                  setSelectedRequest(request);
+                  onOpen();
+                }}>
                   <Text fontSize="sm" fontWeight="medium">{request.title}</Text>
-                  <Badge colorScheme={request.status === 1 ? "green" : "orange"}>
-                    {request.status === 1 ? "Completed" : "Pending"}
+                  <Badge colorScheme={request.status == 0 ? "blue" : request.status == 1 ? "orange" : request.status == 2 ? "yellow" : request.status == 2 ? "green" : "gray"}>
+                    {getRequestStatus(request.status)}
                   </Badge>
                 </Box>
               )) : (
@@ -66,7 +112,7 @@ export const ConversationInfo = ({ conversation, customer, employeesTagged, requ
           </Box>
           <Divider />
 
-          {/* Gợi ý khách hàng */}
+          {/* Assign staff to chat*/}
           <Box>
             <Heading size="sm" mb={3}>Assign Staff</Heading>
             <FormControl>
@@ -76,11 +122,14 @@ export const ConversationInfo = ({ conversation, customer, employeesTagged, requ
               >
                 <PopoverTrigger>
                   <InputGroup>
-                    <Input
-                      placeholder="Enter staff name"
-                      value={userNameInput}
-                      onChange={(e) => setUserNameInput(e.target.value)}
-                    />
+                    <Tooltip label="Only administrators can add staff" isDisabled={userRole !== 0}>
+                      <Input
+                        placeholder="Enter staff name"
+                        value={userNameInput}
+                        onChange={(e) => setUserNameInput(e.target.value)}
+                        disabled={userRole === 1 ? false : true}
+                      />
+                    </Tooltip>
                   </InputGroup>
                 </PopoverTrigger>
                 <PopoverContent>
@@ -94,7 +143,12 @@ export const ConversationInfo = ({ conversation, customer, employeesTagged, requ
                           _hover={{ bg: "gray.100" }}
                           onClick={() => {
                             setUserNameInput("");
-                            handleUserSelect(conversation.id, user.id, personInChargeId)}}
+                            if (employeesTagged && employeesTagged.some(tagged => tagged.employeeId === user.id)) {
+                              showErrorToast("This staff have already exist!")
+                            } else {
+                              handleUserSelect(conversation.id, user.id, personInChargeId)
+                            }
+                          }}
                         >
                           {user.name}
                         </Box>
@@ -115,7 +169,15 @@ export const ConversationInfo = ({ conversation, customer, employeesTagged, requ
                     borderRadius="full"
                   >
                     <TagLabel>{employeeName}</TagLabel>
-                    <Button onClick={() => handlerUserRemove(tagged.id)}></Button>
+                    <IconButton
+                      disabled={userRole === 1 ? false : true}
+                      icon={<CloseIcon />}
+                      size="xs"
+                      variant="ghost"
+                      onClick={() => handlerUserRemove(tagged.id)}
+                      aria-label="Remove user"
+                      _hover={{ bg: "transparent" }}
+                    />
                   </Tag>
                 );
               })}
@@ -179,7 +241,13 @@ export const ConversationInfo = ({ conversation, customer, employeesTagged, requ
                   colorScheme="blue"
                   isLoading={isLoading}
                   width="full"
-                  onClick={() => onSubmit && onSubmit({ title, description, issueType, customerId, personInChargeId })}
+                  onClick={() => {
+                    const currentDate = new Date().toLocaleString();
+                    const userProfile = localStorage.getItem("userProfile");
+                    const userName = userProfile ? JSON.parse(userProfile).name : "Unknown User";
+                    const formattedDescription = `[${currentDate}] - ${userName}: ${description}`;
+                    onSubmit && onSubmit({ title, description: formattedDescription, issueType, personInChargeId, customerId: customer?.id })
+                  }}
                 >
                   Create
                 </Button>

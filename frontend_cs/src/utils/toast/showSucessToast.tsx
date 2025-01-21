@@ -1,10 +1,13 @@
 import { useToast } from "@chakra-ui/react";
 
-export const showSuccessToast = (message: string) => {
+export const useSucessToast = () => {
     const toast = useToast();
-    toast({
-        title: message,
-        status: 'success',
-        duration: 3000,
-    });
-};
+    const showSuccessToast = (message: string) => {
+        toast({
+            title: message,
+            status: 'success',
+            duration: 3000,
+        });
+    };
+    return showSuccessToast;
+}

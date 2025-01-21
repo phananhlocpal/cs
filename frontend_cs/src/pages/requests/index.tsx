@@ -5,7 +5,7 @@ import { RequestResponseModel, RequestCreateRequestModel, RequestUpdateRequestMo
 import { CreateComponent, UpdateComponent, DetailComponent } from "./components";
 import { getRequestStatus, getRequestStatusColorHelper } from "@/helpers";
 import { CiCalendar } from "react-icons/ci";
-import { showSuccessToast, showErrorToast } from "@/utils";
+import { useSucessToast, useErrorToast } from "@/utils";
 
 export const RequestListPage: React.FC = () => {
   // States
@@ -16,6 +16,8 @@ export const RequestListPage: React.FC = () => {
   const [selection, setSelection] = useState<string[]>([]);
   const indeterminate = selection.length > 0 && selection.length < requests.length;
 
+  const showErrorToast = useErrorToast();
+  const showSuccessToast = useSucessToast();
 
   // Chakra hooks
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -62,7 +64,6 @@ export const RequestListPage: React.FC = () => {
     try {
       await requestService.updateRequest(data);
       loadRequests();
-      onClose();
       showSuccessToast('Request updated successfully');
     } catch (error) {
       showErrorToast('Failed to update request');

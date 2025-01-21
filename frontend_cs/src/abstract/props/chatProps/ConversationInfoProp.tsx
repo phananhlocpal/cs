@@ -11,4 +11,6 @@ export interface ConversationInfoProp {
     users: UserResponseModel[];
     handleUserSelect: (conversationId: string, employeeId: string, taggedBy: string) => void;
     handlerUserRemove: (taggedId: string) => void;
+    setSelectedRequest: (request: RequestResponseModel) => void;
+    onOpen: () => void;
 }

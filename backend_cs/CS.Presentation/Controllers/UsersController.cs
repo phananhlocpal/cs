@@ -57,5 +57,17 @@ namespace CS.Presentation.Controllers
             var result = await _mediator.Send(command);
             return Ok(result);
         }
+
+        [Authorize(Roles = "Admin")]
+        [HttpPost("resetedPassword/{userId}")]
+        public async Task<IActionResult> ResetPassword(Guid userId)
+        {
+            var command = new ResetUserPasswordCommand
+            {
+                UserId = userId
+            };
+            var result = await _mediator.Send(command);
+            return Ok(result);
+        }
     }
 }

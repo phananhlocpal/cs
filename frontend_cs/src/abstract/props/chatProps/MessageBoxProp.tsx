@@ -1,4 +1,4 @@
-import { CustomerResponseModel, MessageResponseModel } from "@/abstract/models"
+import { CustomerResponseModel, EmployeeTaggedResponseModel, MessageResponseModel } from "@/abstract/models"
 
 export interface MessageBoxProp {
     messages: Array<MessageResponseModel>;
@@ -7,4 +7,5 @@ export interface MessageBoxProp {
     sendMessage: () => void;
     messagesEndRef: React.RefObject<HTMLDivElement>;
     customer: CustomerResponseModel | null;
+    employeesTagged: EmployeeTaggedResponseModel[];
 }

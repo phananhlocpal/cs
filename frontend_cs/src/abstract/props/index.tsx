@@ -3,3 +3,4 @@ export * from './requestProps';
 export * from './chatProps'
 export * from './customerProps';
 export * from './others';
+export * from './userProps';

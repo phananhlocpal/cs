@@ -47,6 +47,14 @@ class CustomerService {
     }
   }
 
+  async resetPassword(customerId: string) {
+    try {
+      await axiosInterceptorInstance.post(`${this.baseUrl}/resetedPassword`, customerId)
+    } catch (error) {
+      return this.handleError(error);
+    }
+  }
+
   // Error handler
   private handleError(error: unknown): never {
     console.error('API Error:', error);

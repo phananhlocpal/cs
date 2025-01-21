@@ -1,11 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
-import { Box, Container, Flex, useDisclosure } from '@chakra-ui/react';
+import { Box, Container, Flex, useDisclosure, Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay } from '@chakra-ui/react';
 import * as signalR from '@microsoft/signalr';
 import { conversationService, customerService, requestService, userService } from '@/services';
 import { ConversationInfo, ConversationList, MessageBox } from './components';
-import { ConversationResponseModel, CustomerResponseModel, MessageResponseModel, RequestCreateRequestModel } from '@/abstract'
+import { ConversationResponseModel, CustomerResponseModel, MessageResponseModel, RequestCreateRequestModel, RequestResponseModel, RequestUpdateRequestModel } from '@/abstract'
 import { employeeTaggedService } from '@/services/employeeTagged.service';
-import { showSuccessToast, showErrorToast } from '@/utils';
+import { useErrorToast, useSucessToast } from '@/utils';
+import { UpdateComponent } from '../requests/components';
 
 export const ChatPage = () => {
   const [conversations, setConversations] = useState<ConversationResponseModel[]>([]);
@@ -20,6 +21,10 @@ export const ChatPage = () => {
   const [requests, setRequests] = useState<any[]>([]);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [customers, setCustomers] = useState<any[]>([]);
+  const [selectedRequest, setSelectedRequest] = useState<RequestResponseModel>();
+
+  const showErrorToast = useErrorToast();
+  const showSuccessToast = useSucessToast();
 
   useEffect(() => {
     loadUsers();
@@ -101,13 +106,12 @@ export const ChatPage = () => {
   }, [connection]);
 
   // Load messages for the selected conversation
-  const loadConversationMessages = async (conversationId: string) => {
+  const loadConversationMessages = async (conversation: any) => {
     if (conversation?.customerId) {
       var customer = await customerService.getCustomerById(conversation.customerId);
-      console.log(customer);
       setCustomer(customer);
     }
-    connection?.invoke("GetConversationMessages", conversationId);
+    await connection?.invoke("GetConversationMessages", conversation.id);
   };
 
   const loadUsers = async () => {
@@ -132,6 +136,7 @@ export const ChatPage = () => {
 
   const handleCreate = async (data: RequestCreateRequestModel) => {
     try {
+      console.log(data);
       await requestService.createRequest(data);
       showSuccessToast('Request created successfully');
     } catch (error) {
@@ -180,7 +185,7 @@ export const ChatPage = () => {
     }
   }
 
-  const handlerUserRemove = async (taggedId : string) => {
+  const handlerUserRemove = async (taggedId: string) => {
     try {
       await employeeTaggedService.delete(taggedId);
       showSuccessToast('Employee removed successfully');
@@ -193,13 +198,25 @@ export const ChatPage = () => {
     return customerService.getCustomerById(customerId);
   }
 
+  const handleUpdateRequest = async (data: RequestUpdateRequestModel) => {
+    try {
+      await requestService.updateRequest(data);
+      if (customer) {
+        loadRequestByCustomerId(customer.id);
+      }
+      showSuccessToast('Request support ticket updated successfully');
+    } catch (error) {
+      showErrorToast('Failed to update request');
+    }
+  };
+
   return (
     <Box h="calc(100vh - 95px)" p={4} className='box'>
       <Flex direction="row" h="full" style={{ width: "100%" }}>
         <ConversationList conversations={conversations} conversation={conversation} setConversation={setConversation} loadConversationMessages={loadConversationMessages} getCustomerById={getCustomerById} />
-        <MessageBox messages={messages} message={message} setMessage={setMessage} sendMessage={sendMessage} messagesEndRef={messagesEndRef} customer={customer} />
-        <ConversationInfo 
-          conversation={conversation} 
+        <MessageBox employeesTagged={employeesTagged} messages={messages} message={message} setMessage={setMessage} sendMessage={sendMessage} messagesEndRef={messagesEndRef} customer={customer} />
+        <ConversationInfo
+          conversation={conversation}
           customer={customer}
           employeesTagged={employeesTagged}
           requests={requests}
@@ -209,8 +226,25 @@ export const ChatPage = () => {
           users={users}
           handleUserSelect={handleUserSelect}
           handlerUserRemove={handlerUserRemove}
-          />
+          setSelectedRequest={setSelectedRequest}
+          onOpen={onOpen}
+        />
       </Flex>
+      <Modal isOpen={isOpen} onClose={onClose} >
+        <ModalOverlay />
+        <ModalContent maxW="800px">
+          <ModalHeader>
+            Request Support Ticket Details
+          </ModalHeader>
+          <ModalBody>
+            <UpdateComponent
+              onSubmit={handleUpdateRequest}
+              request={selectedRequest ?? {} as RequestResponseModel}
+              onCancel={onClose}
+            />
+          </ModalBody>
+        </ModalContent>
+      </Modal>
     </Box>
   );
 };
