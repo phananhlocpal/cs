@@ -1,16 +1,22 @@
 import { ConversationResponseModel, CustomerResponseModel, EmployeeTaggedResponseModel, RequestCreateRequestModel, RequestResponseModel, UserResponseModel } from "@/abstract/models";
 
 export interface ConversationInfoProp {
-    conversation: ConversationResponseModel | null
-    customer: CustomerResponseModel | null;
-    employeesTagged: EmployeeTaggedResponseModel[] | null;
+    userLogin: UserResponseModel;
+    selectedConversation: ConversationResponseModel | null;
+    selectedCustomer: CustomerResponseModel | null;
+    employeesTaggeds: EmployeeTaggedResponseModel[] | null;
     requests: RequestResponseModel[] | null;
-    onSubmit?: (data: RequestCreateRequestModel) => void;
-    onCancel?: () => void;
-    customers: any;
-    users: UserResponseModel[];
-    handleUserSelect: (conversationId: string, employeeId: string, taggedBy: string) => void;
-    handlerUserRemove: (taggedId: string) => void;
+    onSubmitCreateRequest: (data: RequestCreateRequestModel) => void;
+    handleEmployeeTaggedSelect: (employee: UserResponseModel) => void;
+    handlerEmployeeTaggedRemove: (taggedId: string) => void;
+    isEditConversationStatus: boolean;
+    setIsEditConversationStatus: (status: boolean) => void;
+    isOpenCreateTicket: boolean;
+    setIsOpenCreateTicket: (status: boolean) => void;
     setSelectedRequest: (request: RequestResponseModel) => void;
+    userNameInput: string;
+    setUserNameInput: (value: string) => void;
+    formData: RequestCreateRequestModel;
+    handleFormDataChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
     onOpen: () => void;
 }

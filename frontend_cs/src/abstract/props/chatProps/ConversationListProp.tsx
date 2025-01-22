@@ -2,8 +2,7 @@ import { ConversationResponseModel, CustomerResponseModel } from "@/abstract/mod
 
 export interface ConversationListProp {
     conversations: ConversationResponseModel[]
-    conversation: ConversationResponseModel | null
-    setConversation: Function
-    loadConversationMessages: Function
-    getCustomerById: (customerId: string) => Promise<CustomerResponseModel>
+    seletedConversation: ConversationResponseModel | null
+    handleConversationClick: (conv: any) => void
+    isConversationsLoading: boolean
 }

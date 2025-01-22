@@ -4,3 +4,4 @@ export * from './request.service';
 export * from './customer.service';
 export * from './conversation.service';
 export * from './message.service';
+export * from './employeeTagged.service';

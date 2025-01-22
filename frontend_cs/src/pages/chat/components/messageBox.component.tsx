@@ -1,31 +1,17 @@
 ﻿import { MessageBoxProp } from "@/abstract/props/chatProps/MessageBoxProp";
 import { Box, VStack, Text, Flex, Input, Button, Avatar } from "@chakra-ui/react";
 
-export const MessageBox = ({ employeesTagged, messages, message, setMessage, sendMessage, messagesEndRef, customer }: MessageBoxProp) => {
-    const userProfile = localStorage.getItem("userProfile");
-    const userId = userProfile ? JSON.parse(userProfile).id : null;
+export const MessageBox = ({ loginUser, employeesTagged, messages, message, setMessage, sendMessage, messagesEndRef, customer }: MessageBoxProp) => {
 
     return (
-        <Box
-            className="mx-3"
-            flex="2"
-            borderWidth={1}
-            borderRadius="lg"
-            p={4}
-            bg="white"
-            boxShadow="lg"
-            display="flex"
-            flexDirection="column"
-        >
+        <Box className="mx-3" flex="2" borderWidth={1} borderRadius="lg" p={4} bg="white" boxShadow="lg" display="flex" flexDirection="column">
             {customer && (
                 <Box>
-                    <Flex className="mb-5 rounded-lg" bg="blue.500" p={3} color="white"  alignItems="center">
+                    <Flex className="mb-5 rounded-lg" bg="blue.500" p={3} color="white" alignItems="center">
                         <Avatar
                             size={'sm'}
                             className="mr-3"
-                            src={
-                                'https://th.bing.com/th/id/R.030e8808f8c61d4145840f4ad2bd8629?rik=xwfwJrfgeTxaBg&riu=http%3a%2f%2fimg1.wikia.nocookie.net%2f__cb20140505230441%2fdragonball%2fimages%2fc%2fc3%2fSplit-test-success-kid-meme-300x300.jpg&ehk=1rUnv63VnwJnyuXkhFRD4ifeJV1CVSEi58KRE5J2oTo%3d&risl=&pid=ImgRaw&r=0'
-                            }
+                            src={'https://th.bing.com/th/id/R.030e8808f8c61d4145840f4ad2bd8629?rik=xwfwJrfgeTxaBg&riu=http%3a%2f%2fimg1.wikia.nocookie.net%2f__cb20140505230441%2fdragonball%2fimages%2fc%2fc3%2fSplit-test-success-kid-meme-300x300.jpg&ehk=1rUnv63VnwJnyuXkhFRD4ifeJV1CVSEi58KRE5J2oTo%3d&risl=&pid=ImgRaw&r=0'}
                         />
                         <Text fontWeight="bold">{customer?.name}</Text>
                     </Flex>
@@ -54,7 +40,7 @@ export const MessageBox = ({ employeesTagged, messages, message, setMessage, sen
                         ))
                     ) : (
                         <Text color="gray.500" textAlign="center">
-                            No messages yet.
+                            Select a conversation to see messages.
                         </Text>
                     )}
                 </VStack>
@@ -74,13 +60,13 @@ export const MessageBox = ({ employeesTagged, messages, message, setMessage, sen
                             sendMessage();
                         }
                     }}
-                    disabled={employeesTagged.length > 0 && !employeesTagged.some(employee => employee.employeeId === userId)}
+                    disabled={employeesTagged.length > 0 && !employeesTagged.some(employee => employee.id === loginUser.id)}
                 />
                 <Button colorScheme="blue" onClick={sendMessage}>Send</Button>
             </Flex>
             <Box ml={4}>
                 {
-                    employeesTagged.length > 0 && !employeesTagged.some(employee => employee.employeeId === userId) ?
+                    employeesTagged.length > 0 && !employeesTagged.some(employee => employee.id === loginUser.id) ?
                         (
                             <Text mt={3} color="red" fontStyle="italic">You don't have permission to send message to this customer!</Text>
                         ) : (null)

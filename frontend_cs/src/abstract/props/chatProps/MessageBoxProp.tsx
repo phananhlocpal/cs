@@ -1,6 +1,7 @@
-import { CustomerResponseModel, EmployeeTaggedResponseModel, MessageResponseModel } from "@/abstract/models"
+import { CustomerResponseModel, EmployeeTaggedResponseModel, MessageResponseModel, UserResponseModel } from "@/abstract";
 
 export interface MessageBoxProp {
+    loginUser: UserResponseModel;
     messages: Array<MessageResponseModel>;
     message: string;
     setMessage: (message: string) => void;

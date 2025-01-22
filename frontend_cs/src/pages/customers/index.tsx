@@ -1,57 +1,43 @@
-import React, { useState, useEffect } from "react";
-import { Box, Button, HStack, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, useDisclosure, Table, Thead, Tbody, Tr, Th, Td, useToast, Checkbox, Tag } from "@chakra-ui/react";
-import { customerService } from "@/services";
+import React, { useState } from "react";
+import { Box, Button, HStack, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, useDisclosure, Table, Thead, Tbody, Tr, Th, Td, Checkbox, Spinner } from "@chakra-ui/react";
 import { CustomerCreateRequestModel, CustomerUpdateRequestModel, CustomerResponseModel } from "@/abstract";
 import { CreateComponent, UpdateComponent, DetailComponent } from "./components";
+import { useCustomers } from '@/hooks/useCustomers'
+import { useNotification } from "@/hooks";
 
 export const CustomerPage: React.FC = () => {
   // States
-  const [customers, setCustomers] = useState<CustomerResponseModel[]>([]);
   const [selectedCustomer, setSelectedCustomer] = useState<CustomerResponseModel | null>(null);
   const [modalMode, setModalMode] = useState<'create' | 'update' | 'detail'>('create');
   const [selection, setSelection] = useState<string[]>([]);
+
+  // Hooks
+  const { customers = [], isLoading, createCustomer, updateCustomer } = useCustomers()
   const indeterminate = selection.length > 0 && selection.length < customers.length;
 
   // Chakra hooks
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const toast = useToast();
-
-  // Load requests on mount
-  useEffect(() => {
-    loadCustomers();
-    loadCustomers();
-  }, []);
-
-  const loadCustomers = async () => {
-    try {
-      const data = await customerService.getAllCustomers();
-      setCustomers(data);
-    } catch (error) {
-      showErrorToast('Failed to load customers');
-    }
-  }
+  const showNotification = useNotification();
 
   // Create customer
   const handleCreate = async (data: CustomerCreateRequestModel) => {
     try {
-      await customerService.createCustomer(data);
-      loadCustomers();
+      await createCustomer(data);
       onClose();
-      showSuccessToast('Customer created successfully');
+      showNotification('Customer created successfully', 'success');
     } catch (error) {
-      showErrorToast('Failed to create customer');
+      showNotification('Failed to create customer', 'error');
     }
   };
 
   // Update customer
   const handleUpdate = async (data: CustomerUpdateRequestModel) => {
     try {
-      await customerService.updateCustomer(data);
-      loadCustomers();
+      await updateCustomer(data);
       onClose();
-      showSuccessToast('Customer updated successfully');
+      showNotification('Customer updated successfully', 'success');
     } catch (error) {
-      showErrorToast('Failed to update customer');
+      showNotification('Failed to update customer', 'error');
     }
   };
 
@@ -74,22 +60,7 @@ export const CustomerPage: React.FC = () => {
     onOpen();
   };
 
-  // Toast helpers
-  const showSuccessToast = (message: string) => {
-    toast({
-      title: message,
-      status: 'success',
-      duration: 3000,
-    });
-  };
-
-  const showErrorToast = (message: string) => {
-    toast({
-      title: message,
-      status: 'error',
-      duration: 3000,
-    });
-  };
+  if (isLoading) return <Spinner />
 
   return (
     <Box p={4}>
@@ -111,7 +82,7 @@ export const CustomerPage: React.FC = () => {
                 onChange={(e) => {
                   const checked = e.target.checked;
                   setSelection(
-                    checked ? customers.map((customer) => customer.name) : [],
+                    checked ? (customers || []).map((customer) => customer.name) : [],
                   );
                 }}
               />

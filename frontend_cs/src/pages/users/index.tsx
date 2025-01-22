@@ -1,57 +1,42 @@
-import React, { useState, useEffect } from "react";
-import { Box, Button, HStack, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, useDisclosure, Table, Thead, Tbody, Tr, Th, Td, useToast, Checkbox, Tag } from "@chakra-ui/react";
-import { userService } from "@/services";
+import React, { useState } from "react";
+import { Box, Button, HStack, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, useDisclosure, Table, Thead, Tbody, Tr, Th, Td, Checkbox, Spinner } from "@chakra-ui/react";
 import { UserCreateRequestModel, UserUpdateRequestModel, UserResponseModel } from "@/abstract";
 import { CreateComponent, UpdateComponent, DetailComponent } from "./components";
+import { useNotification, useUsers } from '@/hooks';
 
 export const UserPage: React.FC = () => {
   // States
-  const [users, setUsers] = useState<UserResponseModel[]>([]);
   const [selectedUser, setSelectedUser] = useState<UserResponseModel | null>(null);
   const [modalMode, setModalMode] = useState<'create' | 'update' | 'detail'>('create');
   const [selection, setSelection] = useState<string[]>([]);
-  const indeterminate = selection.length > 0 && selection.length < users.length;
+
+  // Hooks
+  const { users, createUser, updateUser, isUsersLoading } = useUsers();
+  const indeterminate = selection.length > 0 && selection.length < (users?.length || 0);
 
   // Chakra hooks
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const toast = useToast();
-
-  // Load requests on mount
-  useEffect(() => {
-    loadUsers();
-    loadUsers();
-  }, []);
-
-  const loadUsers = async () => {
-    try {
-      const data = await userService.getAllUsers();
-      setUsers(data);
-    } catch (error) {
-      showErrorToast('Failed to load users');
-    }
-  }
+  const showNotification = useNotification();
 
   // Create user
   const handleCreate = async (data: UserCreateRequestModel) => {
     try {
-      await userService.createUser(data);
-      loadUsers();
+      await createUser(data);
       onClose();
-      showSuccessToast('User created successfully');
+      showNotification('User created successfully', 'success');
     } catch (error) {
-      showErrorToast('Failed to create user');
+      showNotification('Failed to create user', 'error');
     }
   };
 
   // Update user
   const handleUpdate = async (data: UserUpdateRequestModel) => {
     try {
-      await userService.updateUser(data);
-      loadUsers();
+      await updateUser(data);
       onClose();
-      showSuccessToast('User updated successfully');
+      showNotification('User updated successfully', 'success');
     } catch (error) {
-      showErrorToast('Failed to update user');
+      showNotification('Failed to update user', 'error');
     }
   };
 
@@ -74,22 +59,7 @@ export const UserPage: React.FC = () => {
     onOpen();
   };
 
-  // Toast helpers
-  const showSuccessToast = (message: string) => {
-    toast({
-      title: message,
-      status: 'success',
-      duration: 3000,
-    });
-  };
-
-  const showErrorToast = (message: string) => {
-    toast({
-      title: message,
-      status: 'error',
-      duration: 3000,
-    });
-  };
+  if (isUsersLoading) {<Spinner />}
 
   return (
     <Box p={4}>
@@ -111,7 +81,7 @@ export const UserPage: React.FC = () => {
                 onChange={(e) => {
                   const checked = e.target.checked;
                   setSelection(
-                    checked ? users.map((user) => user.name) : [],
+                    checked ? (users?.map((user) => user.name) || []) : [],
                   );
                 }}
               />
